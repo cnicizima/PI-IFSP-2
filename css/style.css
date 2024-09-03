@@ -75,6 +75,8 @@
     font-size: 16px;
     line-height: 24px; 
 }
+
+/* css do botao reserve aqui */
 .textos_principal > button{
     color:var(--blue);
     font-weight: 700;
@@ -211,11 +213,11 @@
     filter: brightness(.5);
 }
 
-/* div da caixa  */
+/* div que contem tudo */
 .monaco_fundo_caixa_texto{
     background-color: var(--blue);
     width: 30%;
-    height: 500px;
+    height: 550px;
     position: absolute;
     color: var(--gelo);
     top: -12%;
@@ -248,3 +250,52 @@
     font-size: 17px;
     padding-top: 4px;
 }
+
+/* Div Porque Condamine */
+
+.porque_condamine{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7%;
+    margin: 12% 10% 0 10%;
+}
+
+/* Textos porque condamine */
+.porque_condamine > h1{
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+/* h2 do card */
+.h2_porque_condamine1{
+    margin-bottom: 5%;
+    color: var(--blue);
+}
+.h2_porque_condamine2{
+    margin-bottom: 5%;
+    color: var(--gelo);
+}
+
+.h4_porque_condamine1{
+    color: var(--blue);
+}
+.h4_porque_condamine2{
+    color: var(--gelo);
+}
+
+/* Cards porque condamine - 1(fundo branco), 2(fundo blue) */
+.porque_condamine_cards_1{
+    background-color: var(--gelo);
+    padding: 5%;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.porque_condamine_cards_2{
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 5%;
+    text-align: center;
+}
+
+/* newsletter */
