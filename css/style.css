@@ -326,19 +326,19 @@
 }
 .news_titulo{
     grid-area: 1 / 4 / span 1/ span 3;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     font-size: 24px;
 }
 .news_paragrafo{
     grid-area: 2 / 4 / span 1/ span 3;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     align-content: center;
 }
 .news_privacidade{
     grid-area: 4 / 4 / span 1/ span 3;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     align-content: end;
 }
@@ -346,6 +346,7 @@
 /* config das imagens */
 .imagem_newsletter{
     height: 100%;
+    width: 90%;
     border-radius: 15px;
     object-fit: cover;
 }
@@ -356,7 +357,7 @@
     grid-area: 3 / 4 / span 1/ span 3;
     width: 100%;
     margin: 0 auto 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     justify-content: center;
 
 }
@@ -385,3 +386,93 @@
     border: none;
     border-radius: 15px;
 }
+
+
+/* Footer */
+
+/* container footer */
+.footer{
+    width: 60%;
+    height: 200px;
+    margin: 0px auto 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* border: 2px red solid; */
+    color: var(--blue);
+}
+
+
+/* div do logo com a imagem */
+.footer_logo_div{
+    display: flex;
+    grid-area: 1 / 1 / span2 / span1;
+    margin-left: 8%;
+    /* border: 2px red solid; */
+}
+
+/* imagem logo dentro da div */
+.logo_titulo_img{
+    height: 40px;
+}
+
+/* p dentro da div do logo com texto */
+.logo_titulo_texto{
+    font-size: 40px;
+}
+
+
+/* div paragrafo */
+.logo_texto{
+    grid-area: 3 / 1 / span2 / span1;
+    /* border: 2px red solid; */
+    width: 30%;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 8%;
+}
+
+/* div Contato */
+.logo_contato_texto{
+    grid-area: 1 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 30%;
+    font-size: 12px;
+}
+
+/* div localizaçao */
+.campos_contato1{
+    grid-area: 2 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+/* div telefone */
+.campos_contato2{
+    grid-area: 3 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+/* div email */
+.campos_contato3{
+    grid-area: 4 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+
+}
+
+/* icones font-awesome */
+.contato_font_awesome{
+    font-size: 25px;
+}
+
