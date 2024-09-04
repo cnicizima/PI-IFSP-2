@@ -1,3 +1,8 @@
+body {
+    background-color: var(--gelo);
+    font-family: "Montserrat", system-ui;
+}
+
 .container{
     max-width: 100%;
 }
@@ -37,6 +42,7 @@
 .links_nav{
     color: var(--blue);
     text-decoration: none;
+    font-weight: 600;
 }
 .links_nav:hover{
     color: var(--hover_link);
@@ -65,15 +71,18 @@
 }
 .textos_principal > h3{
     font-size: 16px;
-    line-height: 24px;    
+    line-height: 24px;   
+    font-weight: 400; 
 }
 .textos_principal > h1{
     font-size: 48px;
     line-height: 1;
+    font-weight: 400;
 }
 .textos_principal > h4{
     font-size: 16px;
     line-height: 24px; 
+    font-weight: 400;
 }
 
 /* css do botao reserve aqui */
@@ -85,7 +94,10 @@
     padding: 6px; 
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 2px;
+}
+
+.reserve {
+    box-shadow: 3px 3px 8px black;
 }
 
 /* container azul "porque monaco" */
