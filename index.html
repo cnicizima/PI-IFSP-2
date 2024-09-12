@@ -12,6 +12,8 @@
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="css/modal-cadastro.css">
+
     <!-- import montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,10 +35,28 @@
                     <li><a href="#" class="links_nav">DESTINOS</a></li>
                     <li><a href="#" class="links_nav">SOBRE NÓS</a></li>
                     <li><a href="#" class="links_nav">CONTATO</a></li>
+                    <li><a href="#" class="links_nav" onclick="document.getElementById('modal_cadastro').showModal()">CADASTRAR</a></li>
+                    <li><a href="#" class="links_nav" onclick="document.getElementById('modal_login').showModal()">LOGIN</a></li>
                 </ul>
             </nav>
         </header>
 
+        <!-- modal de login e cadastro -->
+
+        <dialog id="modal_login">
+            <div class="container_modal_login">
+                <button class="btn_fechar_modal" onclick="document.getElementById('modal_login').close()">X</button>
+            </div>
+        </dialog>
+        
+        <dialog id="modal_cadastro">
+            <div class="container_modal_cadastro">
+                <button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button>
+            </div>
+            
+        </dialog>
+        
+        
         <!-- imagem principal -->
 
         <div class="container_imagem_principal">
@@ -208,5 +228,7 @@
    
     <!-- js para os icones fontawesoma -->
     <script src="https://kit.fontawesome.com/b7057748ce.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

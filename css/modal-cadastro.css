@@ -1,0 +1,24 @@
+/* introduzindo variaveis */
+:root{
+  --white: #FFFFFF;
+  --gelo: #EEF2F6;
+  --blue: #496C7B;
+  --dark_blue: #0B0F16;
+  --gray: #57606D;
+  --hover_link: #88A4B2;
+}
+
+
+#modal_login, #modal_cadastro {
+    width: 40%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--blue);
+    margin: 0 auto;
+    align-self: center;
+    background-image: url(../img/img_index/imagem_principal.jpg);
+    background-size: cover;
+    filter: brightness(0.5);
+  }
