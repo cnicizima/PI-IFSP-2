@@ -12,6 +12,7 @@ body {
     --white: #FFFFFF;
     --gelo: #EEF2F6;
     --blue: #496C7B;
+    --light_blue: #88A4B2;
     --dark_blue: #0B0F16;
     --gray: #57606D;
     --hover_link: #88A4B2;
@@ -77,7 +78,7 @@ body {
 .textos_principal > h1{
     font-size: 48px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 500;
 }
 .textos_principal > h4{
     font-size: 16px;
@@ -94,6 +95,7 @@ body {
     padding: 6px; 
     margin-top: 20px;
     margin-bottom: 20px;
+    border: none;
 }
 
 .reserve {
@@ -111,7 +113,7 @@ body {
     left: 10.5%;
 
     /* cor do texto */
-    color: var(--gelo);
+    color: var(--white);
 }
 
 .porque_monaco_container > h1{
@@ -119,6 +121,8 @@ body {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 35px;
 }
 
 .porque_monaco_textos{
@@ -128,9 +132,11 @@ body {
     padding-right: 30px;
     padding-bottom: 30px;
 }
+
 .monaco_textos{
     width: 33.3%;
     text-align: center;
+    font-size: 16px;
 }
 
 /* divisória entre os textos */
@@ -145,9 +151,11 @@ body {
 /* posiçao do texto 'Destinos Populares' */
 .cards_destinos_text{
     margin-top: 15%;
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
     margin-left: 12.5%;  
     margin-right: 12.5%;  
+    color: var(--blue);
+    font-size: 35px;
 }
 
 /* cards DECK container */
@@ -165,6 +173,7 @@ body {
     width: 250px;
     object-fit: cover;
     border-radius: 10px;
+    filter: brightness(0.8);
 }
 
 .seta_esquerda{
@@ -187,17 +196,23 @@ body {
     background-color: var(--gelo);
     border-radius: 5px;    
     padding: 5px;
+    opacity: 0.90;
 }
 
 .item1{
     grid-column: 1/3;    
+    font-size: 16px;
 }
 .item2{
     grid-column: 1/2;
-    padding-top: 4px;    
+    padding-top: 4px;
+    padding-left: 10px;    
 }
 .item3{
-    grid-column: 2/3;   
+    grid-column: 2/3;
+    color: var(--blue);
+    font-size: 14px;
+    padding-left: 4px;
 }
 
 .cards_deck{
@@ -228,8 +243,8 @@ body {
 /* div que contem tudo */
 .monaco_fundo_caixa_texto{
     background-color: var(--blue);
-    width: 30%;
-    height: 550px;
+    width: 25%;
+    height: 500px;
     position: absolute;
     color: var(--gelo);
     top: -12%;
@@ -242,11 +257,14 @@ body {
 .monaco_fundo_caixa_texto > h2{
     font-size: 50px;
     text-align: center;
+    font-weight: 500;
+    font-size: 35px;
 }
 .monaco_fundo_caixa_texto > h4{
     font-size: 15px;
     text-align: center;
     margin-top: 30px;
+    font-weight: 500;
 }
 
 .monaco_world_packers{
@@ -256,11 +274,13 @@ body {
     align-content: center;
 }
 .elipse{
-    height: 30px;
+    height: 60px;
+    padding-bottom: 10px;
 }
 .monaco_world_packers > h5{
-    font-size: 17px;
-    padding-top: 4px;
+    font-size: 16px;
+    padding-top: 14px;
+    font-weight: 600;
 }
 
 /* Div Porque Condamine */
@@ -276,31 +296,40 @@ body {
 .porque_condamine > h1{
     grid-column: 1/4;
     justify-self: center;
+    color: var(--blue);
+    font-weight: 500;
 }
 
 /* h2 do card */
 .h2_porque_condamine1{
     margin-bottom: 5%;
     color: var(--blue);
+    font-size: 18px;
+    font-weight: 700;
 }
 .h2_porque_condamine2{
     margin-bottom: 5%;
-    color: var(--gelo);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .h4_porque_condamine1{
     color: var(--blue);
+    font-weight: 500;
 }
 .h4_porque_condamine2{
-    color: var(--gelo);
+    color: var(--white);
+    font-weight: 500;
 }
 
 /* Cards porque condamine - 1(fundo branco), 2(fundo blue) */
 .porque_condamine_cards_1{
-    background-color: var(--gelo);
+    background-color: var(--white);
     padding: 5%;
     border-radius: 5%;
     text-align: center;
+    box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
 .porque_condamine_cards_2{
@@ -308,6 +337,7 @@ body {
     padding: 5%;
     border-radius: 5%;
     text-align: center;
+    box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
 /* newsletter */
@@ -341,25 +371,40 @@ body {
     /* border: 2px solid red; */
     text-align: center;
     font-size: 24px;
+    color: var(--white);
 }
 .news_paragrafo{
     grid-area: 2 / 4 / span 1/ span 3;
     /* border: 2px solid red; */
     text-align: center;
     align-content: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
 }
 .news_privacidade{
     grid-area: 4 / 4 / span 1/ span 3;
     /* border: 2px solid red; */
     text-align: center;
     align-content: end;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.link_aqui:link {
+    color: var(--white);
+}
+
+.link_aqui:hover {
+    color: var(--hover_link);
 }
 
 /* config das imagens */
 .imagem_newsletter{
     height: 100%;
     width: 90%;
-    border-radius: 15px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -383,28 +428,32 @@ body {
 .email_campo{
     border-radius: 15px;
     width: 60%;
-    background-color: var(--gray);
+    background-color: var(--light_blue);
     border: none;
     margin-right: 10px;
+    opacity: 0.4;
 }
 
 /* configura o placeholder do email */
 .email_campo::placeholder{
-    color: aqua;
+    color: var(--white);
+    font-size: 12px;
+    padding: 15px;
 }
 
 .email_botao{
-    background-color: var(--hover_link);
+    background-color: var(--white);
     border: none;
     border-radius: 15px;
+    color: var(--blue);
 }
-
 
 /* Footer */
 
 /* container footer */
 .footer{
-    width: 60%;
+    background-color: var(--white);
+    width: 100%;
     margin: 0px auto 30px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;

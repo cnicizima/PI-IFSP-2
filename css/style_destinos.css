@@ -1,3 +1,8 @@
+body {
+    background-color: var(--gelo);
+    font-family: "Montserrat", system-ui;
+}
+
 .container{
     max-width: 100%;
 }
@@ -7,6 +12,7 @@
     --white: #FFFFFF;
     --gelo: #EEF2F6;
     --blue: #496C7B;
+    --light_blue: #88A4B2;
     --dark_blue: #0B0F16;
     --gray: #57606D;
     --hover_link: #88A4B2;
@@ -37,6 +43,7 @@
 .links_nav{
     color: var(--blue);
     text-decoration: none;
+    font-weight: 600;
 }
 .links_nav:hover{
     color: var(--hover_link);
@@ -60,7 +67,7 @@
 .div_texto_imagem_principal{
     width: 35%;
     position: absolute;
-    top: 15%;
+    top: 35%;
     left: 30%;
     text-align: center;
     color: var(--gelo);
@@ -68,12 +75,14 @@
 
 /* textos na div */
 .div_texto_imagem_principal h1{
-    font-size: 50px;
+    font-size: 48px;
+    font-weight: 500;
 }
 
 .div_texto_imagem_principal h2{
     font-size: 20px;
     padding: 0 20px;
+    font-weight: 400;
 }
 
 
@@ -87,17 +96,17 @@
     row-gap: 6%;
     column-gap: 2%;
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 9.8%;
 }
 
 /* config do card */
 .card_destino{
     width: 100%;
-    height: 580px;
+    height: 650px;
     color: var(--blue);
     position: relative;
-    box-shadow: 2px 2px var(--gray);
+    box-shadow: 1px 2px 3px #0b0f16b0;
 }
 
 /* imagem do card */
@@ -110,7 +119,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding-left: 5%;
 }
 
@@ -122,15 +131,29 @@
 /* texto maior */
 .destino_descricao{
     padding: 0 5%;
-    text-align: center;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* botao */
 .card_destino_button{
     background-color: var(--blue);
     position: absolute;
-    top: 90%;
+    top: 92%;
     left: 5%;
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 500;
+    border: none;
+    padding: 1px 6px 1px 6px;
+}
+
+.card_destino_localizacao_texto {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 4px;
 }
 
 
@@ -139,7 +162,7 @@
 
 /* div Grid Hoteis geral - com texto dentro*/
 .cards_hoteis_parceiros{
-    border: 2px solid var(--blue);
+    /* border: 2px solid var(--blue); */
     width: 80%;
     margin: 85% auto 0 auto;
     padding-top: 3%;    
@@ -147,6 +170,8 @@
 .cards_hoteis_parceiros h1{
     margin-bottom:3%;
     text-align: center;
+    font-weight: 500;
+    color: var(--blue);
 }
 /* css do grid de cards hotel */
 .grid_hoteis{
@@ -162,6 +187,7 @@
     width: 100%;
     height: 400px;
     color: var(--blue);
+    box-shadow: 1px 2px 3px #0b0f16b0;
 }
 
 /* imagem dos hoteis */
@@ -172,6 +198,8 @@
 /* titulo */
 .hotel_nome{
     padding-left: 5%;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /* div do pin + texto localizaçao */
@@ -183,9 +211,17 @@
     padding-left: 5%;
 }
 
+.card_hotel_localizacao_texto {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 /* preço hotel*/
 .hotel_descricao{
     padding: 0 5%;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
 }
 
 
@@ -220,25 +256,40 @@
     /* border: 2px solid red; */
     text-align: center;
     font-size: 24px;
+    color: var(--white);
 }
 .news_paragrafo{
     grid-area: 2 / 4 / span 1/ span 3;
     /* border: 2px solid red; */
     text-align: center;
     align-content: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
 }
 .news_privacidade{
     grid-area: 4 / 4 / span 1/ span 3;
     /* border: 2px solid red; */
     text-align: center;
     align-content: end;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.link_aqui:link {
+    color: var(--white);
+}
+
+.link_aqui:hover {
+    color: var(--hover_link);
 }
 
 /* config das imagens */
 .imagem_newsletter{
     height: 100%;
     width: 90%;
-    border-radius: 15px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -262,28 +313,32 @@
 .email_campo{
     border-radius: 15px;
     width: 60%;
-    background-color: var(--gray);
+    background-color: var(--light_blue);
     border: none;
     margin-right: 10px;
+    opacity: 0.4;
 }
 
 /* configura o placeholder do email */
 .email_campo::placeholder{
-    color: aqua;
+    color: var(--white);
+    font-size: 12px;
+    padding: 15px;
 }
 
 .email_botao{
-    background-color: var(--hover_link);
+    background-color: var(--white);
     border: none;
     border-radius: 15px;
+    color: var(--blue);
 }
-
 
 /* Footer */
 
 /* container footer */
 .footer{
-    width: 60%;
+    background-color: var(--white);
+    width: 100%;
     margin: 0px auto 30px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
