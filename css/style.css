@@ -49,6 +49,10 @@ body {
     color: var(--hover_link);
 }
 
+.links_nav:link {
+    color: var(--blue);
+}
+
 /* imagem principal */
 
 .imagem_principal{
