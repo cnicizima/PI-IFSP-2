@@ -199,15 +199,20 @@ body {
     opacity: 0.90;
 }
 
+/* texto do local */
 .item1{
     grid-column: 1/3;    
-    font-size: 16px;
+    font-size: 15.5px;
 }
+
+/* pin  da localizaçao */
 .item2{
     grid-column: 1/2;
     padding-top: 4px;
     padding-left: 10px;    
 }
+
+/* texto da localizaçao */
 .item3{
     grid-column: 2/3;
     color: var(--blue);
@@ -469,13 +474,14 @@ body {
 .footer_logo_div{
     display: flex;
     grid-area: 1 / 1 / span2 / span1;
-    margin-left: 8%;
+    margin-left: 1%;
     /* border: 2px red solid; */
 }
 
 /* imagem logo dentro da div */
 .logo_titulo_img{
-    height: 40px;
+    height: 55px;
+    margin-left: 23.5%;
 }
 
 /* p dentro da div do logo com texto */
@@ -491,14 +497,14 @@ body {
     width: 30%;
     text-align: center;
     font-size: 20px;
-    margin-left: 8%;
+    margin-left: 16%;
 }
 
 /* div Contato */
 .logo_contato_texto{
     grid-area: 1 / 2 / span1 / span1;
     /* border: 2px red solid; */
-    margin-left: 30%;
+    margin-left: 37%;
     font-size: 12px;
 }
 

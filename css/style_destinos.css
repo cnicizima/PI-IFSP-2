@@ -68,7 +68,7 @@ body {
     width: 35%;
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 32%;
     text-align: center;
     color: var(--gelo);
 }
@@ -354,13 +354,14 @@ body {
 .footer_logo_div{
     display: flex;
     grid-area: 1 / 1 / span2 / span1;
-    margin-left: 8%;
+    margin-left: 1%;
     /* border: 2px red solid; */
 }
 
 /* imagem logo dentro da div */
 .logo_titulo_img{
-    height: 40px;
+    height: 55px;
+    margin-left: 23.5%;
 }
 
 /* p dentro da div do logo com texto */
@@ -376,14 +377,14 @@ body {
     width: 30%;
     text-align: center;
     font-size: 20px;
-    margin-left: 8%;
+    margin-left: 16%;
 }
 
 /* div Contato */
 .logo_contato_texto{
     grid-area: 1 / 2 / span1 / span1;
     /* border: 2px red solid; */
-    margin-left: 30%;
+    margin-left: 37%;
     font-size: 12px;
 }
 
