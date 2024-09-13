@@ -18,7 +18,12 @@
     background-color: var(--blue);
     margin: 0 auto;
     align-self: center;
-    background-image: url(../img/img_index/imagem_principal.jpg) ;
+    background-image: linear-gradient(270deg, transparent 0%, var(--blue) 80%), url(../img/img_index/imagem_principal.jpg);
     background-size: cover;
     filter: brightness(0.5);
   }
+
+.cadastro_logo_img, .login_logo_img{
+  height: 50px;
+  display: inline;
+}
