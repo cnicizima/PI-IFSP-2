@@ -44,7 +44,7 @@
   opacity: 1;
 }
 
-.entre:link, :visited, :active {
+.entre:visited, :active {
   color: var(--white);
 }
 
