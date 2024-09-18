@@ -39,34 +39,39 @@
         </nav>
       </header>
 
-      <!-- modal de login e cadastro -->
-    
-      <dialog id="modal_cadastro">
-        <div class="container_modal_cadastro">
-            <img src="img/img_index/logo.png" class="cadastro_logo_img">
-            <button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button>
-            <h4>Comece aqui!</h4>
-            <h1>Crie sua conta</h1>
-            <h4>Ja é cadastrado? <a href="#">Entre</a></h4>
-            <input type="text" name="cadastro_nome" id="cadastro_nome"><br>
-            <input type="email" name="cadastro_email" id="cadastro_email"><br>
-            <input type="password" name="cadastro_senha" id="cadastro_senha"><br>
-            <button>Cadastre-se</button>
-        </div>
-      </dialog>
+ 
+        <!-- modal de login e cadastro -->
 
     
+        <dialog id="modal_cadastro">
+          <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button></div>
+          <div class="container_modal_cadastro">
+              <img src="img/img_index/logo.png" class="cadastro_logo_img">
+              <!-- <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button></div> -->
+              <h4>Comece aqui!</h4>
+              <h1>Crie <b>sua conta</b></h1>
+              <h4>Já é cadastrado? <a href="#" class="entre">Entre aqui</a></h4>
+              <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..."><br>
+              <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..."><br>
+              <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..."><br>
+              <button class="cadastro">Cadastre-se</button>
+          </div>
+      </dialog>
+
+      
       <dialog id="modal_login">
-        <div class="container_modal_login">
-            <img src="img/img_index/logo.png" class="login_logo_img">
-            <button class="btn_fechar_modal" onclick="document.getElementById('modal_login').close()">X</button>
-            <h4>Seu bilhete para Mônaco está aqui</h4>
-            <h1>Acesse sua conta</h1>
-            <h4><a href="#">Esqueceu a senha?</a></h4>
-            <input type="email" name="login_email" id="login_email"><br>
-            <input type="password" name="login_senha" id="login_senha"><br>
-            <button>Entrar</button>
-        </div>                
+          <div class="container_modal_login">
+              <img src="img/img_index/logo.png" class="login_logo_img">
+              <div class="xizzinho">
+                  <button class="btn_fechar_modal" onclick="document.getElementById('modal_login').close()">X</button>
+              </div>
+              <h4>Seu bilhete para Mônaco está aqui</h4>
+              <h1>Acesse <b>sua conta</b></h1>
+              <h4><a href="#" class="entre">Esqueceu a senha?</a></h4>
+              <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..."><br>
+              <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..."><br>
+              <button class="login">Entrar</button>
+          </div>                
       </dialog>
 
 

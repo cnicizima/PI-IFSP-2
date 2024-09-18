@@ -25,6 +25,12 @@ body {
   margin-right: 20px;
   height: 50px;
 }
+
+.logo {
+  color: var(--blue);
+  font-size: 35px;
+}
+
 .container_imagem_logo {
   display: flex;
 }
