@@ -16,13 +16,15 @@
     background-color: var(--blue);
     border-radius: 10px;
     padding: 40px;
+    padding-top: 0px;
     margin: 0 auto;
     align-self: center;
     background-image: linear-gradient(225deg, transparent 0%, #496c7bf1 40%), url(../img/img_modal/modal_bckg.jpg);
     background-size: cover;
     border: none;
     filter: brightness(0.75);
-    padding-top: 5%;
+    padding-top: 2%;
+    color: var(--white);
   }
 
 .cadastro_logo_img, .login_logo_img{
@@ -37,7 +39,21 @@
   opacity: 1;
 }
 
+.container_modal_login > h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light_blue);
+  opacity: 1;
+}
+
 .container_modal_cadastro > h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 1;
+}
+
+.container_modal_login > h1 {
   font-size: 48px;
   font-weight: 500;
   color: var(--white);
@@ -53,22 +69,41 @@
 }
 
 .input {
-  width: 45%;
+  width: 40%;
+  height: 40px;
+  background-color: var(--blue);
+  margin-top: 2%;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 1px 2px 6px 0px rgb(0, 0, 0, 70%);
+}
+
+::placeholder {
+  padding: 10px;
+  color: var(--white);
+}
+
+.cadastro, .login {
+  width: 25%;
+  height: 40px;
   background-color: var(--blue);
   margin-top: 2%;
   border-radius: 20px;
   border: none;
+  box-shadow: 1px 2px 6px 0px rgb(0, 0, 0, 70%);
+  color: var(--white)
 }
 
-.cadastro {
-  width: 25%;
-  background-color: var(--blue);
-  margin-top: 2%;
-  border-radius: 20px;
-  border: none
-}
-
-.input:hover, .cadastro:hover {
+.input:hover, .cadastro:hover, .login:hover {
   background-color: var(--hover_link);
 }
+
+.xizzinho {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin: 0;
+}
+
+
 
