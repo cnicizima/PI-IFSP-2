@@ -62,6 +62,7 @@
   opacity: 1;
 }
 
+
 .entre:visited, :active {
   color: var(--white);
 }
