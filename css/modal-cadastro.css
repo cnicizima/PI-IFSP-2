@@ -12,24 +12,26 @@
 
 #modal_login, #modal_cadastro {
     width: 60%;
-    height: 70%;
+    height: 60%;
     background-color: var(--blue);
     border-radius: 10px;
     padding: 40px;
-    padding-top: 0px;
     margin: 0 auto;
     align-self: center;
-    background-image: linear-gradient(225deg, transparent 0%, #496c7bf1 40%), url(../img/img_modal/modal_bckg.jpg);
+    background: rgb(73,108,123);
+    background: linear-gradient(190deg, rgba(73,108,123,0) 0%, rgba(73,108, 123,0.5) 0%, rgba(73,108,123,0.94) 40%, rgba(73,108,123,0.98) 60%, rgba(73,108,123,1) 100%), url(../img/img_modal/modal_bckg.jpg);
     background-size: cover;
     border: none;
     filter: brightness(0.75);
-    padding-top: 2%;
     color: var(--white);
   }
 
 .cadastro_logo_img, .login_logo_img{
   height: 50px;
-  display: inline;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 0;
 }
 
 .container_modal_cadastro > h4 {
@@ -88,7 +90,7 @@
   height: 40px;
   background-color: var(--blue);
   margin-top: 2%;
-  border-radius: 20px;
+  border-radius: 50px;
   border: none;
   box-shadow: 1px 2px 6px 0px rgb(0, 0, 0, 70%);
   color: var(--white)
@@ -103,6 +105,12 @@
   justify-content: end;
   align-items: end;
   margin: 0;
+}
+
+.btn_fechar_modal {
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
 }
 
 

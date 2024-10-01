@@ -35,8 +35,7 @@
                     <li><a href="destinos.html" class="links_nav">DESTINOS</a></li>
                     <li><a href="#" class="links_nav">SOBRE NÓS</a></li>
                     <li><a href="#" class="links_nav">CONTATO</a></li>
-                    <li><a href="#" class="links_nav" onclick="document.getElementById('modal_cadastro').showModal()">CADASTRAR</a></li>
-                    <li><a href="#" class="links_nav" onclick="document.getElementById('modal_login').showModal()">LOGIN</a></li>
+                    <li><a href="#" class="links_nav" onclick="document.getElementById('modal_cadastro').showModal()"><i class="fa-solid fa-user fa-xl" style="color: #496c7b;"></i></a></li>
                 </ul>
             </nav>
         </header>
@@ -45,33 +44,33 @@
 
     
             <dialog id="modal_cadastro">
-                <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button></div>
                 <div class="container_modal_cadastro">
+                    <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()"><i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i></i></button></div>
                     <img src="img/img_index/logo.png" class="cadastro_logo_img">
                     <!-- <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button></div> -->
                     <h4>Comece aqui!</h4>
                     <h1>Crie <b>sua conta</b></h1>
-                    <h4>Já é cadastrado? <a href="#" class="entre">Entre aqui</a></h4>
                     <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..."><br>
                     <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..."><br>
                     <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..."><br>
                     <button class="cadastro">Cadastre-se</button>
+                    <h4>Já é cadastrado? <a href="#" class="entre" onclick="document.getElementById('modal_cadastro').close(); document.getElementById('modal_login').showModal()">Entre aqui</a></h4>
                 </div>
             </dialog>
    
             
             <dialog id="modal_login">
                 <div class="container_modal_login">
+                    <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_login').close()"><i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i></i></button>
                     <img src="img/img_index/logo.png" class="login_logo_img">
-                    <div class="xizzinho">
-                        <button class="btn_fechar_modal" onclick="document.getElementById('modal_login').close()">X</button>
                     </div>
                     <h4>Seu bilhete para Mônaco está aqui</h4>
                     <h1>Acesse <b>sua conta</b></h1>
-                    <h4><a href="#" class="entre">Esqueceu a senha?</a></h4>
+                    <!-- <h4><a href="#" class="entre">Esqueceu a senha?</a></h4> -->
                     <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..."><br>
                     <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..."><br>
                     <button class="login">Entrar</button>
+                    <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre" onclick="document.getElementById('modal_login').close(); document.getElementById('modal_cadastro').showModal()">Crie sua conta</a></h4>
                 </div>                
             </dialog>
 
