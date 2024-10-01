@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'higuen';
+    src: url('higuen.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-color: var(--gelo);
+  font-family: "Montserrat", system-ui;
+}
+
+.container {
+  max-width: 100%;
+}
+
+/* introduzindo variaveis */
+:root {
+  --white: #ffffff;
+  --gelo: #eef2f6;
+  --blue: #496c7b;
+  --light_blue: #88a4b2;
+  --dark_blue: #0b0f16;
+  --gray: #57606d;
+  --hover_link: #88a4b2;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  height: 60px;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 35px;
+  font-family: 'higuen';
+  letter-spacing: 5px;
+  font-weight: 400;
+  padding-bottom: 6px;
+}
+
+.container_imagem_logo {
+  display: flex;
+  align-items: center;
+}
+.imagem_logo {
+  height: 50px;
+  margin-left: 20px;
+}
+.lista_nav {
+  display: flex;
+  gap: 36px;
+  margin-top: 12px;
+}
+.lista_nav > li {
+  list-style-type: none;
+}
+.links_nav {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+.links_nav:hover {
+  color: var(--hover_link);
+}
+
+.links_nav:link {
+  color: var(--blue);
+}
+
+/* Imagem principal */
+
+.div_imagem_principal{
+    width: 100%;
+    position: relative;
+    margin-bottom: 80%;
+}
+
+.imagem_principal_destino{
+    height: 600px;
+    width: 100%;
+    filter: brightness(.5);
+}
+
+/* div posicao texto sobre a imagem */
+.div_texto_imagem_principal{
+    width: 35%;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+    text-align: center;
+    color: var(--gelo);
+}
+
+/* textos na div */
+.div_texto_imagem_principal h1{
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.div_texto_imagem_principal h2{
+    font-size: 20px;
+    padding: 0 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* newsletter */
+
+.newsletter_container {
+    width: 60%;
+    height: 250px;
+    background-color: var(--blue);
+    margin: 10% auto 100px auto;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px 30px 30px 30px;
+    column-gap: 20px;
+    box-shadow: 3px 3px 25px #0b0f16b0;
+  }
+  
+  /* posiçao dos itens no grid */
+  .news_imagem1 {
+    grid-area: 1 / 1 / span 4 / span 1;
+  }
+  .news_imagem2 {
+    grid-area: 1 / 2 / span 4 / span 1;
+  }
+  .news_imagem3 {
+    grid-area: 1 / 3 / span 4 / span 1;
+  }
+  .news_titulo {
+    grid-area: 1 / 4 / span 1 / span 3;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 24px;
+    color: var(--white);
+  }
+  .news_paragrafo {
+    grid-area: 2 / 4 / span 1 / span 3;
+    /* border: 2px solid red; */
+    text-align: center;
+    align-content: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .news_privacidade {
+    grid-area: 4 / 4 / span 1 / span 3;
+    /* border: 2px solid red; */
+    text-align: center;
+    align-content: end;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .link_aqui {
+    color: var(--white);
+  }
+  
+  .link_aqui:hover {
+    color: var(--hover_link);
+  }
+  
+  /* config das imagens */
+  .imagem_newsletter {
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* box email e posicao no grid*/
+  .news_email {
+    display: flex;
+    grid-area: 3 / 4 / span 1 / span 3;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto 0 auto;
+    /* border: 2px solid red; */
+    border-radius: 40px;
+    justify-content: center;
+    background-color: #88a4b263;
+  }
+  
+  /* items dentro do box de email */
+  .envelope {
+    align-self: center;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .email_campo {
+    border-radius: 15px;
+    width: 60%;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  /* configura o placeholder do email */
+  .email_campo::placeholder {
+    color: var(--white);
+    font-size: 12px;
+    padding: 15px;
+  }
+  
+  .email_botao {
+    background-color: var(--white);
+    border: none;
+    border-radius: 45px;
+    color: var(--blue);
+    height: 40px;
+    margin: 10px;
+    padding-left: 5px;
+    font-size: 14px;
+    width: 105px;
+  }
+  
+  /* Footer */
+  
+  /* container footer */
+  .footer {
+    background-color: var(--white);
+    width: 100%;
+    margin: 0px auto 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* border: 2px red solid; */
+    color: var(--blue);
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--blue);
+  }
+  
+  /* div do logo com a imagem */
+  .footer_logo_div {
+    display: flex;
+    grid-area: 1 / 1 / span2 / span1;
+    margin-left: 1%;
+    /* border: 2px red solid; */
+  }
+  
+  /* imagem logo dentro da div */
+  .logo_titulo_img {
+    height: 55px;
+    margin-left: 23.5%;
+    margin-top: 15px;
+  }
+  
+  /* p dentro da div do logo com texto */
+  .logo_titulo_texto {
+    font-size: 35px;
+    padding-top: 20px;
+  }
+  
+  /* div paragrafo */
+  .logo_texto {
+    grid-area: 3 / 1 / span2 / span1;
+    /* border: 2px red solid; */
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  
+  /* div Contato */
+  .logo_contato_texto {
+    grid-area: 1 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 37%;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  
+  /* div localizaçao */
+  .campos_contato1 {
+    grid-area: 2 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    margin-top: 35px;
+  }
+  
+  /* div telefone */
+  .campos_contato2 {
+    grid-area: 3 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+  
+  /* div email */
+  .campos_contato3 {
+    grid-area: 4 / 2 / span1 / span1;
+    /* border: 2px red solid; */
+    margin-left: 15%;
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* icones font-awesome */
+  .contato_font_awesome {
+    font-size: 25px;
+  }
+  
+  /* COPYRIGHT */
+  .copyright {
+    text-align: center;
+    color: var(--blue);
+  }
