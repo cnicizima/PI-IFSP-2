@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'higuen';
+    src: url('higuen.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   background-color: var(--gelo);
   font-family: "Montserrat", system-ui;
@@ -22,20 +29,26 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-right: 20px;
-  height: 50px;
+  height: 60px;
 }
 
 .logo {
   color: var(--blue);
   font-size: 35px;
+  font-family: 'higuen';
+  letter-spacing: 5px;
+  font-weight: 400;
+  padding-bottom: 6px;
 }
 
 .container_imagem_logo {
   display: flex;
+  align-items: center;
 }
 .imagem_logo {
-  height: 40px;
+  height: 50px;
   margin-left: 20px;
 }
 .lista_nav {
@@ -120,7 +133,7 @@ body {
   background-color: var(--blue);
   position: absolute;
   bottom: -150%;
-  top: 85%;
+  top: 80%;
   left: 10.5%;
   z-index: 1000;
 
