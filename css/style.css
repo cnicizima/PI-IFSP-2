@@ -10,7 +10,7 @@ body {
   font-family: "Montserrat", system-ui;
 }
 
-.container {
+.container_principal {
   max-width: 100%;
 }
 
@@ -31,7 +31,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-right: 20px;
+  padding-right: 20px;
   height: 60px;
+  position: fixed;
+  z-index: 1001;
+  background-color: var(--gelo);
+  width: 100%;
 }
 
 .logo {
@@ -310,63 +315,6 @@ body {
   font-size: 16px;
   padding-top: 14px;
   font-weight: 600;
-}
-
-/* Div Porque Condamine */
-
-.porque_condamine {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 7%;
-  margin: 12% 10% 0 10%;
-}
-
-/* Textos porque condamine */
-.porque_condamine > h1 {
-  grid-column: 1/4;
-  justify-self: center;
-  color: var(--blue);
-  font-weight: 500;
-}
-
-/* h2 do card */
-.h2_porque_condamine1 {
-  margin-bottom: 5%;
-  color: var(--blue);
-  font-size: 18px;
-  font-weight: 700;
-}
-.h2_porque_condamine2 {
-  margin-bottom: 5%;
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.h4_porque_condamine1 {
-  color: var(--blue);
-  font-weight: 500;
-}
-.h4_porque_condamine2 {
-  color: var(--white);
-  font-weight: 500;
-}
-
-/* Cards porque condamine - 1(fundo branco), 2(fundo blue) */
-.porque_condamine_cards_1 {
-  background-color: var(--white);
-  padding: 5%;
-  border-radius: 5%;
-  text-align: center;
-  box-shadow: 3px 3px 25px #0b0f16b0;
-}
-
-.porque_condamine_cards_2 {
-  background-color: var(--blue);
-  padding: 5%;
-  border-radius: 5%;
-  text-align: center;
-  box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
 /* newsletter */
