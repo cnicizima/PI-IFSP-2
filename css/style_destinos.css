@@ -78,12 +78,18 @@ body {
     width: 100%;
     position: relative;
     margin-bottom: 80%;
+    
 }
 
 .imagem_principal_destino{
     height: 600px;
     width: 100%;
     filter: brightness(.5);
+    background-image: url(../img/img_destinos/monaco_fundo_destino.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* div posicao texto sobre a imagem */
@@ -261,6 +267,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   padding: 30px 30px 30px 30px;
   column-gap: 20px;
+  box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
 /* posiçao dos itens no grid */
