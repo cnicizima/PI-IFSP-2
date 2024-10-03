@@ -84,6 +84,11 @@ body {
     height: 600px;
     width: 100%;
     filter: brightness(.5);
+    background-image: url(../img/img_contato/pexels-hudson-mcdonald-692563691-28193003.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* div posicao texto sobre a imagem */

@@ -84,6 +84,11 @@ body {
     height: 600px;
     width: 100%;
     filter: brightness(.5);
+    background-image: url(../img/img_sobre_nos/pexels-pierre-blache-651604-3108581.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* div posicao texto sobre a imagem */
