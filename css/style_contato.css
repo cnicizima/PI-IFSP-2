@@ -32,6 +32,10 @@ body {
   align-items: center;
   margin-right: 20px;
   height: 60px;
+  position: fixed;
+  z-index: 1001;
+  background-color: var(--gelo);
+  width: 100%;
 }
 
 .logo {
