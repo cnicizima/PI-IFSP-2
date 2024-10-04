@@ -103,7 +103,7 @@
 
 .xizzinho {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: end;
   margin: 0;
 }
@@ -113,6 +113,7 @@
   border: none;
   border-radius: 100px;
 }
+
 
 
 
