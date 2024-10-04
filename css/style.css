@@ -72,7 +72,9 @@ body {
   color: var(--blue);
   text-decoration: none;
   font-weight: 600;
+  
 }
+
 
 .links_nav:hover {
   color: var(--hover_link);
@@ -81,6 +83,7 @@ body {
 .links_nav:link {
   color: var(--blue);
 }
+
 
 /* imagem principal */
 
