@@ -388,3 +388,25 @@ body {
     text-align: center;
     color: var(--blue);
   }
+
+  /* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra */
+}
+
+/* Estilo do "polegar" (parte que se arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--light_blue); /* Cor do polegar */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo da trilha (parte que fica atrás do polegar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor da trilha */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o polegar */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue); /* Cor do polegar ao passar o mouse */
+}
