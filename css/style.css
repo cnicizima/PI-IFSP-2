@@ -9,9 +9,10 @@ body {
   background-color: var(--gelo);
   font-family: "Montserrat", system-ui;
 }
-
+/* mudei altura 10% textos principal e positon e filter do container */
 .container_principal {
   max-width: 100%;
+  position: absolute;
 }
 
 /* introduzindo variaveis */
@@ -108,7 +109,7 @@ body {
   width: 30%;
   margin-left: 10%;
   position: absolute;
-  top: 30%;
+  top: 10%;
   color: var(--gelo);
 }
 
