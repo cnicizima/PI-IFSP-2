@@ -39,7 +39,7 @@
   font-weight: 500;
   color: var(--light_blue);
   opacity: 1;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .container_modal_login > h4 {
@@ -47,7 +47,7 @@
   font-weight: 500;
   color: var(--light_blue);
   opacity: 1;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .container_modal_cadastro > h1 {
