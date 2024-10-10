@@ -45,7 +45,7 @@ body {
   color: var(--blue);
   font-size: 35px;
   font-family: 'higuen';
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   font-weight: 400;
   padding-bottom: 6px;
 }
@@ -588,7 +588,7 @@ video {
 
 /* Estilo do "polegar" (parte que se arrasta) */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--light_blue); /* Cor do polegar */
+    background-color: var(--blue); /* Cor do polegar */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
@@ -600,5 +600,5 @@ video {
 
 /* Efeito ao passar o mouse sobre o polegar */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--blue); /* Cor do polegar ao passar o mouse */
+    background: var(--hover_link); /* Cor do polegar ao passar o mouse */
 }
