@@ -350,9 +350,13 @@ video {
   align-content: center;
 }
 
-.elipse {
-  height: 60px;
-  padding-bottom: 10px;
+.eclipse {
+  height: 40px;
+  border-radius: 100%;
+}
+
+.texto_world {
+  padding-left: 10px;
 }
 
 .monaco_world_packers>h5 {
