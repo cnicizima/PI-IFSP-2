@@ -82,7 +82,8 @@ body {
 .div_imagem_principal{
     width: 100%;
     position: relative;
-    margin-bottom: 80%;
+    margin-bottom: -5%;
+    z-index: 999;
 }
 
 .imagem_principal_destino{
@@ -100,7 +101,7 @@ body {
 .div_texto_imagem_principal{
     width: 35%;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 32%;
     text-align: center;
     color: var(--gelo);
@@ -118,17 +119,6 @@ body {
     font-weight: 400;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-}
-
-.hero img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
 /* Seção de informações de contato */
 .contact-info {
   display: flex;
@@ -136,7 +126,7 @@ body {
   padding: 40px;
   position: relative;
   top: -150px; /* Para mover as divs para cima, metade dentro da imagem */
-  z-index: 1;
+  z-index: 1000;
   gap: 50px;
 }
 
@@ -169,6 +159,12 @@ body {
   margin-bottom: 10px;
 }
 
+::placeholder {
+  padding: 10px;
+  color: var(--white);
+  opacity: 0.5;
+}
+
 /* Ajuste para a sobreposição */
 .contact-info::before {
   content: "";
@@ -177,37 +173,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f0f4f8;
   z-index: -1;
   height: 50%;
   top: 50%;
 }
 
-/* Seção de perguntas frequentes */
-.faq {
-  padding: 40px;
-  text-align: center;
-}
-
-.faq h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
-  color: #333;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-}
-
-.faq-item h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.faq-item p {
-  color: #666;
-}
-
+/* form */
 /* Imagem de Mônaco na parte inferior */
 .monaco-image img {
   width: 100%;
@@ -247,7 +218,7 @@ input[type="text"], input[type="tel"], textarea {
   padding: 15px;
   border: 1px solid #c3cad1;
   border-radius: 8px;
-  background-color: #e0e7ed;
+  background-color: #496C7B;
   font-size: 1rem;
   color: #333;
 }
@@ -270,7 +241,7 @@ small {
 
 .submit-btn button {
   padding: 15px 30px;
-  background-color: #3c5461;
+  background-color: var(--blue);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -280,26 +251,15 @@ small {
 }
 
 .submit-btn button:hover {
-  background-color: #556677;
+  background-color: var(--hover_link);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fc;
-  color: #333;
-}
-
+/* faq */
 .faq-section {
   display: flex;
   justify-content: center;
   padding: 50px 0;
-  background-color: white;
+  background-color: var(--gelo);
 }
 
 .faq-container {
@@ -314,14 +274,14 @@ body {
 }
 
 .faq-text h1 {
-  font-size: 2.5rem;
-  color: #1e2026;
+  font-size: 26px;
+  color: var(--blue);
   margin-bottom: 10px;
 }
 
 .faq-text p {
-  font-size: 1rem;
-  color: #6c757d;
+  font-size: 18px;
+  color: var(--blue);
   margin-bottom: 30px;
 }
 
@@ -339,19 +299,19 @@ body {
 
 .faq-question h3 {
   font-size: 1.1rem;
-  color: #1e2026;
+  color: var(--blue);
 }
 
 .faq-icon {
   font-size: 1.5rem;
-  color: #6c757d;
+  color: var(--blue);
 }
 
 .faq-answer {
   margin-top: 10px;
   display: none;
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--blue);
 }
 
 .faq-answer p {
@@ -366,252 +326,253 @@ body {
   content: '-';
 }
 
-.contact-us {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #6c757d;
-}
-
-.contact-us a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-us a:hover {
-  text-decoration: underline;
-}
-
 .faq-image {
   flex: 1;
 }
 
 .faq-image img {
-  max-width: 100%;
+  width: 403px;
   border-radius: 8px;
+  height: 500px;
 }
 
 /* newsletter */
 
 .newsletter_container {
-    width: 60%;
-    height: 250px;
-    background-color: var(--blue);
-    margin: 10% auto 100px auto;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 30px 30px 30px 30px;
-    column-gap: 20px;
-    box-shadow: 3px 3px 25px #0b0f16b0;
-  }
-  
-  /* posiçao dos itens no grid */
-  .news_imagem1 {
-    grid-area: 1 / 1 / span 4 / span 1;
-  }
-  .news_imagem2 {
-    grid-area: 1 / 2 / span 4 / span 1;
-  }
-  .news_imagem3 {
-    grid-area: 1 / 3 / span 4 / span 1;
-  }
-  .news_titulo {
-    grid-area: 1 / 4 / span 1 / span 3;
-    /* border: 2px solid red; */
-    text-align: center;
-    font-size: 24px;
-    color: var(--white);
-  }
-  .news_paragrafo {
-    grid-area: 2 / 4 / span 1 / span 3;
-    /* border: 2px solid red; */
-    text-align: center;
-    align-content: center;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 16px;
-  }
-  .news_privacidade {
-    grid-area: 4 / 4 / span 1 / span 3;
-    /* border: 2px solid red; */
-    text-align: center;
-    align-content: end;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  .link_aqui {
-    color: var(--white);
-  }
-  
-  .link_aqui:hover {
-    color: var(--hover_link);
-  }
-  
-  /* config das imagens */
-  .imagem_newsletter {
-    height: 100%;
-    width: 90%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  /* box email e posicao no grid*/
-  .news_email {
-    display: flex;
-    grid-area: 3 / 4 / span 1 / span 3;
-    width: 100%;
-    height: 60px;
-    margin: 0 auto 0 auto;
-    /* border: 2px solid red; */
-    border-radius: 40px;
-    justify-content: center;
-    background-color: #88a4b263;
-  }
-  
-  /* items dentro do box de email */
-  .envelope {
-    align-self: center;
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  .email_campo {
-    border-radius: 15px;
-    width: 60%;
-    background-color: transparent;
-    border: none;
-    margin-right: 10px;
-  }
-  
-  /* configura o placeholder do email */
-  .email_campo::placeholder {
-    color: var(--white);
-    font-size: 12px;
-    padding: 15px;
-  }
-  
-  .email_botao {
-    background-color: var(--white);
-    border: none;
-    border-radius: 45px;
-    color: var(--blue);
-    height: 40px;
-    margin: 10px;
-    padding-left: 5px;
-    font-size: 14px;
-    width: 105px;
-  }
-  
-  /* Footer */
-  
-  /* container footer */
-  .footer {
-    background-color: var(--white);
-    width: 100%;
-    margin: 0px auto 30px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* border: 2px red solid; */
-    color: var(--blue);
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--blue);
-  }
-  
-  /* div do logo com a imagem */
-  .footer_logo_div {
-    display: flex;
-    grid-area: 1 / 1 / span2 / span1;
-    margin-left: 1%;
-    /* border: 2px red solid; */
-  }
-  
-  /* imagem logo dentro da div */
-  .logo_titulo_img {
-    height: 55px;
-    margin-left: 23.5%;
-    margin-top: 15px;
-  }
-  
-  /* p dentro da div do logo com texto */
-  .logo_titulo_texto {
-    font-size: 35px;
-    padding-top: 20px;
-  }
-  
-  /* div paragrafo */
-  .logo_texto {
-    grid-area: 3 / 1 / span2 / span1;
-    /* border: 2px red solid; */
-    width: 25%;
-    text-align: center;
-    font-size: 20px;
-    margin-left: 20%;
-  }
-  
-  /* div Contato */
-  .logo_contato_texto {
-    grid-area: 1 / 2 / span1 / span1;
-    /* border: 2px red solid; */
-    margin-left: 37%;
-    font-size: 12px;
-    margin-top: 20px;
-  }
-  
-  /* div localizaçao */
-  .campos_contato1 {
-    grid-area: 2 / 2 / span1 / span1;
-    /* border: 2px red solid; */
-    margin-left: 15%;
-    display: flex;
-    gap: 20px;
-    font-size: 16px;
-    margin-top: 35px;
-  }
-  
-  /* div telefone */
-  .campos_contato2 {
-    grid-area: 3 / 2 / span1 / span1;
-    /* border: 2px red solid; */
-    margin-left: 15%;
-    display: flex;
-    gap: 15px;
-    font-size: 16px;
-    margin-top: 28px;
-  }
-  
-  /* div email */
-  .campos_contato3 {
-    grid-area: 4 / 2 / span1 / span1;
-    /* border: 2px red solid; */
-    margin-left: 15%;
-    display: flex;
-    gap: 15px;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  /* icones font-awesome */
-  .contato_font_awesome {
-    font-size: 25px;
-  }
-  
-  /* COPYRIGHT */
-  .copyright {
-    text-align: center;
-    color: var(--blue);
-  }
+  width: 60%;
+  height: 250px;
+  background-color: var(--blue);
+  margin: 10% auto 100px auto;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 30px 30px 30px 30px;
+  column-gap: 20px;
+  box-shadow: 3px 3px 25px #0b0f16b0;
+}
 
-  /* Estilo da barra de rolagem */
+/* posiçao dos itens no grid */
+.news_imagem1 {
+  grid-area: 1 / 1 / span 4 / span 1;
+}
+
+.news_imagem2 {
+  grid-area: 1 / 2 / span 4 / span 1;
+}
+
+.news_imagem3 {
+  grid-area: 1 / 3 / span 4 / span 1;
+}
+
+.news_titulo {
+  grid-area: 1 / 4 / span 1 / span 3;
+  /* border: 2px solid red; */
+  text-align: center;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.news_paragrafo {
+  grid-area: 2 / 4 / span 1 / span 3;
+  /* border: 2px solid red; */
+  text-align: center;
+  align-content: center;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.news_privacidade {
+  grid-area: 4 / 4 / span 1 / span 3;
+  /* border: 2px solid red; */
+  text-align: center;
+  align-content: end;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.link_aqui {
+  color: var(--white);
+}
+
+.link_aqui:hover {
+  color: var(--hover_link);
+}
+
+/* config das imagens */
+.imagem_newsletter {
+  height: 100%;
+  width: 90%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* box email e posicao no grid*/
+.news_email {
+  display: flex;
+  grid-area: 3 / 4 / span 1 / span 3;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto 0 auto;
+  /* border: 2px solid red; */
+  border-radius: 40px;
+  justify-content: center;
+  background-color: #88a4b263;
+}
+
+/* items dentro do box de email */
+.envelope {
+  align-self: center;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.email_campo {
+  border-radius: 15px;
+  width: 60%;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+}
+
+/* configura o placeholder do email */
+.email_campo::placeholder {
+  color: var(--white);
+  font-size: 12px;
+  padding: 15px;
+}
+
+.email_botao {
+  background-color: var(--white);
+  border: none;
+  border-radius: 45px;
+  color: var(--blue);
+  height: 40px;
+  margin: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  width: 105px;
+}
+
+/* Footer */
+
+/* container footer */
+.footer {
+  background-color: var(--white);
+  width: 100%;
+  margin: 0px auto 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* border: 2px red solid; */
+  color: var(--blue);
+  padding-bottom: 20px;
+  
+}
+
+/* div do logo com a imagem */
+.footer_logo_div {
+  display: flex;
+  grid-area: 1 / 1 / span2 / span1;
+  margin-left: 1%;
+  /* border: 2px red solid; */
+}
+
+/* imagem logo dentro da div */
+.logo_titulo_img {
+  height: 55px;
+  margin-left: 26%;
+  margin-top: 15px;
+}
+
+/* p dentro da div do logo com texto */
+.logo_titulo_texto {
+  font-size: 35px;
+  padding-top: 20px;
+  font-family: 'higuen';
+  letter-spacing: 2px;
+  font-weight: 400;
+  
+
+}
+
+/* div paragrafo */
+.logo_texto {
+  grid-area: 3 / 1 / span2 / span1;
+  /* border: 2px red solid; */
+  width: 25%;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 20%;
+  padding-top: px;
+}
+
+/* div Contato */
+.logo_contato_texto {
+  grid-area: 1 / 2 / span1 / span1;
+  /* border: 2px red solid; */
+  margin-left: 37%;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* div localizaçao */
+.campos_contato1 {
+  grid-area: 2 / 2 / span1 / span1;
+  /* border: 2px red solid; */
+  margin-left: 15%;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  margin-top: 35px;
+}
+
+/* div telefone */
+.campos_contato2 {
+  grid-area: 3 / 2 / span1 / span1;
+  /* border: 2px red solid; */
+  margin-left: 15%;
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  margin-top: 28px;
+}
+
+/* div email */
+.campos_contato3 {
+  grid-area: 4 / 2 / span1 / span1;
+  /* border: 2px red solid; */
+  margin-left: 15%;
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* icones font-awesome */
+.contato_font_awesome {
+  font-size: 25px;
+}
+
+/* COPYRIGHT */
+.copyright {
+  text-align: center;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
     width: 12px; /* Largura da barra */
 }
 
 /* Estilo do "polegar" (parte que se arrasta) */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--light_blue); /* Cor do polegar */
+    background-color: var(--blue); /* Cor do polegar */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
@@ -623,5 +584,5 @@ body {
 
 /* Efeito ao passar o mouse sobre o polegar */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--blue); /* Cor do polegar ao passar o mouse */
+    background: var(--hover_link); /* Cor do polegar ao passar o mouse */
 }

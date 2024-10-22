@@ -1,9 +1,20 @@
+/* introduzindo variaveis */
+:root {
+    --white: #ffffff;
+    --gelo: #eef2f6;
+    --blue: #496c7b;
+    --light_blue: #88a4b2;
+    --dark_blue: #0b0f16;
+    --gray: #57606d;
+    --hover_link: #88a4b2;
+  }
+
 /* div da esquerda */
 .carrinho_principal{
     border: 2px solid red;
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -14,13 +25,52 @@
     border: 2px solid green;
     flex-grow: 4;
     padding: 10px;
+    color: var(--blue);
 }
 
 /* div da direta, checkout */
 .checkout{
     border: 2px solid blue;
     flex-grow: 1;
-    padding: 10px;
+    padding: 50px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 18px;
+}
+
+.checkout button {
+    background-color: var(--light_blue);
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.usar {
+    width: 20%;
+    padding: 8px;
+}
+
+.pagamento {
+    width: 100%;
+    padding: 8px;
+}
+
+.checkout p {
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.checkout input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+::placeholder {
+    opacity: 0.5;
 }
 
 /* div superior com a escirta seu carrinho e "3itens" */
@@ -70,4 +120,36 @@
 .continuar_comprando{
     display: flex;
     gap: 5px;
+}
+
+::placeholder {
+    color: var(--blue);
+}
+
+.custo_total {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custo_total h2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.custo_total h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.hr_final {
+    margin-top: 350px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.hr_comeco {
+    opacity: 0.5;
+    margin: 20px 0 20px 0;
 }
