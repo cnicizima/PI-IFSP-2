@@ -140,7 +140,7 @@ section.about-us .card p {
 }
 
 .imagem_principal_destino {
-  height: 750px;
+  height: 600px;
   width: 100%;
   filter: brightness(0.5);
   background-image: url(../img/img_sobre_nos/pexels-pierre-blache-651604-3108581.jpg);

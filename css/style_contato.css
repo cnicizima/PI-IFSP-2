@@ -100,7 +100,7 @@ body {
 .div_texto_imagem_principal{
     width: 35%;
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 32%;
     text-align: center;
     color: var(--gelo);
