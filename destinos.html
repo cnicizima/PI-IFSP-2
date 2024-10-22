@@ -19,7 +19,7 @@
   
     </head>
   <body>
-    <div class="container">
+    <div class="container_principal">
 
         <!-- header -->
         <header class="header">
@@ -33,60 +33,50 @@
                   <li><a href="destinos.html" class="links_nav">DESTINOS</a></li>
                   <li><a href="sobre_nos.html" class="links_nav">SOBRE NÓS</a></li>
                   <li><a href="contato.html" class="links_nav">CONTATO</a></li>
-                  <li><a href="#" class="links_nav" onclick="document.getElementById('modal_cadastro').showModal()">ACESSAR</a></li>
+                  <li><a href="#" class="links_nav" onclick="openModal('modal_cadastro')">ACESSAR</a></li>
               </ul>
           </nav>
       </header>
 
       <!-- modal de login e cadastro -->
 
-
       <dialog id="modal_cadastro">
-          <div class="container_modal_cadastro">
-              <div class="xizzinho">
-                  <img src="img/img_index/logo_branca.png" class="cadastro_logo_img">
-                  <button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()"><i
-                          class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i></i></button>
-              </div>
-              <!-- <img src="img/img_index/logo.png" class="cadastro_logo_img"> -->
-              <!-- <div class="xizzinho"><button class="btn_fechar_modal" onclick="document.getElementById('modal_cadastro').close()">X</button></div> -->
-              <h4>Comece aqui!</h4>
-              <h1>Crie <b>sua conta</b></h1>
-              <input type="text" class="input" name="cadastro_nome" id="cadastro_nome"
-                  placeholder="Digite seu nome..."><br>
-              <input type="email" class="input" name="cadastro_email" id="cadastro_email"
-                  placeholder="Digite seu email..."><br>
-              <input type="password" class="input" name="cadastro_senha" id="cadastro_senha"
-                  placeholder="Digite sua senha..."><br>
-              <button class="cadastro">Cadastre-se</button>
-              <h4>Já é cadastrado? <a href="#" class="entre"
-                      onclick="document.getElementById('modal_cadastro').close(); document.getElementById('modal_login').showModal()">Entre
-                      aqui</a></h4>
-          </div>
-      </dialog>
-
-
-      <dialog id="modal_login">
-          <div class="container_modal_login">
-              <div class="xizzinho">
-                  <img src="img/img_index/logo_branca.png" class="login_logo_img">
-                  <button class="btn_fechar_modal"
-                      onclick="document.getElementById('modal_login').close()"><i class="fa-solid fa-xmark fa-2xl"
-                          style="color: #eef2f6;"></i></i></button>
-              </div>
-              <h4>Seu bilhete para Mônaco está aqui</h4>
-              <h1>Acesse <b>sua conta</b></h1>
-              <!-- <h4><a href="#" class="entre">Esqueceu a senha?</a></h4> -->
-              <input type="email" class="input" name="login_email" id="login_email"
-                  placeholder="Digite seu email..."><br>
-              <input type="password" class="input" name="login_senha" id="login_senha"
-                  placeholder="Digite sua senha..."><br>
-              <button class="login">Entrar</button>
-              <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre"
-                      onclick="document.getElementById('modal_login').close(); document.getElementById('modal_cadastro').showModal()">Crie
-                      sua conta</a></h4>
-          </div>
-      </dialog>
+        <div class="container_modal_cadastro" onclick="event.stopPropagation();">
+            <div class="xizzinho">
+                <img src="img/img_index/logo_branca.png" class="cadastro_logo_img">
+                <button class="btn_fechar_modal" onclick="closeModal('modal_cadastro')">
+                    <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
+                </button>
+            </div>
+            <h4>Comece aqui!</h4>
+            <h1>Crie <b>sua conta</b></h1>
+            <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..." required><br>
+            <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..." required><br>
+            <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..." required><br>
+            <button class="cadastro" onclick="toggleBlur(true);">Cadastre-se</button>
+            <h4>Já é cadastrado? <a href="#" class="entre" onclick="closeModal('modal_cadastro'); openModal('modal_login');">Entre aqui</a></h4>
+        </div>
+    </dialog>
+    
+    <dialog id="modal_login">
+        <div class="container_modal_login" onclick="event.stopPropagation();">
+            <div class="xizzinho">
+                <img src="img/img_index/logo_branca.png" class="login_logo_img">
+                <button class="btn_fechar_modal" onclick="closeModal('modal_login')">
+                    <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
+                </button>
+            </div>
+            <h4>Seu bilhete para Mônaco está aqui</h4>
+            <h1>Acesse <b>sua conta</b></h1>
+            <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..." required><br>
+            <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..." required><br>
+            <button class="login" onclick="toggleBlur(true);">Entrar</button>
+            <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre" onclick="closeModal('modal_login'); openModal('modal_cadastro');">Crie sua conta</a></h4>
+        </div>
+    </dialog>
+    
+    <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
+    <button onclick="openModal('modal_login')">Abrir Login</button>
 
 
       <!-- div da imagem principal (tem a div da imagem, div textos e div do grid como filhos)-->
@@ -477,6 +467,7 @@
       </div>
       
       <h3 class="copyright">@Copyright by Azure 2024 - Todos os direitos reservados. </h3>
+    </div>
 
     <!-- js para os icones fontawesoma -->
     <script src="https://kit.fontawesome.com/b7057748ce.js" crossorigin="anonymous"></script>
