@@ -1,0 +1,73 @@
+/* div da esquerda */
+.carrinho_principal{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+/* div do carrinho e pacotes */
+.carrinho{
+    border: 2px solid green;
+    flex-grow: 4;
+    padding: 10px;
+}
+
+/* div da direta, checkout */
+.checkout{
+    border: 2px solid blue;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* div superior com a escirta seu carrinho e "3itens" */
+.seu_carrinho{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* div "detahes, quatde e preço */
+.detalhes{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* div que contem foto, pacote, quatede e preço */
+.pacote{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+/* div que contem a foto com o texto descritivo */
+.pacote_foto_texto{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* div só do texto descritivo */
+.pacote_texto {
+    width: 200px;
+}
+
+
+/* config da imagem - tlvz mude se colocar icone */
+.pacote_foto_texto img{
+    width: 100px;
+}
+
+/* div q tem + numero e - */
+.mais_menos{
+    display: flex;
+}
+
+/* ultima div com icone e texto */
+.continuar_comprando{
+    display: flex;
+    gap: 5px;
+}
