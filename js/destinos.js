@@ -22,6 +22,7 @@ function resetTimeAnimation() {
     runningTime.style.animation = null 
     runningTime.style.animation = 'runningTime 7s linear 1 forwards'
 }
+
 function showSlider(type) {
     let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
     if(type === 'next'){
@@ -44,3 +45,5 @@ function showSlider(type) {
 }
 // Start the initial animation 
 resetTimeAnimation()
+
+
