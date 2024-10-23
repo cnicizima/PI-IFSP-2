@@ -11,26 +11,28 @@
 
 /* div da esquerda */
 .carrinho_principal{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    background-color: var(--white);
+    margin-bottom: 50px;
 }
 
 /* div do carrinho e pacotes */
 .carrinho{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     flex-grow: 4;
-    padding: 10px;
+    padding: 50px;
     color: var(--blue);
 }
 
 /* div da direta, checkout */
 .checkout{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     flex-grow: 1;
     padding: 50px;
     background-color: var(--blue);
@@ -77,13 +79,21 @@
 .seu_carrinho{
     display: flex;
     justify-content: space-between;
+    margin: -5px 5px 10px;
+    font-size: 12px;
 }
 
 /* div "detahes, quatde e preço */
 .detalhes{
     display: flex;
     justify-content: space-between;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0px 15px 30px 15px;
+    margin-left: -15px;
 }
+
 
 /* div que contem foto, pacote, quatede e preço */
 .pacote{
@@ -97,29 +107,52 @@
 .pacote_foto_texto{
     display: flex;
     justify-content: space-between;
+    align-items: start;
 }
+.h3_carrinho {
+    opacity: 0.5;
+}
+
+
 
 
 /* div só do texto descritivo */
 .pacote_texto {
     width: 200px;
+    padding: 0px 10px 15px 12px;
+    font-size: 10px;
+    color: var(--blue);
 }
 
 
 /* config da imagem - tlvz mude se colocar icone */
 .pacote_foto_texto img{
     width: 100px;
+    height: 100px;
+}
+
+.preco_pacote {
+    opacity: 0.6;
+    font-size: 10px;
 }
 
 /* div q tem + numero e - */
 .mais_menos{
     display: flex;
+    align-items: baseline;
+    padding: 10px;
+    gap: 10px;
+    font-size: 13px;
+    margin-left: -200px;
 }
 
 /* ultima div com icone e texto */
 .continuar_comprando{
     display: flex;
-    gap: 5px;
+    gap: 15px;
+    margin-top: 270px;
+    align-items: center;
+    font-size: 12px;
 }
 
 ::placeholder {
@@ -151,5 +184,5 @@
 
 .hr_comeco {
     opacity: 0.5;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 10px 0;
 }

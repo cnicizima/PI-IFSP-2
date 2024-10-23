@@ -214,9 +214,9 @@ form {
 }
 
 input[type="text"], input[type="tel"], textarea {
-  width: 100%;
+  width: 40%;
   padding: 15px;
-  border: 1px solid #c3cad1;
+  border: 1px solid var(--blue);
   border-radius: 8px;
   background-color: #496C7B;
   font-size: 1rem;
