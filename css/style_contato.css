@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'higuen';
-    src: url('higuen.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "higuen";
+  src: url("higuen.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
   --dark_blue: #0b0f16;
   --gray: #57606d;
   --hover_link: #88a4b2;
+  --soft_blue: #64818f;
 }
 
 /* header */
@@ -42,7 +43,7 @@ body {
 .logo {
   color: var(--blue);
   font-size: 35px;
-  font-family: 'higuen';
+  font-family: "higuen";
   letter-spacing: 5px;
   font-weight: 400;
   padding-bottom: 6px;
@@ -79,44 +80,44 @@ body {
 
 /* Imagem principal */
 
-.div_imagem_principal{
-    width: 100%;
-    position: relative;
-    margin-bottom: -5%;
-    z-index: 999;
+.div_imagem_principal {
+  width: 100%;
+  position: relative;
+  margin-bottom: -5%;
+  z-index: 999;
 }
 
-.imagem_principal_destino{
-    height: 600px;
-    width: 100%;
-    filter: brightness(.5);
-    background-image: url(../img/img_contato/pexels-hudson-mcdonald-692563691-28193003.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.imagem_principal_destino {
+  height: 600px;
+  width: 100%;
+  filter: brightness(0.5);
+  background-image: url(../img/img_contato/pexels-hudson-mcdonald-692563691-28193003.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* div posicao texto sobre a imagem */
-.div_texto_imagem_principal{
-    width: 35%;
-    position: absolute;
-    top: 20%;
-    left: 32%;
-    text-align: center;
-    color: var(--gelo);
+.div_texto_imagem_principal {
+  width: 35%;
+  position: absolute;
+  top: 20%;
+  left: 32%;
+  text-align: center;
+  color: var(--gelo);
 }
 
 /* textos na div */
-.div_texto_imagem_principal h1{
-    font-size: 48px;
-    font-weight: 500;
+.div_texto_imagem_principal h1 {
+  font-size: 48px;
+  font-weight: 500;
 }
 
-.div_texto_imagem_principal h2{
-    font-size: 20px;
-    padding: 0 20px;
-    font-weight: 400;
+.div_texto_imagem_principal h2 {
+  font-size: 20px;
+  padding: 0 20px;
+  font-weight: 400;
 }
 
 /* Seção de informações de contato */
@@ -132,9 +133,9 @@ body {
 
 .info-box {
   text-align: center;
-  width: 275px;
+  width: 340px;
   height: 265px;
-  background-color: #64818f;
+  background-color: var(--soft_blue);
   padding: 50px;
   border-radius: 30px;
   color: #fff;
@@ -150,7 +151,7 @@ body {
 
 .info-box p {
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 18px;
   padding-top: 15px;
 }
 
@@ -209,18 +210,16 @@ form {
 
 .input-group {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
+  width: 122%;
 }
 
-input[type="text"], input[type="tel"], textarea {
-  width: 40%;
-  padding: 15px;
-  border: 1px solid var(--blue);
-  border-radius: 8px;
-  background-color: #496C7B;
-  font-size: 1rem;
-  color: #333;
+#contato_textos {
+  width: 100%;
+}
+
+.contatos_textox {
+  width: 50%;
 }
 
 textarea {
@@ -248,6 +247,7 @@ small {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-weight: 500;
 }
 
 .submit-btn button:hover {
@@ -323,7 +323,7 @@ small {
 }
 
 .faq-item.active .faq-icon {
-  content: '-';
+  content: "-";
 }
 
 .faq-image {
@@ -342,7 +342,7 @@ small {
   width: 60%;
   height: 250px;
   background-color: var(--blue);
-  margin: 10% auto 100px auto;
+  margin: 5% auto 100px auto;
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -469,7 +469,6 @@ small {
   /* border: 2px red solid; */
   color: var(--blue);
   padding-bottom: 20px;
-  
 }
 
 /* div do logo com a imagem */
@@ -491,11 +490,9 @@ small {
 .logo_titulo_texto {
   font-size: 35px;
   padding-top: 20px;
-  font-family: 'higuen';
+  font-family: "higuen";
   letter-spacing: 2px;
   font-weight: 400;
-  
-
 }
 
 /* div paragrafo */
@@ -567,22 +564,22 @@ small {
 
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra */
+  width: 12px; /* Largura da barra */
 }
 
 /* Estilo do "polegar" (parte que se arrasta) */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--blue); /* Cor do polegar */
-    border-radius: 10px; /* Bordas arredondadas */
+  background-color: var(--blue); /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 /* Estilo da trilha (parte que fica atrás do polegar) */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor da trilha */
-    border-radius: 10px; /* Bordas arredondadas */
+  background: #f1f1f1; /* Cor da trilha */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 /* Efeito ao passar o mouse sobre o polegar */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--hover_link); /* Cor do polegar ao passar o mouse */
+  background: var(--hover_link); /* Cor do polegar ao passar o mouse */
 }

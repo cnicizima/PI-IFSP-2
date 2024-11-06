@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'higuen';
-  src: url('higuen.otf') format('opentype');
+  font-family: "higuen";
+  src: url("higuen.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -38,13 +38,12 @@ body {
   z-index: 1001;
   background-color: var(--gelo);
   width: 100%;
-  
 }
 
 .logo {
   color: var(--blue);
   font-size: 35px;
-  font-family: 'higuen';
+  font-family: "higuen";
   letter-spacing: 2px;
   font-weight: 400;
   padding-bottom: 6px;
@@ -53,7 +52,6 @@ body {
 .container_imagem_logo {
   display: flex;
   align-items: center;
-  
 }
 
 .imagem_logo {
@@ -67,7 +65,7 @@ body {
   margin-top: 12px;
 }
 
-.lista_nav>li {
+.lista_nav > li {
   list-style-type: none;
 }
 
@@ -75,9 +73,7 @@ body {
   color: var(--blue);
   text-decoration: none;
   font-weight: 600;
-  
 }
-
 
 .links_nav:hover {
   color: var(--hover_link);
@@ -86,7 +82,6 @@ body {
 .links_nav:link {
   color: var(--blue);
 }
-
 
 /* imagem principal */
 
@@ -99,7 +94,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 /* container com a imagem */
@@ -116,26 +110,26 @@ body {
   color: var(--gelo);
 }
 
-.textos_principal>h3 {
+.textos_principal > h3 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.textos_principal>h1 {
+.textos_principal > h1 {
   font-size: 48px;
   line-height: 1;
   font-weight: 500;
 }
 
-.textos_principal>h4 {
+.textos_principal > h4 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
 /* css do botao reserve aqui */
-.textos_principal>button {
+.textos_principal > button {
   color: var(--blue);
   font-weight: 700;
   font-size: 16px;
@@ -149,6 +143,11 @@ body {
 
 .reserve {
   box-shadow: 3px 3px 8px black;
+}
+
+.reserve > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* container azul "porque monaco" */
@@ -167,7 +166,7 @@ body {
   color: var(--white);
 }
 
-.porque_monaco_container>h1 {
+.porque_monaco_container > h1 {
   display: block;
   text-align: center;
   padding-top: 20px;
@@ -315,7 +314,6 @@ video {
   transition: 1s opacity;
 }
 
-
 /* div que contem tudo */
 .monaco_fundo_caixa_texto {
   background-color: var(--blue);
@@ -330,14 +328,14 @@ video {
 }
 
 /* textos na caixa */
-.monaco_fundo_caixa_texto>h2 {
+.monaco_fundo_caixa_texto > h2 {
   font-size: 50px;
   text-align: center;
   font-weight: 500;
   font-size: 35px;
 }
 
-.monaco_fundo_caixa_texto>h4 {
+.monaco_fundo_caixa_texto > h4 {
   font-size: 15px;
   text-align: center;
   margin-top: 30px;
@@ -360,7 +358,7 @@ video {
   padding-left: 10px;
 }
 
-.monaco_world_packers>h5 {
+.monaco_world_packers > h5 {
   font-size: 16px;
   padding-top: 14px;
   font-weight: 600;
@@ -499,7 +497,6 @@ video {
   /* border: 2px red solid; */
   color: var(--blue);
   padding-bottom: 20px;
-  
 }
 
 /* div do logo com a imagem */
@@ -521,11 +518,9 @@ video {
 .logo_titulo_texto {
   font-size: 35px;
   padding-top: 20px;
-  font-family: 'higuen';
+  font-family: "higuen";
   letter-spacing: 2px;
   font-weight: 400;
-  
-
 }
 
 /* div paragrafo */
@@ -597,22 +592,22 @@ video {
 
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra */
+  width: 12px; /* Largura da barra */
 }
 
 /* Estilo do "polegar" (parte que se arrasta) */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--blue); /* Cor do polegar */
-    border-radius: 10px; /* Bordas arredondadas */
+  background-color: var(--blue); /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 /* Estilo da trilha (parte que fica atrás do polegar) */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor da trilha */
-    border-radius: 10px; /* Bordas arredondadas */
+  background: #f1f1f1; /* Cor da trilha */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 /* Efeito ao passar o mouse sobre o polegar */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--hover_link); /* Cor do polegar ao passar o mouse */
+  background: var(--hover_link); /* Cor do polegar ao passar o mouse */
 }

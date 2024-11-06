@@ -1,250 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Azure  |  Página Inicial</title>
+    <title>Azure | Página Inicial</title>
     <!-- link Fivicon -->
-    <link rel="icon" href="img/img_favicon/logo_branca16x16.png" type="image/png">
+    <link
+      rel="icon"
+      href="img/img_favicon/logo_branca16x16.png"
+      type="image/png"
+    />
 
     <!-- link reset -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
 
     <!-- link css -->
-    <link rel="stylesheet" href="css/style_contato.css">
-    <link rel="stylesheet" href="css/modal-cadastro.css">
+    <link rel="stylesheet" href="css/style_contato.css" />
+    <link rel="stylesheet" href="css/modal-cadastro.css" />
 
     <!-- import montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container_principal">
+      <!-- header -->
+      <header class="header">
+        <div class="container_imagem_logo">
+          <img
+            src="img/img_index/logo_azul.png"
+            class="imagem_logo"
+            alt="logo"
+          />
+          <h1 class="logo">Azure</h1>
+        </div>
+        <nav>
+          <ul class="lista_nav">
+            <li><a href="index.html" class="links_nav">HOME</a></li>
+            <li><a href="destinos.html" class="links_nav">DESTINOS</a></li>
+            <li><a href="sobre_nos.html" class="links_nav">SOBRE NÓS</a></li>
+            <li><a href="contato.html" class="links_nav">CONTATO</a></li>
+            <li>
+              <a
+                href="#"
+                class="links_nav"
+                onclick="openModal('modal_cadastro')"
+                >ACESSAR</a
+              >
+            </li>
+            <li>
+              <a href="carrinho.html"
+                ><i
+                  class="fa-solid fa-cart-shopping fa-xl"
+                  style="color: #496c7b"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-        <!-- header -->
-        <header class="header">
-            <div class="container_imagem_logo">
-                <img src="img/img_index/logo_azul.png" class="imagem_logo" alt="logo">
-                <h1 class="logo">Azure</h1>
-            </div>
-            <nav>
-                <ul class="lista_nav">
-                    <li><a href="index.html" class="links_nav">HOME</a></li>
-                    <li><a href="destinos.html" class="links_nav">DESTINOS</a></li>
-                    <li><a href="sobre_nos.html" class="links_nav">SOBRE NÓS</a></li>
-                    <li><a href="contato.html" class="links_nav">CONTATO</a></li>
-                    <li><a href="#" class="links_nav" onclick="openModal('modal_cadastro')">ACESSAR</a></li>
-                    <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #496c7b;"></i></a></li>
-                </ul>
-            </nav>
-        </header>
+      <!-- modal de login e cadastro -->
 
-        <!-- modal de login e cadastro -->
+      <dialog id="modal_cadastro">
+        <div
+          class="container_modal_cadastro"
+          onclick="event.stopPropagation();"
+        >
+          <div class="xizzinho">
+            <img
+              src="img/img_index/logo_branca.png"
+              class="cadastro_logo_img"
+            />
+            <button
+              class="btn_fechar_modal"
+              onclick="closeModal('modal_cadastro')"
+            >
+              <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
+            </button>
+          </div>
+          <h4>Comece aqui!</h4>
+          <h1>Crie <b>sua conta</b></h1>
+          <input
+            type="text"
+            class="input"
+            name="cadastro_nome"
+            id="cadastro_nome"
+            placeholder="Digite seu nome..."
+            required
+          /><br />
+          <input
+            type="email"
+            class="input"
+            name="cadastro_email"
+            id="cadastro_email"
+            placeholder="Digite seu email..."
+            required
+          /><br />
+          <input
+            type="password"
+            class="input"
+            name="cadastro_senha"
+            id="cadastro_senha"
+            placeholder="Digite sua senha..."
+            required
+          /><br />
+          <button class="cadastro" onclick="toggleBlur(true);">
+            Cadastre-se
+          </button>
+          <h4>
+            Já é cadastrado?
+            <a
+              href="#"
+              class="entre"
+              onclick="closeModal('modal_cadastro'); openModal('modal_login');"
+              >Entre aqui</a
+            >
+          </h4>
+        </div>
+      </dialog>
 
+      <dialog id="modal_login">
+        <div class="container_modal_login" onclick="event.stopPropagation();">
+          <div class="xizzinho">
+            <img src="img/img_index/logo_branca.png" class="login_logo_img" />
+            <button
+              class="btn_fechar_modal"
+              onclick="closeModal('modal_login')"
+            >
+              <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
+            </button>
+          </div>
+          <h4>Seu bilhete para Mônaco está aqui</h4>
+          <h1>Acesse <b>sua conta</b></h1>
+          <input
+            type="email"
+            class="input"
+            name="login_email"
+            id="login_email"
+            placeholder="Digite seu email..."
+            required
+          /><br />
+          <input
+            type="password"
+            class="input"
+            name="login_senha"
+            id="login_senha"
+            placeholder="Digite sua senha..."
+            required
+          /><br />
+          <button class="login" onclick="toggleBlur(true);">Entrar</button>
+          <h4>
+            <a href="#" class="entre">Esqueceu a senha?</a> <br />
+            <a
+              href="#"
+              class="entre"
+              onclick="closeModal('modal_login'); openModal('modal_cadastro');"
+              >Crie sua conta</a
+            >
+          </h4>
+        </div>
+      </dialog>
 
-        <dialog id="modal_cadastro">
-            <div class="container_modal_cadastro" onclick="event.stopPropagation();">
-                <div class="xizzinho">
-                    <img src="img/img_index/logo_branca.png" class="cadastro_logo_img">
-                    <button class="btn_fechar_modal" onclick="closeModal('modal_cadastro')">
-                        <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
-                    </button>
-                </div>
-                <h4>Comece aqui!</h4>
-                <h1>Crie <b>sua conta</b></h1>
-                <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..." required><br>
-                <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..." required><br>
-                <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..." required><br>
-                <button class="cadastro" onclick="toggleBlur(true);">Cadastre-se</button>
-                <h4>Já é cadastrado? <a href="#" class="entre" onclick="closeModal('modal_cadastro'); openModal('modal_login');">Entre aqui</a></h4>
-            </div>
-        </dialog>
-        
-        <dialog id="modal_login">
-            <div class="container_modal_login" onclick="event.stopPropagation();">
-                <div class="xizzinho">
-                    <img src="img/img_index/logo_branca.png" class="login_logo_img">
-                    <button class="btn_fechar_modal" onclick="closeModal('modal_login')">
-                        <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
-                    </button>
-                </div>
-                <h4>Seu bilhete para Mônaco está aqui</h4>
-                <h1>Acesse <b>sua conta</b></h1>
-                <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..." required><br>
-                <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..." required><br>
-                <button class="login" onclick="toggleBlur(true);">Entrar</button>
-                <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre" onclick="closeModal('modal_login'); openModal('modal_cadastro');">Crie sua conta</a></h4>
-            </div>
-        </dialog>
-        
-        <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
-        <button onclick="openModal('modal_login')">Abrir Login</button>
+      <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
+      <button onclick="openModal('modal_login')">Abrir Login</button>
 
-            <div class="div_imagem_principal">
-                <img
-                  src="img/img_index/monaco_fundo.webp"
-                  class="imagem_principal_destino"
-                />
-        
-                <!-- div do texto sobre a imagem -->
-                <div class="div_texto_imagem_principal">
-                  <h1>Fale <b>conosco!</b> </h1>
-                  <h2>Bem-vindo à Azure, sua porta de entrada para o deslumbrante mundo de Mônaco! Nossa equipe está dedicada a transformar seu sonho de visitar este elegante destino em realidade.</h2>
-                </div>
+      <div class="div_imagem_principal">
+        <img
+          src="img/img_index/monaco_fundo.webp"
+          class="imagem_principal_destino"
+        />
+
+        <!-- div do texto sobre a imagem -->
+        <div class="div_texto_imagem_principal">
+          <h1>Fale <b>conosco!</b></h1>
+          <h2>
+            Bem-vindo à Azure, sua porta de entrada para o deslumbrante mundo de
+            Mônaco! Nossa equipe está dedicada a transformar seu sonho de
+            visitar este elegante destino em realidade.
+          </h2>
+        </div>
 
         <section class="contact-info">
-            <div class="info-box">
-                <i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff"></i>
-                <h3>Localização</h3>
-                <p>Avenue de la Costa, 25, 98000 Mônaco, Mônaco</p>
-            </div>
-            <div class="info-box">
-                <i class="fa-solid fa-phone fa-2xl" style="color: #ffffff"></i>
-                <h3>Telefone</h3>
-                <p>+377 99 70 00 00<br />+377 59 60 12 34</p>
-            </div>
-                <div class="info-box">
-                  <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff"></i>
-                  <h3>Email</h3>
-                  <p>azuremonaco@gmail.com</p>
-                </div>
-                <div class="info-box">
-                  <i class="fa-solid fa-clock fa-2xl" style="color: #ffffff"></i>
-                  <h3>Horários</h3>
-                  <p>Horário de check-in: 14:00<br />Horário de check-out: 12:00</p>
-                </div>
-              </section>
-            </div>
-        
-            <section class="faq-section">
-                <div class="faq-container">
-                    <!-- Left FAQ Text Section -->
-                    <div class="faq-text">
-                        <h1>Perguntas frequentes</h1>
-                        <p>Encontre aqui as respostas para as principais dúvidas sobre sua viagem exclusiva a Mônaco.</p>
-        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>Como funciona a política de cancelamento da agência?</h3>
-                                <span class="faq-icon"><i class="fa-solid fa-circle-arrow-down fa-xs" style="color: #496c7b;"></i></span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Nossa política de cancelamento varia de acordo com o fornecedor e o tipo de pacote escolhido. Recomendamos verificar os termos específicos no momento da reserva, mas trabalhamos para oferecer a maior flexibilidade possível.</p>
-                            </div>
-                        </div>
-        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>Posso pagar minha viagem em parcelas?</h3>
-                                <span class="faq-icon"><i class="fa-solid fa-circle-arrow-down fa-xs" style="color: #496c7b;"></i></span>
-                            </div>
-                            <div class="faq-answer hidden">
-                                <p>Sim, oferecemos opções de pagamento parcelado, dependendo do valor total do pacote. Consulte nossa equipe para mais detalhes sobre as condições de parcelamento.</p>
-                            </div>
-                        </div>
-        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <h3>Preciso de visto para visitar Mônaco?</h3>
-                                <span class="faq-icon"><i class="fa-solid fa-circle-arrow-down fa-xs" style="color: #496c7b;"></i></span>
-                            </div>
-                            <div class="faq-answer hidden">
-                                <p>Depende do seu país de origem. Se você é cidadão de um país pertencente à União Europeia ou ao Espaço Schengen, não precisa de visto para estadias de até 90 dias. Para outros países, recomenda-se verificar as exigências junto à embaixada.</p>
-                            </div>
-                        </div>
-        
-                    </div>
-        
-                    <!-- Right Image Section -->
-                    <div class="faq-image">
-                        <img src="img/img_contato/faq.jpg">
-                    </div>
-                </div>
-            </section>
+          <div class="info-box">
+            <i
+              class="fa-solid fa-location-dot fa-2xl"
+              style="color: #ffffff"
+            ></i>
+            <h3>Localização</h3>
+            <p>Avenue de la Costa, 25, 98000 Mônaco, Mônaco</p>
+          </div>
+          <div class="info-box">
+            <i class="fa-solid fa-phone fa-2xl" style="color: #ffffff"></i>
+            <h3>Telefone</h3>
+            <p>+377 99 70 00 00<br />+377 59 60 12 34</p>
+          </div>
+          <div class="info-box">
+            <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff"></i>
+            <h3>Email</h3>
+            <p>azuremonaco@gmail.com</p>
+          </div>
+          <div class="info-box">
+            <i class="fa-solid fa-clock fa-2xl" style="color: #ffffff"></i>
+            <h3>Horários</h3>
+            <p>Check-in: 14:00<br />Check-out: 12:00</p>
+          </div>
+        </section>
+      </div>
 
-            <section class="form-section">
-                <div class="container">
-                    <h2>Escreva uma mensagem para nós!</h2>
-                    <form action="#" method="POST">
-                        <div class="input-group">
-                            <input type="text" name="first-name" placeholder="Primeiro Nome">
-                            <input type="text" name="last-name" placeholder="Sobrenome">
-                        </div>
-                        <div class="input-group">
-                            <input type="tel" name="phone" placeholder="Telefone">
-                            <input type="text" name="subject" placeholder="Assunto">
-                        </div>
-                        <textarea name="message" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
-                        <small>Coloque o mínimo de informação pessoal.</small>
-                        <div class="submit-btn">
-                            <button type="submit">ENTRE EM CONTATO</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+      <section class="faq-section">
+        <div class="faq-container">
+          <!-- Left FAQ Text Section -->
+          <div class="faq-text">
+            <h1>Perguntas frequentes</h1>
+            <p>
+              Encontre aqui as respostas para as principais dúvidas sobre sua
+              viagem exclusiva a Mônaco.
+            </p>
 
-                    <!-- Newsletter -->
-        <div class="newsletter_container">
-            <div class="news_imagem1"><img src="img/img_index/news1.png" class="imagem_newsletter"></div>
-            <div class="news_imagem2"><img src="img/img_index/news2.png" class="imagem_newsletter"></div>
-            <div class="news_imagem3"><img src="img/img_index/news3.png" class="imagem_newsletter"></div>
-            <h1 class="news_titulo">Assine nossa newsletter e receba nossas ofertas!</h1>
-            <h3 class="news_paragrafo">e ganhe 20% de desconto em sua primeira compra</h3>
-            <div class="news_email">
-               <i class="fa-regular fa-envelope envelope" style="color: white; margin-left: 20px;"></i>
-               <input type="email" class="email_campo" placeholder="Insira seu e-mail..."> <button type="button" class="email_botao"> <b>Inscreva-se</b></button> 
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Como funciona a política de cancelamento da agência?</h3>
+                <span class="faq-icon"
+                  ><i
+                    class="fa-solid fa-circle-arrow-down fa-xs"
+                    style="color: #496c7b"
+                  ></i
+                ></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Nossa política de cancelamento varia de acordo com o
+                  fornecedor e o tipo de pacote escolhido. Recomendamos
+                  verificar os termos específicos no momento da reserva, mas
+                  trabalhamos para oferecer a maior flexibilidade possível.
+                </p>
+              </div>
             </div>
-            <h3 class="news_privacidade">Leia nossa política de privacidade <a href="#" class="link_aqui">aqui</a></h3>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Posso pagar minha viagem em parcelas?</h3>
+                <span class="faq-icon"
+                  ><i
+                    class="fa-solid fa-circle-arrow-down fa-xs"
+                    style="color: #496c7b"
+                  ></i
+                ></span>
+              </div>
+              <div class="faq-answer hidden">
+                <p>
+                  Sim, oferecemos opções de pagamento parcelado, dependendo do
+                  valor total do pacote. Consulte nossa equipe para mais
+                  detalhes sobre as condições de parcelamento.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Preciso de visto para visitar Mônaco?</h3>
+                <span class="faq-icon"
+                  ><i
+                    class="fa-solid fa-circle-arrow-down fa-xs"
+                    style="color: #496c7b"
+                  ></i
+                ></span>
+              </div>
+              <div class="faq-answer hidden">
+                <p>
+                  Depende do seu país de origem. Se você é cidadão de um país
+                  pertencente à União Europeia ou ao Espaço Schengen, não
+                  precisa de visto para estadias de até 90 dias. Para outros
+                  países, recomenda-se verificar as exigências junto à
+                  embaixada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image Section -->
+          <div class="faq-image">
+            <img src="img/img_contato/faq.jpg" />
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="container">
+          <h2>Escreva uma mensagem para nós!</h2>
+          <form action="#" method="POST">
+            <div class="input-group">
+              <input
+                type="text"
+                name="first-name"
+                placeholder="Primeiro Nome"
+              />
+              <input type="text" name="last-name" placeholder="Sobrenome" />
+            </div>
+            <div class="input-group">
+              <input
+                type="tel"
+                name="phone"
+                class="contatos_textox"
+                placeholder="Telefone"
+              />
+              <input type="text" name="subject" placeholder="Assunto" />
+            </div>
+            <textarea
+              name="message"
+              rows="5"
+              id="contato_textos"
+              placeholder="Escreva sua mensagem aqui..."
+            ></textarea>
+            <small>Coloque o mínimo de informação pessoal.</small>
+            <div class="submit-btn">
+              <button type="submit">ENTRE EM CONTATO</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <div class="newsletter_container">
+        <div class="news_imagem1">
+          <img src="img/img_index/news1.png" class="imagem_newsletter" />
+        </div>
+        <div class="news_imagem2">
+          <img src="img/img_index/news2.png" class="imagem_newsletter" />
+        </div>
+        <div class="news_imagem3">
+          <img src="img/img_index/news3.png" class="imagem_newsletter" />
+        </div>
+        <h1 class="news_titulo">
+          Assine nossa newsletter e receba nossas ofertas!
+        </h1>
+        <h3 class="news_paragrafo">
+          e ganhe 20% de desconto em sua primeira compra
+        </h3>
+        <div class="news_email">
+          <i
+            class="fa-regular fa-envelope envelope"
+            style="color: white; margin-left: 20px"
+          ></i>
+          <input
+            type="email"
+            class="email_campo"
+            placeholder="Insira seu e-mail..."
+          />
+          <button type="button" class="email_botao"><b>Inscreva-se</b></button>
+        </div>
+        <h3 class="news_privacidade">
+          Leia nossa política de privacidade
+          <a href="#" class="link_aqui">aqui</a>
+        </h3>
+      </div>
+
+      <!-- Footer -->
+
+      <div class="footer">
+        <div class="footer_logo_div">
+          <img src="img/img_index/logo_azul.png" class="logo_titulo_img" />
+          <h1 class="logo_titulo_texto">Azure</h1>
         </div>
 
-        <!-- Footer -->
-
-        <div class="footer">
-
-            <div class="footer_logo_div">
-                <img src="img/img_index/logo_azul.png" class="logo_titulo_img">
-                <h1 class="logo_titulo_texto">Azure</h1>
-            </div>
-
-            <div class="logo_texto">
-                <p>Transforme seus sonhos em destinos inesquecíveis conosco, onde cada jornada é uma experiência única!</p>
-            </div>
-
-            <div class="logo_contato_texto">
-                <h1>Contatos</h1>
-            </div>
-
-            <div class="campos_contato1">
-                <i class="fa-solid fa-location-dot contato_font_awesome"></i>
-                <p>Av. Bahia, 1739 - Indaiá, Caraguatatuba - SP.</p>
-            </div>
-
-            <div class="campos_contato2">
-                <i class="fa-solid fa-phone contato_font_awesome"></i>
-                <p>(12) 3885-2130</p>
-            </div>
-
-            <div class="campos_contato3">
-                <i class="fa-solid fa-envelope contato_font_awesome"></i>
-                <p>azure@gmail.com</p>
-            </div>
-
+        <div class="logo_texto">
+          <p>
+            Transforme seus sonhos em destinos inesquecíveis conosco, onde cada
+            jornada é uma experiência única!
+          </p>
         </div>
 
-            <h3 class="copyright">@Copyright by Azure 2024 - Todos os direitos reservados. </h3>
+        <div class="logo_contato_texto">
+          <h1>Contatos</h1>
+        </div>
 
+        <div class="campos_contato1">
+          <i class="fa-solid fa-location-dot contato_font_awesome"></i>
+          <p>Av. Bahia, 1739 - Indaiá, Caraguatatuba - SP.</p>
+        </div>
+
+        <div class="campos_contato2">
+          <i class="fa-solid fa-phone contato_font_awesome"></i>
+          <p>(12) 3885-2130</p>
+        </div>
+
+        <div class="campos_contato3">
+          <i class="fa-solid fa-envelope contato_font_awesome"></i>
+          <p>azure@gmail.com</p>
+        </div>
+      </div>
+
+      <h3 class="copyright">
+        @Copyright by Azure 2024 - Todos os direitos reservados.
+      </h3>
     </div>
-    
-   
+
     <!-- js para os icones fontawesoma -->
-    <script src="https://kit.fontawesome.com/b7057748ce.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b7057748ce.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- js para modal login/cadastro -->
     <script src="js/script.js"></script>
     <!-- js para faq -->
     <script src="js/contato.js"></script>
-    
-</body>
+  </body>
 </html>
