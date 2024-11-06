@@ -1,188 +1,195 @@
 /* introduzindo variaveis */
 :root {
-    --white: #ffffff;
-    --gelo: #eef2f6;
-    --blue: #496c7b;
-    --light_blue: #88a4b2;
-    --dark_blue: #0b0f16;
-    --gray: #57606d;
-    --hover_link: #88a4b2;
-  }
+  --white: #ffffff;
+  --gelo: #eef2f6;
+  --blue: #496c7b;
+  --light_blue: #88a4b2;
+  --dark_blue: #0b0f16;
+  --gray: #57606d;
+  --hover_link: #88a4b2;
+}
 
 /* div da esquerda */
-.carrinho_principal{
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: row;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    background-color: var(--white);
-    margin-bottom: 50px;
+.carrinho_principal {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: var(--white);
+  margin-bottom: 50px;
 }
 
 /* div do carrinho e pacotes */
-.carrinho{
-    /* border: 2px solid green; */
-    flex-grow: 4;
-    padding: 50px;
-    color: var(--blue);
+.carrinho {
+  /* border: 2px solid green; */
+  flex-grow: 4;
+  padding: 50px;
+  color: var(--blue);
 }
 
 /* div da direta, checkout */
-.checkout{
-    /* border: 2px solid blue; */
-    flex-grow: 1;
-    padding: 50px;
-    background-color: var(--blue);
-    color: var(--white);
-    font-size: 18px;
+.checkout {
+  /* border: 2px solid blue; */
+  flex-grow: 1;
+  padding: 50px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 18px;
 }
 
 .checkout button {
-    background-color: var(--light_blue);
-    border: none;
-    color: var(--white);
-    font-weight: 500;
-    margin-top: 20px;
+  background-color: var(--light_blue);
+  border: none;
+  color: var(--white);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#codigo::placeholder {
+  color: var(--white);
+}
+
+#codigo {
+    border-radius: 0px;
 }
 
 .usar {
-    width: 20%;
-    padding: 8px;
+  width: 20%;
+  padding: 8px;
 }
 
 .pagamento {
-    width: 100%;
-    padding: 8px;
+  width: 100%;
+  padding: 8px;
 }
 
 .checkout p {
-    opacity: 0.5;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 20px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .checkout input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
 }
 
 ::placeholder {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* div superior com a escirta seu carrinho e "3itens" */
-.seu_carrinho{
-    display: flex;
-    justify-content: space-between;
-    margin: -5px 5px 10px;
-    font-size: 12px;
+.seu_carrinho {
+  display: flex;
+  justify-content: space-between;
+  margin: -5px 5px 10px;
+  font-size: 12px;
 }
 
 /* div "detahes, quatde e preço */
-.detalhes{
-    display: flex;
-    justify-content: space-between;
-    opacity: 0.5;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 0px 15px 30px 15px;
-    margin-left: -15px;
+.detalhes {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0px 15px 30px 15px;
+  margin-left: -15px;
 }
-
 
 /* div que contem foto, pacote, quatede e preço */
-.pacote{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.pacote {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-
 
 /* div que contem a foto com o texto descritivo */
-.pacote_foto_texto{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+.pacote_foto_texto {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 .h3_carrinho {
-    opacity: 0.5;
+  opacity: 0.5;
 }
-
-
-
 
 /* div só do texto descritivo */
 .pacote_texto {
-    width: 200px;
-    padding: 0px 10px 15px 12px;
-    font-size: 10px;
-    color: var(--blue);
+  width: 200px;
+  padding: 0px 10px 15px 12px;
+  font-size: 10px;
+  color: var(--blue);
 }
 
-
 /* config da imagem - tlvz mude se colocar icone */
-.pacote_foto_texto img{
-    width: 100px;
-    height: 100px;
+.pacote_foto_texto img {
+  width: 100px;
+  height: 100px;
 }
 
 .preco_pacote {
-    opacity: 0.6;
-    font-size: 10px;
+  opacity: 0.6;
+  font-size: 10px;
 }
 
 /* div q tem + numero e - */
-.mais_menos{
-    display: flex;
-    align-items: baseline;
-    padding: 10px;
-    gap: 10px;
-    font-size: 13px;
-    margin-left: -200px;
+.mais_menos {
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+  gap: 10px;
+  font-size: 13px;
+  margin-left: -200px;
 }
 
 /* ultima div com icone e texto */
-.continuar_comprando{
-    display: flex;
-    gap: 15px;
-    margin-top: 270px;
-    align-items: center;
-    font-size: 12px;
+.continuar_comprando {
+  display: flex;
+  gap: 15px;
+  margin-top: 270px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.link_continuar > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ::placeholder {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .custo_total {
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .custo_total h2 {
-    font-weight: 500;
-    font-size: 20px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .custo_total h3 {
-    font-weight: 400;
-    font-size: 20px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .hr_final {
-    margin-top: 350px;
-    margin-bottom: 20px;
-    opacity: 0.5;
+  margin-top: 350px;
+  margin-bottom: 20px;
+  opacity: 0.5;
 }
 
 .hr_comeco {
-    opacity: 0.5;
-    margin: 20px 0 10px 0;
+  opacity: 0.5;
+  margin: 20px 0 10px 0;
 }

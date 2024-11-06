@@ -1,32 +1,42 @@
 /* introduzindo variaveis */
-:root{
-  --white: #FFFFFF;
-  --gelo: #EEF2F6;
-  --blue: #496C7B;
-  --light_blue: #88A4B2;
-  --dark_blue: #0B0F16;
-  --gray: #57606D;
-  --hover_link: #88A4B2;
+:root {
+  --white: #ffffff;
+  --gelo: #eef2f6;
+  --blue: #496c7b;
+  --light_blue: #88a4b2;
+  --dark_blue: #0b0f16;
+  --gray: #57606d;
+  --hover_link: #88a4b2;
+  --soft_blue: #64818f;
 }
 
+#modal_login,
+#modal_cadastro {
+  width: 60%;
+  height: 60%;
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 0 auto;
+  align-self: center;
+  background: rgb(73, 108, 123);
+  background: linear-gradient(
+      190deg,
+      rgba(73, 108, 123, 0) 0%,
+      rgba(73, 108, 123, 0.5) 0%,
+      rgba(73, 108, 123, 0.94) 40%,
+      rgba(73, 108, 123, 0.98) 60%,
+      rgba(73, 108, 123, 1) 100%
+    ),
+    url(../img/img_modal/modal_bckg.jpg);
+  background-size: cover;
+  border: none;
+  filter: brightness(0.75);
+  color: var(--white);
+}
 
-#modal_login, #modal_cadastro {
-    width: 60%;
-    height: 60%;
-    background-color: var(--blue);
-    border-radius: 10px;
-    padding: 40px;
-    margin: 0 auto;
-    align-self: center;
-    background: rgb(73,108,123);
-    background: linear-gradient(190deg, rgba(73,108,123,0) 0%, rgba(73,108, 123,0.5) 0%, rgba(73,108,123,0.94) 40%, rgba(73,108,123,0.98) 60%, rgba(73,108,123,1) 100%), url(../img/img_modal/modal_bckg.jpg);
-    background-size: cover;
-    border: none;
-    filter: brightness(0.75);
-    color: var(--white);
-  }
-
-.cadastro_logo_img, .login_logo_img{
+.cadastro_logo_img,
+.login_logo_img {
   height: 50px;
   display: flex;
   justify-content: start;
@@ -64,8 +74,8 @@
   opacity: 1;
 }
 
-
-.entre:visited, :active {
+.entre:visited,
+:active {
   color: var(--white);
 }
 
@@ -76,11 +86,11 @@
 .input {
   width: 40%;
   height: 40px;
-  background-color: var(--blue);
+  background-color: var(--soft_blue);
   margin-top: 2%;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 2px 6px 0px rgb(0, 0, 0, 70%);
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 ::placeholder {
@@ -88,18 +98,21 @@
   color: var(--white);
 }
 
-.cadastro, .login {
+.cadastro,
+.login {
   width: 25%;
   height: 40px;
-  background-color: var(--blue);
+  background-color: var(--soft_blue);
   margin-top: 2%;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 2px 6px 0px rgb(0, 0, 0, 70%);
-  color: var(--white)
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.200);
+  color: var(--white);
 }
 
-.input:hover, .cadastro:hover, .login:hover {
+.input:hover,
+.cadastro:hover,
+.login:hover {
   background-color: var(--hover_link);
 }
 
@@ -116,6 +129,14 @@
   border-radius: 100px;
 }
 
-
-
-
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 40%;
+  padding: 15px;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  background-color: var(--soft_blue);
+  font-size: 1rem;
+  color: #333;
+}
