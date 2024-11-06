@@ -174,93 +174,67 @@ section.about-us .card p {
   font-weight: 400;
 }
 
-.content-wrapper {
+.carousel {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 0;
-}
-
-.quem-somos {
-  background-color: #3c5461;
-  padding: 30px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.quem-somos h2 {
-  font-size: 35px;
-  margin-bottom: 20px;
-  color: var(--gelo);
-}
-
-.quem-somos p {
-  font-size: 20px;
-  line-height: 1.6;
-  color: var(--gelo);
-}
-
-.imagem_quem_somos {
+  overflow: hidden;
   width: 70%;
-  margin-left: 30%;
-  bottom: 15%;
+  height: 500px;
 }
 
-.missao-visao-valores {
+.carousel-item {
   display: flex;
-  gap: 20px;
-  flex: 2;
-  background-color: var(--light_blue);
-  padding: 5%;
-  padding-left: 10%;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  transition: transform 0.5s ease;
 }
 
-.card {
-  background-color: #fff;
-  color: #333;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  height: 600px;
+.carousel-item img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card img {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 15px;
+.carousel-text {
+  width: 50%;
+  padding: 40px;
+  background-color: var(--blue);
+  color: #fff;
 }
 
-.card h3 {
-  font-size: 20px;
+.carousel-text h2 {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #888;
   margin-bottom: 10px;
-  color: var(--blue);
 }
 
-.card p, .card ul {
-  font-size:16px;
-  line-height: 1.5;
+.carousel-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.card h3, .card p, .card ul {
-  padding: 4%;
-  color: var(--blue);
+.carousel-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.card ul {
-  list-style: disc;
-  padding-left: 0;
-  color: var(--blue);
-  margin-left: 10px;
+.carousel-text button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.card ul li {
-  margin-bottom: 5px;
-  text-align: start;
-  margin: 0 0 4px 20px;
+.carousel-text button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* Div Porque Condamine */
