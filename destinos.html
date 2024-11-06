@@ -82,277 +82,56 @@
     <button onclick="openModal('modal_login')">Abrir Login</button>
 
 
-      <!-- div da imagem principal (tem a div da imagem, div textos e div do grid como filhos)-->
-      <!-- <div class="div_imagem_principal">
-        <img
-          
-          class="imagem_principal_destino"
-        />
+   
 
-         div do texto sobre a imagem 
-        <div class="div_texto_imagem_principal">
-          <h1>Nossos <b>destinos!</b> </h1>
-          <h2>
-            Desde o glamouroso Casino de Monte-Carlo até os elegantes jardins
-            exóticos e as boutiques de prestígio, Mônaco oferece uma experiência
-            incomparável.
-          </h2>
-        </div> -->
-
-        <div class="carousel">
-          <div class="list">
-              <div class="item" style="background-image: url(img/img_destinos/card_lavortto.png);">
-                  <div class="content">
-                      <div class="title">Praia do</div>
-                      <div class="name">Larvotto</div>
-                      <div class="des">Com suas águas cristalinas e areia dourada, essa praia é um verdadeiro oásis de tranquilidade e beleza.</div>
-                      <div class="btn">
-                         
-                      </div>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(img/img_destinos/monaco-pictures-3qho33d801fw91zo.jpg);">
-                  
-                  <div class="content">
-                      <div class="title">Grimaldi</div>
-                      <div class="name">Fórum</div>
-                      <div class="des">Venha explorar o Grimaldi Forum, um dos mais prestigiosos centros de convenções e eventos da Riviera Francesa!</div>
-                      <div class="btn">
-                      </div>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(img/img_destinos/casino-de-monte-carlo-centerpiece-in-monaco-8ffce24vsffwhzvj.jpg);">
-                  <div class="content">
-                      <div class="title">Casino de</div>
-                      <div class="name">Monte Carlo</div>
-                      <div class="des">O Casino de Monte Carlo é mais do que um destino de jogos; é um lugar onde os sonhos se tornam realidade.</div>
-                      <div class="btn">
-                      </div>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(img/img_destinos/18-762x578.png);">
-                  
-                  <div class="content">
-                      <div class="title">Museu</div>
-                      <div class="name">Oceanográfico</div>
-                      <div class="des">Mergulhe em um mundo fascinante de biodiversidade marinha e conservação no Museu Oceanográfico de Mônaco, um dos mais importantes do seu gênero!</div>
-                      <div class="btn">
-
-                      </div>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(img/img_destinos/pexels-mike-kit-590388141-17346695.jpg);">
-                  
-                  <div class="content">
-                      <div class="title">Catedral de</div>
-                      <div class="name">SÃO NICOLAU</div>
-                      <div class="des">Situada no coração da cidade, esta catedral impressionante é um verdadeiro símbolo da rica herança do Principado.</div>
-                      <div class="btn">
-                      </div>
-                  </div>
-              </div>
-              <div class="item" style="background-image: url(image/eagel3.jpg);">
-                  
-                  <div class="content">
-                      <div class="title">Porto de </div>
-                      <div class="name">Fontvieille</div>
-                      <div class="des">Com sua beleza natural e atmosfera vibrante, o porto é o ponto de partida perfeito para uma experiência inesquecível em Mônaco.</div>
-                      <div class="btn">
-                        
-                      </div>
-                  </div>
-              </div>
-            
-             
-          <!--next prev button-->
-          <div class="arrows">
-              <button class="prev"><</button>
-              <button class="next">></button>
+        <div class="carousel-container">
+          <div class="carousel-slides">
+            <div class="carousel-slide"><img src="img/img_destinos/monaco-pictures-3qho33d801fw91zo.jpg" alt="Imagem 1"></div>
+            <div class="carousel-slide"><img src="img/img_destinos/pexels-vincent-gerbouin-445991-2231299.jpg" alt="Imagem 3"></div>
+            <div class="carousel-slide"><img src="img/img_destinos/pexels-mike-kit-590388141-17346695.jpg" alt="Imagem 4"></div>
+            <div class="carousel-slide"><img src="img/img_destinos/pexels-castorlystock-3836520.jpg" alt="Imagem 5"></div>
+            <div class="carousel-slide"><img src="img/img_destinos/pexels-bingqian-li-230971044-20841489.jpg" alt="Imagem 6"></div>
           </div>
-          <!-- time running -->
-          <div class="timeRunning"></div>
-      </div>
-
-        </div>
-
-        <!-- div flutuante grid com destinos sobre a imagem principal
-
-        <div class="grid_destinos">
-          <div class="card_destino">
-            <img src="img/img_destinos/card_lavortto.png" alt="" />
-            <h3 class="destino_nome">Praia do Lavortto</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="destino_descricao">
-              A Praia de Larvotto, localizada no coração de Mônaco, é um
-              verdadeiro paraíso mediterrâneo que combina beleza natural com
-              sofisticação. Com suas águas cristalinas e calmas, é o local
-              perfeito para relaxar e desfrutar do sol em um ambiente refinado.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
+        
+          <div class="carousel-nav">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
           </div>
-
-          <div class="card_destino">
-            <img src="img/img_destinos/card_grimaldi.png" alt="" />
-            <h3 class="destino_nome">Grimaldi Forum</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">
-                Monaco-Ville, Monaco.
-              </h4>
-            </div>
-            <h5 class="destino_descricao">
-              O fórum é conhecido por sediar desde conferências internacionais e
-              exposições de arte até espetáculos musicais e eventos culturais de
-              grande escala. Além disso, o Grimaldi Forum possui uma localização
-              privilegiada à beira-mar, proporcionando vistas deslumbrantes do
-              Mediterrâneo e uma atmosfera inspiradora.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
-          </div>
-
-          <div class="card_destino">
-            <img src="img/img_destinos/card_catedral.png" alt="" />
-            <h3 class="destino_nome">Catedral de São Nicolau</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="destino_descricao">
-              A Catedral de São Nicolau, situada em Mônaco, é um magnífico
-              exemplo de arquitetura românica e um dos marcos mais icônicos do
-              principado. Construída no final do século XIX, a catedral é
-              conhecida por sua impressionante fachada de pedra branca e seus
-              interiores elegantemente decorados.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
-          </div>
-
-          <div class="card_destino">
-            <img src="img/img_destinos/card_casino.png" alt="" />
-            <h3 class="destino_nome">Casino Monte Carlo</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="destino_descricao">
-              A Praia de Larvotto, localizada no coração de Mônaco, é um
-              verdadeiro paraíso mediterrâneo que combina beleza natural com
-              sofisticação. Com suas águas cristalinas e calmas, é o local
-              perfeito para relaxar e desfrutar do sol em um ambiente refinado.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
-          </div>
-
-          <div class="card_destino">
-            <img src="img/img_destinos/card_jardim.png" alt="" />
-            <h3 class="destino_nome">Jardim Exótico de Mônaco</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">
-                Monaco-Ville, Monaco.
-              </h4>
-            </div>
-            <h5 class="destino_descricao">
-              O fórum é conhecido por sediar desde conferências internacionais e
-              exposições de arte até espetáculos musicais e eventos culturais de
-              grande escala. Além disso, o Grimaldi Forum possui uma localização
-              privilegiada à beira-mar, proporcionando vistas deslumbrantes do
-              Mediterrâneo e uma atmosfera inspiradora.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
-          </div>
-
-          <div class="card_destino">
-            <img src="img/img_destinos/card_museu.png" alt="" />
-            <h3 class="destino_nome">Museu Oceanográfico</h3>
-            <div class="card_destino_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_destino_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="destino_descricao">
-              A Catedral de São Nicolau, situada em Mônaco, é um magnífico
-              exemplo de arquitetura românica e um dos marcos mais icônicos do
-              principado. Construída no final do século XIX, a catedral é
-              conhecida por sua impressionante fachada de pedra branca e seus
-              interiores elegantemente decorados.
-            </h5>
-            <button type="button" class="card_destino_button">Detalhes</button>
+        
+          <div class="carousel-indicators">
+            <button onclick="goToSlide(0)" class="active"></button>
+            <button onclick="goToSlide(1)"></button>
+            <button onclick="goToSlide(2)"></button>
+            <button onclick="goToSlide(3)"></button>
+            <button onclick="goToSlide(4)"></button>
           </div>
         </div>
-      </div> -->
 
-
-      <!-- Div hoteis parceiros -->
-      <!-- <div class="cards_hoteis_parceiros">
-        <h1>Conheça também nossos <b>hotéis parceiros!</b> </h1>
-
-        <div class="grid_hoteis"> -->
-        <!-- div dos cards -->
-        <!-- <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_paris.png" alt="" />
-            <h3 class="hotel_nome">Hotel de Paris Monte Carlo</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Larvotto, Monaco.</h4>
+        <div class="container">
+          <h2>Hot Tours</h2>
+          <div class="card-container">
+            <div class="card">
+              <img src="benidorm.jpg" alt="Benidorm, Spain">
+              <div class="card-content">
+                <h3>Benidorm, Spain</h3>
+                <p class="reviews">⭐⭐⭐⭐ <span>4 customer reviews</span></p>
+                <p>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p>
+                <button>Buy This Tour</button>
+                <div class="price-tag">$790</div>
+              </div>
             </div>
-            <h5 class="hotel_descricao">R$12.312</h5>
-          </div>
-
-          <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_fairmont.png" alt="" />
-            <h3 class="hotel_nome">Fairmont Monte Carlo</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Monaco-Ville, Monaco.</h4>
+            <div class="card">
+              <img src="mauritius.jpg" alt="Mauritius Island, Africa">
+              <div class="card-content">
+                <h3>Mauritius Island, Africa</h3>
+                <p class="reviews">⭐⭐⭐⭐⭐ <span>5 customer reviews</span></p>
+                <p>The beautiful and inviting island nation of Mauritius is an ideal 'flop and drop' at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p>
+                <button>Buy This Tour</button>
+                <div class="price-tag">$890</div>
+              </div>
             </div>
-            <h5 class="hotel_descricao">R$3.932</h5>
-          </div>
-
-          <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_hermitage.png" alt="" />
-            <h3 class="hotel_nome">Hotel Hermitage</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="hotel_descricao">R$4.334</h5>
-          </div>
-
-          <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_metropole.png" alt="" />
-            <h3 class="hotel_nome">Hotel Metropole</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="hotel_descricao">R$12.312</h5>
-          </div>
-
-          <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_leMeridien.png" alt="" />
-            <h3 class="hotel_nome">Le Méridien Beach Plaza</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Monaco-Ville, Monaco.</h4>
-            </div>
-            <h5 class="hotel_descricao">R$3.932</h5>
-          </div>
-
-          <div class="grid_card_hotel">
-            <img src="img/img_destinos/card_hotel_monteCarloBay.png" alt="" />
-            <h3 class="hotel_nome">Monte Carlo Bay Resort</h3>
-            <div class="card_hotel_localizacao">
-              <i class="fa-solid fa-location-dot item2"></i>
-              <h4 class="card_hotel_localizacao_texto">Larvotto, Monaco.</h4>
-            </div>
-            <h5 class="hotel_descricao">R$4.334</h5>
           </div>
         </div>
-      </div> -->
-
 
         <!-- Newsletter -->
 
@@ -409,5 +188,6 @@
     <script src="https://kit.fontawesome.com/b7057748ce.js" crossorigin="anonymous"></script>
     <script src="./js/destinos.js"></script>
     <script src="js/script.js"></script>
+    <script src="destinos.js"></script>
   </body>
 </html>
