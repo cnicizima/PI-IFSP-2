@@ -1,49 +1,42 @@
-var nextBtn = document.querySelector('.next'),
-    prevBtn = document.querySelector('.prev'),
-    carousel = document.querySelector('.carousel'),
-    list = document.querySelector('.list'), 
-    item = document.querySelectorAll('.item'),
-    runningTime = document.querySelector('.carousel .timeRunning') 
-let timeRunning = 3000 
-let timeAutoNext = 7000
-nextBtn.onclick = function(){
-    showSlider('next')
-}
-prevBtn.onclick = function(){
-    showSlider('prev')
-}
-let runTimeOut 
-let runNextAuto = setTimeout(() => {
-    nextBtn.click()
-}, timeAutoNext)
-function resetTimeAnimation() {
-    runningTime.style.animation = 'none'
-    runningTime.offsetHeight /* trigger reflow */
-    runningTime.style.animation = null 
-    runningTime.style.animation = 'runningTime 7s linear 1 forwards'
-}
+let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const indicators = document.querySelectorAll('.carousel-indicators button');
+  let autoSlideInterval;
 
-function showSlider(type) {
-    let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
-    if(type === 'next'){
-        list.appendChild(sliderItemsDom[0])
-        carousel.classList.add('next')
-    } else{
-        list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
-        carousel.classList.add('prev')
-    }
-    clearTimeout(runTimeOut)
-    runTimeOut = setTimeout( () => {
-        carousel.classList.remove('next')
-        carousel.classList.remove('prev')
-    }, timeRunning)
-    clearTimeout(runNextAuto)
-    runNextAuto = setTimeout(() => {
-        nextBtn.click()
-    }, timeAutoNext)
-    resetTimeAnimation() // Reset the running time animation
-}
-// Start the initial animation 
-resetTimeAnimation()
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+      indicators[i].classList.toggle('active', i === index);
+    });
+    document.querySelector('.carousel-slides').style.transform = `translateX(-${index * 100}%)`;
+    currentSlide = index;
+  }
 
+  function nextSlide() {
+    const newIndex = (currentSlide + 1) % slides.length;
+    showSlide(newIndex);
+  }
 
+  function prevSlide() {
+    const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(newIndex);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+    resetAutoSlide();
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000); // Intervalo de 3 segundos
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    startAutoSlide();
+  });
+  
