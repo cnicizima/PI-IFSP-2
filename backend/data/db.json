@@ -1,12 +1,12 @@
 {
     "destinos": [
       {
-        "imagem": "https://www.visitmonaco.com/ImageRepository/PageContenu/675448ab-26fd-40bd-ac71-30434fc80b1c/Slider/7-web-large-jpg-b-vergely-lot-13-juil-2021-05-addcrop-2.jpg?Width=2500&Height=1250",
+        "imagem": "https://www.thomascook.com/.imaging/default/dam/uk/holidays/destinations/thing-to-do/monte_carlo_things_to_do_3.jpg/jcr:content.jpg",
         "nome": "Praia do Larvotto",
         "avaliacao": " ★ ★ ★ ★",
         "reviews": 4,
         "descricao": "Um verdadeiro paraíso à beira-mar, onde o charme do Mediterrâneo se encontra com a sofisticação monegasca.",
-        "preco": 790
+        "preco": 120
       },
       {
         "imagem": "https://cdn.sanity.io/images/vxy259ii/production/1f35d1782bb463076171c2d59775e08613a51067-2560x1707.jpg?auto=format&crop=focalpoint&fit=max&q=80&w=1280",
@@ -14,7 +14,7 @@
         "avaliacao": " ★ ★ ★ ★ ★",
         "reviews": 5,
         "descricao": "Mergulhe em uma experiência única, entre mesas de jogos tradicionais, máquinas modernas e uma seleção de restaurantes e bares exclusivos",
-        "preco": 890
+        "preco": 960
       },
       {
         "imagem": "https://www.passagenspromo.com.br/blog/wp-content/uploads/2024/06/Design-sem-nome-2024-06-10T233813.130-1024x512.jpg",
@@ -22,7 +22,7 @@
         "avaliacao": " ★ ★ ★ ★ ★",
         "reviews": 5,
         "descricao": "Perfeito para quem deseja escapar da agitação e se conectar com a natureza em meio ao glamour de Mônaco.",
-        "preco": 890
+        "preco": 120
       },
       {
         "imagem": "https://st.depositphotos.com/1002969/4108/i/450/depositphotos_41086517-stock-photo-cathedral-interior-and-pipe-organ.jpg",
@@ -30,7 +30,7 @@
         "avaliacao": " ★ ★ ★ ★ ",
         "reviews": 4,
         "descricao": "Está catedral histórica é um lugar de paz e contemplação, além de ser um importante marco cultural e religioso. ",
-        "preco": 890
+        "preco": 100
       },
       {
         "imagem": "https://www.viajandoeviajando.com/wp-content/uploads/2019/05/museu-oceanografico-de-monaco-17-1024x576.jpg",
@@ -38,7 +38,31 @@
         "avaliacao": " ★ ★ ★ ★ ★ ",
         "reviews": 5,
         "descricao": "Uma visita imperdível para quem busca explorar as maravilhas do fundo do mar e se encantar com a biodiversidade do planeta.",
+        "preco": 100
+      },
+      {
+        "imagem": "https://horusdvcs.com/wp-content/uploads/2021/01/Hall-Verriere-14-ancien-logo.jpeg",
+        "nome": "Grimaldi Forum",
+        "avaliacao": " ★ ★ ★ ★ ★ ",
+        "reviews": 5,
+        "descricao": " Além de sediar grandes exposições, shows e conferências internacionais, o Grimaldi Forum oferece uma atmosfera sofisticada, com amplas áreas para eventos e acesso direto ao mar. ",
+        "preco": 150
+      },
+      {
+        "imagem": "https://lustforthesublime.com/wp-content/uploads/2019/05/2-FMC_-GP-Fairmont-Hairpin2-1024x683.jpg",
+        "nome": "Monaco Grand Prix",
+        "avaliacao": " ★ ★ ★ ★ ★ ",
+        "reviews": 5,
+        "descricao": "O Grand Prix de Mônaco atrai fãs e celebridades de todo o mundo para testemunhar pilotos de elite competindo nas ruas estreitas da cidade.",
         "preco": 890
+      },
+      {
+        "imagem": "https://media.istockphoto.com/id/1152232757/pt/foto/monte-carlo-castle-fortess-in-a-sunny-summer-day-blue-sky-in-monaco.jpg?s=612x612&w=0&k=20&c=Mc0PEA7fghP2_KM5_OxKyCL1x4ce8l3lCwJM7Shzptc=",
+        "nome": "Palácio do Princípe",
+        "avaliacao": " ★ ★ ★ ★ ",
+        "reviews": 4,
+        "descricao": "Com sua arquitetura imponente e rica em história, o palácio oferece uma viagem no tempo, desde suas elegantes salas decoradas até os pátios e jardins que encantam os visitantes.",
+        "preco": 380
       }
     ]
   }
