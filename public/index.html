@@ -61,7 +61,7 @@
                 <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..." required><br>
                 <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..." required><br>
                 <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..." required><br>
-                <button class="cadastro" onclick="toggleBlur(true);">Cadastre-se</button>
+                <button class="cadastro" id="btnCadastro" onclick="toggleBlur(true);">Cadastre-se</button>
                 <h4>Já é cadastrado? <a href="#" class="entre" onclick="closeModal('modal_cadastro'); openModal('modal_login');">Entre aqui</a></h4>
             </div>
         </dialog>
@@ -78,13 +78,103 @@
                 <h1>Acesse <b>sua conta</b></h1>
                 <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..." required><br>
                 <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..." required><br>
-                <button class="login" onclick="toggleBlur(true);">Entrar</button>
+                <button class="login" id="btnLogin" onclick="toggleBlur(true);">Entrar</button>
                 <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre" onclick="closeModal('modal_login'); openModal('modal_cadastro');">Crie sua conta</a></h4>
             </div>
         </dialog>
         
         <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
         <button onclick="openModal('modal_login')">Abrir Login</button>
+
+         <!-- Script que interage com o back-end -->
+
+    <script>
+        // Função para enviar dados de cadastro para o back-end
+        document.getElementById('btnCadastro').addEventListener('click', async function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do formulário
+
+            const nome = document.getElementById('cadastro_nome').value;
+            const email = document.getElementById('cadastro_email').value;
+            const senha = document.getElementById('cadastro_senha').value;
+
+            if (!nome || !email || !senha) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+
+            try {
+                // Envia os dados para o back-end via POST
+                const response = await fetch('http://localhost:4000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: nome,  // Nome de usuário
+                        email: email,    // E-mail
+                        password: senha  // Senha
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Cadastro bem-sucedido!');
+                    closeModal('modal_cadastro');
+                    openModal('modal_login');
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao enviar dados de cadastro:', error);
+                alert('Erro ao cadastrar o usuário.');
+            }
+        });
+
+        // Função para enviar dados de cadastro para o back-end
+document.getElementById('btnCadastro').addEventListener('click', async function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do formulário
+
+    const nome = document.getElementById('cadastro_nome').value;
+    const email = document.getElementById('cadastro_email').value;
+    const senha = document.getElementById('cadastro_senha').value;
+
+    if (!nome || !email || !senha) {
+        alert('Preencha todos os campos!');
+        return;
+    }
+
+    try {
+        // Envia os dados para o back-end via POST
+        const response = await fetch('http://localhost:4000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: nome,  // Nome de usuário
+                email: email,    // E-mail
+                password: senha  // Senha
+            }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert('Cadastro bem-sucedido!');
+            closeModal('modal_cadastro');
+            openModal('modal_login');
+        } else {
+            // Exibe a mensagem de erro detalhada que vem do servidor
+            alert(`Erro: ${data.message}`);
+        }
+    } catch (error) {
+        console.error('Erro ao enviar dados de cadastro:', error);
+        alert('Erro ao cadastrar o usuário. Tente novamente mais tarde.');
+    }
+});
+
+    </script>
         
 
         <!-- imagem principal -->
