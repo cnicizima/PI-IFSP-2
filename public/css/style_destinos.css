@@ -159,33 +159,29 @@ body {
   width: 100%;
 }
 
-
+/* 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Grid de duas colunas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   max-width: 1200px;
   width: 100%;
-  margin-top: 40px; /* Espaçamento no topo */
- 
-}
+  margin-top: 40px; 
+} */
 
 .container {
   max-width: 800px;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   display: flex;
+  grid-template-columns: repeat(2, 1fr);
   margin-left: 400px;
 }
 
-.container h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
 
 .card-container {
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 20px;
 }
@@ -197,6 +193,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
 }
 
 .card:hover {
@@ -217,13 +214,14 @@ body {
 }
 
 .card-content h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 10px;
+  color: var(--blue);
 }
 
 .card-content .reviews {
   font-size: 0.9em;
-  color: #555;
+  color: var(--blue);
   margin-bottom: 10px;
 }
 
@@ -234,22 +232,22 @@ body {
 
 .card-content p {
   font-size: 0.9em;
-  color: #666;
+  color: var(--blue);
   margin-bottom: 15px;
 }
 
 .card-content button {
   padding: 10px 15px;
   font-size: 1em;
-  color: #333;
-  border: 2px solid #333;
+  color: var(--blue);
+  border: 2px solid var(--blue);
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .card-content button:hover {
-  background-color: #333;
+  background-color: var(--blue);
   color: #fff;
 }
 
@@ -257,7 +255,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #1abc9c;
+  background-color: var(--blue);
   color: #fff;
   padding: 10px 15px;
   font-weight: bold;

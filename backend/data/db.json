@@ -1,27 +1,43 @@
 {
     "destinos": [
       {
-        "imagem": "benidorm.jpg",
-        "nome": "Benidorm, Spain",
-        "avaliacao": "⭐⭐⭐⭐",
+        "imagem": "https://www.visitmonaco.com/ImageRepository/PageContenu/675448ab-26fd-40bd-ac71-30434fc80b1c/Slider/7-web-large-jpg-b-vergely-lot-13-juil-2021-05-addcrop-2.jpg?Width=2500&Height=1250",
+        "nome": "Praia do Larvotto",
+        "avaliacao": " ★ ★ ★ ★",
         "reviews": 4,
-        "descricao": "Benidorm is a buzzing resort with a big reputation for beach holidays...",
+        "descricao": "Um verdadeiro paraíso à beira-mar, onde o charme do Mediterrâneo se encontra com a sofisticação monegasca.",
         "preco": 790
       },
       {
-        "imagem": "mauritius.jpg",
-        "nome": "Mauritius Island, Africa",
-        "avaliacao": "⭐⭐⭐⭐⭐",
+        "imagem": "https://cdn.sanity.io/images/vxy259ii/production/1f35d1782bb463076171c2d59775e08613a51067-2560x1707.jpg?auto=format&crop=focalpoint&fit=max&q=80&w=1280",
+        "nome": "Casino Monte-Carlo",
+        "avaliacao": " ★ ★ ★ ★ ★",
         "reviews": 5,
-        "descricao": "The beautiful and inviting island nation of Mauritius is an ideal...",
+        "descricao": "Mergulhe em uma experiência única, entre mesas de jogos tradicionais, máquinas modernas e uma seleção de restaurantes e bares exclusivos",
         "preco": 890
       },
       {
-        "imagem": "mauritius.jpg",
-        "nome": "Mauritius Island, Africa",
-        "avaliacao": "⭐⭐⭐⭐⭐",
+        "imagem": "https://www.passagenspromo.com.br/blog/wp-content/uploads/2024/06/Design-sem-nome-2024-06-10T233813.130-1024x512.jpg",
+        "nome": "Jardins Japoneses",
+        "avaliacao": " ★ ★ ★ ★ ★",
         "reviews": 5,
-        "descricao": "The beautiful and inviting island nation of Mauritius is an ideal...",
+        "descricao": "Perfeito para quem deseja escapar da agitação e se conectar com a natureza em meio ao glamour de Mônaco.",
+        "preco": 890
+      },
+      {
+        "imagem": "https://st.depositphotos.com/1002969/4108/i/450/depositphotos_41086517-stock-photo-cathedral-interior-and-pipe-organ.jpg",
+        "nome": "Catedral São Nicolau",
+        "avaliacao": " ★ ★ ★ ★ ",
+        "reviews": 4,
+        "descricao": "Está catedral histórica é um lugar de paz e contemplação, além de ser um importante marco cultural e religioso. ",
+        "preco": 890
+      },
+      {
+        "imagem": "https://www.viajandoeviajando.com/wp-content/uploads/2019/05/museu-oceanografico-de-monaco-17-1024x576.jpg",
+        "nome": "Museu Oceanográfico",
+        "avaliacao": " ★ ★ ★ ★ ★ ",
+        "reviews": 5,
+        "descricao": "Uma visita imperdível para quem busca explorar as maravilhas do fundo do mar e se encantar com a biodiversidade do planeta.",
         "preco": 890
       }
     ]
