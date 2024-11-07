@@ -170,20 +170,20 @@ body {
 } */
 
 .container {
-  max-width: 800px;
-  width: 100%;
-  padding: 30px;
+  width: 50%;
   text-align: center;
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 400px;
+  margin-left: 370px;
+  flex-direction: column;
 }
 
 
 .card-container {
   display: grid;
-  flex-direction: column;
   gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 150%;
 }
 
 .card {
@@ -412,7 +412,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   padding: 30px 30px 30px 30px;
-  column-gap: 20px;
+  column-gap: 0px;
   box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
