@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const path = require('path');
+
 
 /* GET home page. */
 
@@ -23,6 +25,9 @@ router.get('/carrinho', async (req, res) => {
   res.sendFile(path.join(__dirname, '../public/carrinho.html'));
 });
 
+router.get('/admin', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/admin.html'));
+});
 
 
 module.exports = router;

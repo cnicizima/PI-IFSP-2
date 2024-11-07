@@ -1,0 +1,44 @@
+1)instalar node - npm install
+2) npm init - começa um projeto
+3) npm i express generator na pasta de front - instala o express
+4) npm i npm -g (acho que instala global)
+5) npx express-generator (ai sim cria um projeto expresS)
+6) npm install
+7) npm start. 
+
+Agora é configurar as rotas:
+
+o express no frontend serve para rodar o projeto front em uma porta local.
+
+app.js nao precisa alterar nada. pois ja diz que o 3000/ vai para o index por causa do bin. mas incluir:
+// Defina a porta desejada
+const PORT = process.env.PORT || 3000;
+console.log(`Servidor rodando na porta ${PORT}`);
+
+nas rotas index, colocar os gets pra obter a pagina estatica:
+
+router.get('/', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
+router.get('/destinos', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/destinos.html'));
+});
+
+etc.
+
+depois, seguir passo 2, 3, 4,5 6 e 7 para a pasta backend. E isntalar o cors (npm install cors
+
+no arquivo app.js incluir: 
+"const cors = require('cors');" e "app.use(cors());"
+// Defina a porta desejada
+const PORT = process.env.PORT || 4000;
+console.log(`Servidor rodando na porta ${PORT}`);
+
+
+a logica é: porta 3000 roda local os estatico do front
+cors para rodar duas portas
+back roda na 4000 com apenas uma /routes/pacotes
+no pacotes, vou ter os GET, DELETE dos pacotes. router.get('api/pacote/:id'){}
+e no script do admin, vai ter um fecht no localhost:4000/api/pacote/id pra criar um pacote, etc.
+

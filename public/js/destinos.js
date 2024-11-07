@@ -40,3 +40,36 @@ let currentSlide = 0;
     startAutoSlide();
   });
   
+
+
+// para montar dinamicamente a partir do db.json
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cardContainer = document.getElementById('card-container');
+
+  fetch('http://localhost:4000/api/data')
+    .then(response => response.json())
+    .then(data => {
+      const destinos = data.destinos || data;
+
+      destinos.forEach(destino => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <img src="${destino.imagem}" alt="${destino.nome}">
+          <div class="card-content">
+            <h3>${destino.nome}</h3>
+            <p class="reviews">${destino.avaliacao} <span>${destino.reviews} customer reviews</span></p>
+            <p>${destino.descricao}</p>
+            <button>Buy This Tour</button>
+            <div class="price-tag">$${destino.preco}</div>
+          </div>
+        `;
+
+        cardContainer.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar destinos:', error));
+});
+

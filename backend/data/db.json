@@ -1,0 +1,29 @@
+{
+    "destinos": [
+      {
+        "imagem": "benidorm.jpg",
+        "nome": "Benidorm, Spain",
+        "avaliacao": "⭐⭐⭐⭐",
+        "reviews": 4,
+        "descricao": "Benidorm is a buzzing resort with a big reputation for beach holidays...",
+        "preco": 790
+      },
+      {
+        "imagem": "mauritius.jpg",
+        "nome": "Mauritius Island, Africa",
+        "avaliacao": "⭐⭐⭐⭐⭐",
+        "reviews": 5,
+        "descricao": "The beautiful and inviting island nation of Mauritius is an ideal...",
+        "preco": 890
+      },
+      {
+        "imagem": "mauritius.jpg",
+        "nome": "Mauritius Island, Africa",
+        "avaliacao": "⭐⭐⭐⭐⭐",
+        "reviews": 5,
+        "descricao": "The beautiful and inviting island nation of Mauritius is an ideal...",
+        "preco": 890
+      }
+    ]
+  }
+  
