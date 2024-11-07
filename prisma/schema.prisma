@@ -20,25 +20,28 @@ model Clientes {
   telefone   String
   nascimento DateTime
   sexo       String?
-  // campo compras para relacionar com o modelo Compras
+  // Relacionamento com Compras
   compras    Compras[]
 }
 
 model Destinos {
-  codigoDestino Int       @id
-  nome          String
-  preco         Decimal
-  data          DateTime
-  // campo compras para relacionar com o modelo Compras
-  compras       Compras[]
+  id        Int       @id @default(autoincrement())
+  imagem    String
+  nome      String
+  avaliacao String
+  reviews   Int
+  descricao String
+  preco     Float
+  // Relacionamento com Compras
+  compras   Compras[]
 }
 
 model Compras {
-  numeroCompra   Int      @id @default(autoincrement())
-  cliente        Clientes @relation(fields: [clienteCpf], references: [cpf])
-  clienteCpf     BigInt
-  destino        Destinos @relation(fields: [destinoCliente], references: [codigoDestino])
-  destinoCliente Int
-  quantidade     Int
-  data           DateTime
+  numeroCompra Int      @id @default(autoincrement())
+  cliente      Clientes @relation(fields: [clienteCpf], references: [cpf])
+  clienteCpf   BigInt
+  destino      Destinos @relation(fields: [destinoId], references: [id])
+  destinoId    Int // Relacionamento com Destinos pelo campo 'id'
+  quantidade   Int
+  data         DateTime
 }
