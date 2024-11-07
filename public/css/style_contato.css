@@ -348,7 +348,7 @@ small {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   padding: 30px 30px 30px 30px;
-  column-gap: 20px;
+  column-gap: 0px;
   box-shadow: 3px 3px 25px #0b0f16b0;
 }
 
