@@ -23,6 +23,7 @@ body {
   --dark_blue: #0b0f16;
   --gray: #57606d;
   --hover_link: #88a4b2;
+  --soft_blue: #64818f;
 }
 
 /* header */
@@ -38,62 +39,6 @@ body {
   background-color: var(--gelo);
   width: 100%;
 }
-
-/* section.about-us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px 0;
-}
-
-section.about-us .intro {
-  text-align: center;
-  max-width: 600px;
-}
-
-section.about-us .intro h2 {
-  font-size: 32px;
-  color: #3c5a5e;
-  margin-bottom: 20px;
-  margin-top: 50px;
-}
-
-section.about-us .intro p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--blue);
-}
-
-section.about-us .content {
-  display: flex;
-  gap: 100px;
-  margin-top: 70px;
-}
-
-section.about-us .card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  width: 400px;
-}
-
-section.about-us .card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-section.about-us .card h3 {
-  color: #3c5a5e;
-  margin: 20px 0 10px;
-}
-
-section.about-us .card p {
-  line-height: 1.5;
-  font-size: 16px;
-  color: var(--blue);
-} */
 
 .logo {
   color: var(--blue);
@@ -145,7 +90,7 @@ section.about-us .card p {
   height: 600px;
   width: 100%;
   filter: brightness(0.5);
-  background-image: url(../img/img_sobre_nos/pexels-pierre-blache-651604-3108581.jpg);
+  background-image: url(../img/img_sobre_nos/background_sobrenos.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,67 +119,92 @@ section.about-us .card p {
   font-weight: 400;
 }
 
-.carousel {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  width: 70%;
-  height: 500px;
-}
-
-.carousel-item {
+.intro {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-width: 100%;
   transition: transform 0.5s ease;
+  padding: 5% 10% 5% 10%;
+  color: var(--blue);
 }
 
-.carousel-item img {
-  width: 50%;
+.intro img {
+  width: 40%;
   height: 100%;
   object-fit: cover;
+  padding: 0px;
+  filter: brightness(0.9);
 }
 
-.carousel-text {
-  width: 50%;
-  padding: 40px;
-  background-color: var(--blue);
-  color: #fff;
+.intro-text {
+  width: 40%;
+  padding-left: 5%;
+  color: var(--blue);
 }
 
-.carousel-text h2 {
+.intro-text h2 {
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
-  color: #888;
   margin-bottom: 10px;
+  color: var(--blue);
 }
 
-.carousel-text h1 {
+.intro-text h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: var(--blue);
+  font-weight: 500;
 }
 
-.carousel-text p {
-  font-size: 16px;
+.intro-text p {
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: var(--blue);
+  font-weight: 500;
 }
 
-.carousel-text button {
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.missao-visao-valores {
+  text-align: center;
+  background-color: var(--blue);
+  padding: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-.carousel-text button:hover {
-  background-color: #fff;
-  color: #000;
+.missao-visao-valores-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  width: 80%;
+}
+
+.missao-visao-valores-card {
+  background-color: var(--soft_blue);
+  padding: 30px;
+  width: 29%;
+  border-radius: 8px;
+}
+
+.missao-visao-valores h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.missao-visao-valores-card p {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.missao-visao-valores-card ul {
+  font-size: 18px;
+  color: var(--white);
+  text-align: left;
 }
 
 /* Div Porque Condamine */
@@ -243,7 +213,7 @@ section.about-us .card p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 7%;
-  margin: 10% 10% 0 10%;
+  margin: 5% 10% 0 10%;
 }
 
 /* Textos porque condamine */
