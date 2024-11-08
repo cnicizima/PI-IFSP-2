@@ -62,8 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>${destino.nome}</h3>
             <p class="reviews">${destino.avaliacao} <span>${destino.reviews} customer reviews</span></p>
             <p>${destino.descricao}</p>
+            <div>
             <button>Buy This Tour</button>
             <div class="price-tag">$${destino.preco}</div>
+            </div>
           </div>
         `;
 
