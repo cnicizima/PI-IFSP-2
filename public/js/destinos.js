@@ -47,10 +47,10 @@ let currentSlide = 0;
 document.addEventListener('DOMContentLoaded', () => {
   const cardContainer = document.getElementById('card-container');
 
-  fetch('http://localhost:4000/api/data')
+  fetch('http://localhost:4000/admin/destinos')
     .then(response => response.json())
-    .then(data => {
-      const destinos = data.destinos || data;
+    .then(destinos => {
+      cardContainer.innerHTML = ''; // Limpa o container antes de adicionar os cards
 
       destinos.forEach(destino => {
         const card = document.createElement('div');
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="reviews">${destino.avaliacao} <span>${destino.reviews} customer reviews</span></p>
             <p>${destino.descricao}</p>
             <div>
-            <button>Buy This Tour</button>
-            <div class="price-tag">$${destino.preco}</div>
+              <button>Buy This Tour</button>
+              <div class="price-tag">$${destino.preco}</div>
             </div>
           </div>
         `;
@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Erro ao carregar destinos:', error));
 });
+
 

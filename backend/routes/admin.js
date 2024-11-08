@@ -24,4 +24,16 @@ router.post('/destinos', async (req, res) => {
   }
 });
 
+
+// **Rota GET para buscar todos os destinos no banco SQLITE**
+router.get('/destinos', async (req, res) => {
+  try {
+    const destinos = await prisma.destinos.findMany();
+    res.status(200).json(destinos);
+  } catch (error) {
+    console.error('Erro ao buscar destinos:', error);
+    res.status(500).json({ error: 'Erro ao buscar destinos' });
+  }
+});
+
 module.exports = router;
