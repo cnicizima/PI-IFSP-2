@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Gerenciamento de Destinos</title>
+  <link rel="stylesheet" href="css/style_admin.css">
+</head>
+<body>
+
+  <h1>Administração de Destinos</h1>
+
+  <!-- Botão para abrir o modal -->
+  <button id="openModalBtn">Incluir Pacote</button>
+
+  <!-- Modal para adicionar um novo destino -->
+  <div id="modal" style="display:none;">
+    <div class="modal-content">
+      <span id="closeModalBtn">&times;</span>
+
+      <h2>Adicionar Novo Destino</h2>
+
+      <form id="destinoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea><br>
+
+        <label for="imagem">URL da Imagem:</label>
+        <input type="text" id="imagem" name="imagem" required><br>
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" name="preco" step="0.01" required><br>
+
+        <label for="avaliacao">Avaliação:</label>
+        <input type="text" id="avaliacao" name="avaliacao" required><br>
+
+        <label for="reviews">Número de Reviews:</label>
+        <input type="number" id="reviews" name="reviews" required><br>
+
+        <button type="submit">Adicionar Destino</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/admin_front.js"></script>
+
+</body>
+</html>
