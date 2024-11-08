@@ -4,8 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require ('cors');
+const dotenv = require('dotenv');
+dotenv.config({ path: './.env' }); 
 
 var indexRouter = require('./routes/pacotes');
+var adminRouter = require('./routes/admin');
 
 
 var app = express();
@@ -26,6 +29,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/admin', adminRouter);
 
 
 
