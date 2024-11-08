@@ -170,11 +170,11 @@ body {
 } */
 
 .container {
-  width: 50%;
+  width: 100%;
   text-align: center;
   display: flex;
-  margin-left: 370px;
   flex-direction: column;
+  padding: 100px 30px;
 }
 
 
@@ -183,7 +183,6 @@ body {
   gap: 20px;
   padding: 20px;
   grid-template-columns: repeat(2, 1fr);
-  width: 150%;
 }
 
 .card {
@@ -251,15 +250,16 @@ body {
   color: #fff;
 }
 
+/* a tag agora está apos o button - mudei a div no destinos.js */
 .price-tag {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   background-color: var(--blue);
+  width: 100px;
   color: #fff;
   padding: 10px 15px;
   font-weight: bold;
   border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
 }
 /* DESTINOS */
 
@@ -406,7 +406,7 @@ body {
   width: 60%;
   height: 250px;
   background-color: var(--blue);
-  margin: 10% auto 100px auto;
+  margin: 3% auto 100px auto;
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
