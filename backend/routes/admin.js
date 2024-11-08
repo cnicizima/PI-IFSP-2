@@ -36,4 +36,46 @@ router.get('/destinos', async (req, res) => {
   }
 });
 
+
+// Rota DELETE para excluir um destino
+router.delete('/destinos/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const destino = await prisma.destinos.delete({
+      where: { id: parseInt(id) },
+    });
+    res.status(200).json(destino);
+  } catch (error) {
+    console.error('Erro ao excluir destino:', error);
+    res.status(500).json({ error: 'Erro ao excluir destino' });
+  }
+});
+
+
+
+// Rota PUT para atualizar um destino
+router.put('/destinos/:id', async (req, res) => {
+  const { id } = req.params;
+  const { imagem, nome, avaliacao, reviews, descricao, preco } = req.body;
+  try {
+    const destino = await prisma.destinos.update({
+      where: { id: parseInt(id) },
+      data: {
+        imagem,
+        nome,
+        avaliacao,
+        reviews: reviews.toString(),
+        descricao,
+        preco: parseFloat(preco),
+      },
+    });
+    res.status(200).json(destino);
+  } catch (error) {
+    console.error('Erro ao atualizar destino:', error);
+    res.status(500).json({ error: 'Erro ao atualizar destino' });
+  }
+});
+
 module.exports = router;
+
+

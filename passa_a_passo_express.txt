@@ -1,3 +1,12 @@
+QUANDO CLONAR:
+ABRIR TERMINAL NA RAIZ E DAR 'npm install'
+DEPOIS ENTRAR CD BACKEND E DAR 'npm install' no backend tambem
+para testar: na raiz(front) npm start (porta 3000) e em outro terminal, entrar cd backend e "npm start" (porta 4000)
+
+
+----------------------------------------
+Passo a passo do express:
+
 1)instalar node - npm install
 2) npm init - começa um projeto
 3) npm i express generator na pasta de front - instala o express
@@ -52,7 +61,6 @@ DATABASE_URL="file:./dev.db" no env (para sqlite)
 npx prisma migrate dev --name nome_da_migration (qdo tiver o schema pronto)
 npx prisma migrate status (para ver status)
 npx prisma generate - para criar o client que vai interagir com o banco
-
 
 
 Ex de Schema:
@@ -129,7 +137,4 @@ Antes de rodar, verificar se tem o prisma e o prisma client instalado no package
 
 ------------------------------
 
-Quando clonar, nao ira vir tudo. 
-entrar no terminal na raiz e dar npm i, e depois entrar no backend e dar npm i. Dar npm onde tem package json
-criar um .env na raiz  e incluir o endereço DATABASE_URL="file:./prisma/dev.db"
 
