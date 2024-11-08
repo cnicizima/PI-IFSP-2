@@ -12,9 +12,9 @@ router.post('/destinos', async (req, res) => {
         imagem,
         nome,
         avaliacao,
-        reviews,
+        reviews: reviews.toString(),
         descricao,
-        preco,
+        preco: parseFloat(preco),
       },
     });
     res.status(201).json(destino);

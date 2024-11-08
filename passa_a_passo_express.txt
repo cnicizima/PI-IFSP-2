@@ -35,14 +35,14 @@ no arquivo app.js incluir:
 const PORT = process.env.PORT || 4000;
 console.log(`Servidor rodando na porta ${PORT}`);
 
-
+------------------------------
 a logica é: porta 3000 roda local os estatico do front
 cors para rodar duas portas
 back roda na 4000 com apenas uma /routes/pacotes
 no pacotes, vou ter os GET, DELETE dos pacotes. router.get('api/pacote/:id'){}
 e no script do admin, vai ter um fecht no localhost:4000/api/pacote/id pra criar um pacote, etc.
 
-
+------------------------------
 Para usar o prisma:
 
 npm install prisma @prisma/client
@@ -51,7 +51,7 @@ DATABASE_URL="file:./dev.db" no env (para sqlite)
 
 npx prisma migrate dev --name nome_da_migration (qdo tiver o schema pronto)
 npx prisma migrate status (para ver status)
-npx prisma generate - para cruar o client que vai interagir com o banco
+npx prisma generate - para criar o client que vai interagir com o banco
 
 
 
@@ -100,3 +100,36 @@ model Compras {
   quantidade   Int
   data         DateTime
 }
+
+
+------------------------------
+configurando o banco de dados com o prisma para dar certo:
+criar um .env na raiz com o: DATABASE_URL="file:./prisma/dev.db"
+
+corrigir o dotenv dentro do app.js do backend:
+const dotenv = require('dotenv');
+dotenv.config({ path: '../.env' });
+isto porque o env estava um nivel acima de onde estava o app.js 
+
+O caminho estava errado.
+
+O esquema prisma deve ligar à URL:
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+COM OS CAMINHOS CORRETOS - DOTENV TER QUE ESTAR INSTALADO (npm i dotenv)TANTO NO BACK QTO NO front
+
+RODAR npx prisma migrate dev e depois npx prisma generate.
+
+Antes de rodar, verificar se tem o prisma e o prisma client instalado no package-json
+
+
+------------------------------
+
+Quando clonar, nao ira vir tudo. 
+entrar no terminal na raiz e dar npm i, e depois entrar no backend e dar npm i. Dar npm onde tem package json
+criar um .env na raiz  e incluir o endereço DATABASE_URL="file:./prisma/dev.db"
+
