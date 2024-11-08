@@ -42,3 +42,61 @@ back roda na 4000 com apenas uma /routes/pacotes
 no pacotes, vou ter os GET, DELETE dos pacotes. router.get('api/pacote/:id'){}
 e no script do admin, vai ter um fecht no localhost:4000/api/pacote/id pra criar um pacote, etc.
 
+
+Para usar o prisma:
+
+npm install prisma @prisma/client
+npx prisma init
+DATABASE_URL="file:./dev.db" no env (para sqlite)
+
+npx prisma migrate dev --name nome_da_migration (qdo tiver o schema pronto)
+npx prisma migrate status (para ver status)
+npx prisma generate - para cruar o client que vai interagir com o banco
+
+
+
+Ex de Schema:
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Clientes {
+  cpf        BigInt    @id
+  nome       String
+  email      String    @unique
+  endereco   String
+  cidade     String
+  UF         String
+  telefone   String
+  nascimento DateTime
+  sexo       String?
+  // Relacionamento com Compras
+  compras    Compras[]
+}
+
+model Destinos {
+  id        Int       @id @default(autoincrement())
+  imagem    String
+  nome      String
+  avaliacao String
+  reviews   Int
+  descricao String
+  preco     Float
+  // Relacionamento com Compras
+  compras   Compras[]
+}
+
+model Compras {
+  numeroCompra Int      @id @default(autoincrement())
+  cliente      Clientes @relation(fields: [clienteCpf], references: [cpf])
+  clienteCpf   BigInt
+  destino      Destinos @relation(fields: [destinoId], references: [id])
+  destinoId    Int // Relacionamento com Destinos pelo campo 'id'
+  quantidade   Int
+  data         DateTime
+}
