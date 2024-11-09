@@ -26,10 +26,9 @@ model Destinos {
   imagem    String
   nome      String
   avaliacao String
-  reviews   String
+  reviews   Int // Alterado de String para Int
   descricao String
   preco     Float
-  // Relacionamento com Compras
   compras   Compras[]
 }
 
