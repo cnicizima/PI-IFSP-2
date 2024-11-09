@@ -7,12 +7,21 @@ const prisma = new PrismaClient();
 router.post('/destinos', async (req, res) => {
   try {
     const { imagem, nome, avaliacao, reviews, descricao, preco } = req.body;
+    
+    // Garantir que reviews seja um inteiro
+    const reviewsInt = parseInt(reviews, 10);
+
+    // Verifica se reviews é um número válido
+    if (isNaN(reviewsInt)) {
+      return res.status(400).json({ error: 'Reviews deve ser um número válido' });
+    }
+
     const destino = await prisma.destinos.create({
       data: {
         imagem,
         nome,
         avaliacao,
-        reviews: reviews.toString(),
+        reviews: reviewsInt, // Alterado para passar como inteiro
         descricao,
         preco: parseFloat(preco),
       },
@@ -24,8 +33,7 @@ router.post('/destinos', async (req, res) => {
   }
 });
 
-
-// **Rota GET para buscar todos os destinos no banco SQLITE**
+// Rota GET para buscar todos os destinos no banco SQLITE
 router.get('/destinos', async (req, res) => {
   try {
     const destinos = await prisma.destinos.findMany();
@@ -35,7 +43,6 @@ router.get('/destinos', async (req, res) => {
     res.status(500).json({ error: 'Erro ao buscar destinos' });
   }
 });
-
 
 // Rota DELETE para excluir um destino
 router.delete('/destinos/:id', async (req, res) => {
@@ -51,12 +58,19 @@ router.delete('/destinos/:id', async (req, res) => {
   }
 });
 
-
-
 // Rota PUT para atualizar um destino
 router.put('/destinos/:id', async (req, res) => {
   const { id } = req.params;
   const { imagem, nome, avaliacao, reviews, descricao, preco } = req.body;
+  
+  // Garantir que reviews seja um inteiro
+  const reviewsInt = parseInt(reviews, 10);
+
+  // Verifica se reviews é um número válido
+  if (isNaN(reviewsInt)) {
+    return res.status(400).json({ error: 'Reviews deve ser um número válido' });
+  }
+
   try {
     const destino = await prisma.destinos.update({
       where: { id: parseInt(id) },
@@ -64,11 +78,12 @@ router.put('/destinos/:id', async (req, res) => {
         imagem,
         nome,
         avaliacao,
-        reviews: reviews.toString(),
+        reviews: reviewsInt, // Alterado para passar como inteiro
         descricao,
         preco: parseFloat(preco),
       },
     });
+
     res.status(200).json(destino);
   } catch (error) {
     console.error('Erro ao atualizar destino:', error);
@@ -77,5 +92,3 @@ router.put('/destinos/:id', async (req, res) => {
 });
 
 module.exports = router;
-
-
