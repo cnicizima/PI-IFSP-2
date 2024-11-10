@@ -1,0 +1,19 @@
+1) Ao clonar, não vira a mode_nodule, porque ela esta na pasta .gitignore (ou seja, não sobe para o github).
+Então precisa abrir o terminal, ir na raiz e dar npm install. Depois ir no backend e dar npm install também. 
+Isto vai instalar todos os programas que estão listados no package-json (dotenv, prisma client, etc)
+
+
+Aprendizados: 
+- precisa ter o dotenv configurado no app.js do backend para ele puxar as config do .env(neste caso a URL do banco de dados)
+o dotenv precisa apontar para o .env , entao configurar o path para isso. Usar o require também.
+No .env a url tem que apontar para o arquivo .db do prisma (no caso do sqlite). no caso no mysql, tem outra forma, com senha e etc.
+
+Para o frot:
+- no app.js, vão ser feitos os roteadores. Lá voce diz que usara um endpoint /users ou / . 
+- no routes que voce vai criar de fato o que será feito nestes endpoints, como colocar os get, puts, deletes, etc.
+
+Ex: criou no app.js um roteador para o / chamado indexRouter. No routes, ter um index.js que vai ter um router.get('/') que vai enviar para o endereço do index.html. 
+
+Para o Back:
+
+é parecido, mas as rotas serão os caminhos que o front acessará para pegar dados, usando o JS para fazer a logica do front, para que busque a rota no back.
