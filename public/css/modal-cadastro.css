@@ -13,7 +13,7 @@
 #modal_login,
 #modal_cadastro {
   width: 60%;
-  height: 60%;
+  height: 80%;
   background-color: var(--blue);
   border-radius: 10px;
   padding: 40px;
