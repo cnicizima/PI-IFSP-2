@@ -45,45 +45,211 @@
 
         <!-- modal de login e cadastro -->
 
-
         <dialog id="modal_cadastro">
-            <div class="container_modal_cadastro" onclick="event.stopPropagation();">
-                <div class="xizzinho">
-                    <img src="img/img_index/logo_branca.png" class="cadastro_logo_img">
-                    <button class="btn_fechar_modal" onclick="closeModal('modal_cadastro')">
-                        <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
-                    </button>
-                </div>
-                <h4>Comece aqui!</h4>
-                <h1>Crie <b>sua conta</b></h1>
-                <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome..." required><br>
-                <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..." required><br>
-                <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..." required><br>
-                <button class="cadastro" onclick="toggleBlur(true);">Cadastre-se</button>
-                <h4>Já é cadastrado? <a href="#" class="entre" onclick="closeModal('modal_cadastro'); openModal('modal_login');">Entre aqui</a></h4>
+            <div
+              class="container_modal_cadastro"
+              onclick="event.stopPropagation();"
+            >
+              <div class="xizzinho">
+                <img
+                  src="img/img_index/logo_branca.png"
+                  class="cadastro_logo_img"
+                />
+                <button
+                  class="btn_fechar_modal"
+                  onclick="closeModal('modal_cadastro')"
+                >
+                  <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
+                </button>
+              </div>
+              <h4>Comece aqui!</h4>
+              <h1>Crie <b>sua conta</b></h1>
+              <input
+                type="text"
+                class="input"
+                name="cadastro_nome"
+                id="cadastro_nome"
+                placeholder="Digite seu nome..."
+                required
+              /><br />
+              <input
+                type="email"
+                class="input"
+                name="cadastro_email"
+                id="cadastro_email"
+                placeholder="Digite seu email..."
+                required
+              /><br />
+              <input
+                type="password"
+                class="input"
+                name="cadastro_senha"
+                id="cadastro_senha"
+                placeholder="Digite sua senha..."
+                required
+              /><br />
+              <button class="cadastro" id="btnCadastro" onclick="registerUser();">
+                Cadastre-se
+              </button>
+              <h4>
+                Já é cadastrado?
+                <a
+                  href="#"
+                  class="entre"
+                  onclick="closeModal('modal_cadastro'); openModal('modal_login');"
+                  >Entre aqui</a
+                >
+              </h4>
             </div>
-        </dialog>
-        
-        <dialog id="modal_login">
+          </dialog>
+    
+          <dialog id="modal_login">
             <div class="container_modal_login" onclick="event.stopPropagation();">
-                <div class="xizzinho">
-                    <img src="img/img_index/logo_branca.png" class="login_logo_img">
-                    <button class="btn_fechar_modal" onclick="closeModal('modal_login')">
-                        <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6;"></i>
-                    </button>
-                </div>
-                <h4>Seu bilhete para Mônaco está aqui</h4>
-                <h1>Acesse <b>sua conta</b></h1>
-                <input type="email" class="input" name="login_email" id="login_email" placeholder="Digite seu email..." required><br>
-                <input type="password" class="input" name="login_senha" id="login_senha" placeholder="Digite sua senha..." required><br>
-                <button class="login" onclick="toggleBlur(true);">Entrar</button>
-                <h4><a href="#" class="entre">Esqueceu a senha?</a> <br> <a href="#" class="entre" onclick="closeModal('modal_login'); openModal('modal_cadastro');">Crie sua conta</a></h4>
+              <div class="xizzinho">
+                <img src="img/img_index/logo_branca.png" class="login_logo_img" />
+                <button
+                  class="btn_fechar_modal"
+                  onclick="closeModal('modal_login')"
+                >
+                  <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
+                </button>
+              </div>
+              <h4>Seu bilhete para Mônaco está aqui</h4>
+              <h1>Acesse <b>sua conta</b></h1>
+              <input
+                type="email"
+                class="input"
+                name="login_email"
+                id="login_email"
+                placeholder="Digite seu email..."
+                required
+              /><br />
+              <input
+                type="password"
+                class="input"
+                name="login_senha"
+                id="login_senha"
+                placeholder="Digite sua senha..."
+                required
+              /><br />
+              <button class="login" id="btnLogin" onclick="loginUser();">
+                Entrar
+              </button>
+              <h4>
+                <a href="#" class="entre">Esqueceu a senha?</a> <br />
+                <a
+                  href="#"
+                  class="entre"
+                  onclick="closeModal('modal_login'); openModal('modal_cadastro');"
+                  >Crie sua conta</a
+                >
+              </h4>
             </div>
-        </dialog>
-        
-        <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
-        <button onclick="openModal('modal_login')">Abrir Login</button>
-        
+          </dialog>
+    
+          <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
+          <button onclick="openModal('modal_login')">Abrir Login</button>
+    
+    
+          <!-- Script para funcionar o modal -->
+          <script>
+            // Função para registrar o usuário
+            async function registerUser() {
+              const nome = document.getElementById("cadastro_nome").value;
+              const email = document.getElementById("cadastro_email").value;
+              const senha = document.getElementById("cadastro_senha").value;
+    
+              if (!nome || !email || !senha) {
+                alert("Preencha todos os campos!");
+                return;
+              }
+    
+              try {
+                const response = await fetch(
+                  "http://localhost:4000/users/register",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      nome,
+                      email,
+                      senha,
+                    }),
+                  }
+                );
+    
+                const data = await response.json();
+                if (response.ok) {
+                  alert("Cadastro bem-sucedido!");
+                  closeModal("modal_cadastro");
+                  openModal("modal_login");
+                } else {
+                  alert(data.message);
+                }
+              } catch (error) {
+                console.error("Erro ao cadastrar o usuário:", error);
+                alert("Erro ao cadastrar o usuário.");
+              }
+            }
+    
+            // Função para fazer o login do usuário
+            async function loginUser() {
+              const email = document.getElementById("login_email").value;
+              const senha = document.getElementById("login_senha").value;
+    
+              if (!email || !senha) {
+                alert("Preencha todos os campos!");
+                return;
+              }
+    
+              try {
+                // Envia os dados para o back-end via POST
+                const response = await fetch("http://localhost:4000/users/login", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    email: email, // E-mail
+                    senha: senha, // Senha
+                  }),
+                });
+    
+                const data = await response.json();
+    
+                if (response.ok) {
+                //   alert(data.message); // Exibe a mensagem do servidor
+    
+                  // Usa setTimeout para garantir que o alert seja fechado antes do redirecionamento
+                  setTimeout(() => {
+                    window.location.href = data.redirectTo; // Redireciona para a página correta
+                  }, 500); // Espera 500ms (meio segundo) antes de redirecionar
+                } else {
+                  alert(data.message); // Exibe a mensagem de erro
+                }
+              } catch (error) {
+                console.error("Erro ao enviar dados de login:", error);
+                alert("Erro ao realizar login. Tente novamente mais tarde.");
+              }
+            }
+    
+            // Adiciona o event listener para o botão de login
+            document
+              .getElementById("btnLogin")
+              .addEventListener("click", loginUser);
+    
+            // Função para abrir o modal
+            function openModal(id) {
+              document.getElementById(id).showModal();
+            }
+    
+            // Função para fechar o modal
+            function closeModal(id) {
+              document.getElementById(id).close();
+            }
+          </script>
 
 
             <div class="div_imagem_principal">

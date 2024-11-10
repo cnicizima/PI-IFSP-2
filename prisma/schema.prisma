@@ -7,18 +7,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Clientes {
-  cpf        BigInt    @id
-  nome       String
-  email      String    @unique
-  endereco   String
-  cidade     String
-  UF         String
-  telefone   String
-  nascimento DateTime
-  sexo       String?
-  // Relacionamento com Compras
-  compras    Compras[]
+model Users {
+  id       Int       @id @default(autoincrement())
+  nome     String
+  email    String    @unique
+  senha    String
+  is_admin Boolean   @default(false) // Campo novo, padrão como false
+  compras  Compras[]
 }
 
 model Destinos {
@@ -34,8 +29,8 @@ model Destinos {
 
 model Compras {
   numeroCompra Int      @id @default(autoincrement())
-  cliente      Clientes @relation(fields: [clienteCpf], references: [cpf])
-  clienteCpf   BigInt
+  cliente      Users    @relation(fields: [clienteId], references: [id])
+  clienteId    Int
   destino      Destinos @relation(fields: [destinoId], references: [id])
   destinoId    Int // Relacionamento com Destinos pelo campo 'id'
   quantidade   Int

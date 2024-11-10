@@ -17,10 +17,10 @@ function toggleBlur(apply) {
 }
 
 // Fechar o modal ao clicar fora dele
-document.querySelectorAll("dialog").forEach((modal) => {
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal(modal.id);
-    }
-  });
-});
+// document.querySelectorAll("dialog").forEach((modal) => {
+//   modal.addEventListener("click", (event) => {
+//     if (event.target === modal) {
+//       closeModal(modal.id);
+//     }
+//   });
+// });
