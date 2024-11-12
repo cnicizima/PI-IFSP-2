@@ -7,7 +7,7 @@ var cors = require ('cors');
 const dotenv = require('dotenv');
 dotenv.config({ path: '../.env' }); 
 
-var indexRouter = require('./routes/pacotes');
+// var indexRouter = require('./routes/pacotes');
 var adminRouter = require('./routes/admin');
 var usersRouter = require('./routes/users');
 
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 
