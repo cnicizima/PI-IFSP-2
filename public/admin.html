@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Destinos</title>
+    <link rel="stylesheet" href="css/style_admin.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Destinos</title>
-  <link rel="stylesheet" href="css/style_admin.css">
-</head>
+  <body>
+    <!-- <header>
+      <h1>ADMIN</h1>
+      <h1>Gerenciamento de Destinos</h1>
+      <button id="openModalBtn">Adicionar Novo Destino</button>
+    </header> -->
+                <div class="div_imagem_principal">
+                <img class="imagem_principal_destino"/>
 
-<body>
-  <header>
-    <h1>ADMIN</h1>
-    <h1>Gerenciamento de Destinos</h1>
-    <button id="openModalBtn">Adicionar Novo Destino</button>
-  </header>
+                <!-- div do texto sobre a imagem -->
+                <div class="div_texto_imagem_principal">
+                  <h1>Gerenciamento de <b>destinos !</b> </h1>
+                </div>
 
-  <section id="card-container">
-    <!-- Os cards de destinos serão inseridos aqui dinamicamente via JavaScript -->
-  </section>
+                <button id="openModalBtn">Adicionar Novo Destino</button>
 
-  <!-- Modal para Adicionar/Atualizar Destino -->
-  <div id="modal" style="display:none;">
-    <div class="modal-content">
-      <button id="closeModalBtn">Fechar</button>
-      <h2 id="modal-title">Adicionar Novo Destino</h2>
-      <form id="destinoForm">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required><br>
+    <section id="card-container">
+      <!-- Os cards de destinos serão inseridos aqui dinamicamente via JavaScript -->
+    </section>
 
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" required></textarea><br>
+    <!-- Modal para Adicionar/Atualizar Destino -->
+    <div id="modal" style="display: none">
+      <div class="modal-content">
+        <button id="closeModalBtn">Fechar</button>
+        <h2 id="modal-title">Novo <b>destino !</b></h2>
+        <form id="destinoForm">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required /><br />
 
-        <label for="imagem">Imagem (URL):</label>
-        <input type="url" id="imagem" required><br>
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" required></textarea><br />
 
-        <label for="preco">Preço:</label>
-        <input type="number" id="preco" step="0.01" required><br>
+          <label for="imagem">Imagem (URL):</label>
+          <input type="url" id="imagem" required /><br />
 
-        <label for="avaliacao">Avaliação:</label>
-        <input type="text" id="avaliacao" required><br>
+          <label for="preco">Preço:</label>
+          <input type="number" id="preco" step="0.01" required /><br />
 
-        <label for="reviews">Reviews:</label>
-        <input type="number" id="reviews" required><br>
+          <label for="avaliacao">Avaliação:</label>
+          <input type="text" id="avaliacao" required /><br />
 
-        <button type="submit" id="submitDestino">Salvar</button>
-      </form>
+          <label for="reviews">Reviews:</label>
+          <input type="number" id="reviews" required /><br />
+
+          <button type="submit" id="submitDestino">Salvar</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <!-- Modal para Atualização de Destino -->
-  <div id="updateModal" style="display:none;">
-    <div class="modal-content">
-      <button id="closeUpdateModalBtn">Fechar</button>
-      <h2 id="update-modal-title">Atualizar Destino</h2>
-      <form id="updateDestinoForm">
-        <input type="hidden" id="updateId">
+    <!-- Modal para Atualização de Destino -->
+    <div id="updateModal" style="display: none">
+      <div class="modal-content">
+        <button id="closeUpdateModalBtn">Fechar</button>
+        <h2 id="update-modal-title">Atualizar Destino</h2>
+        <form id="updateDestinoForm">
+          <input type="hidden" id="updateId" />
 
-        <label for="updateNome">Nome:</label>
-        <input type="text" id="updateNome" required><br>
+          <label for="updateNome">Nome:</label>
+          <input type="text" id="updateNome" required /><br />
 
-        <label for="updateDescricao">Descrição:</label>
-        <textarea id="updateDescricao" required></textarea><br>
+          <label for="updateDescricao">Descrição:</label>
+          <textarea id="updateDescricao" required></textarea><br />
 
-        <label for="updateImagem">Imagem (URL):</label>
-        <input type="url" id="updateImagem" required><br>
+          <label for="updateImagem">Imagem (URL):</label>
+          <input type="url" id="updateImagem" required /><br />
 
-        <label for="updatePreco">Preço:</label>
-        <input type="number" id="updatePreco" step="0.01" required><br>
+          <label for="updatePreco">Preço:</label>
+          <input type="number" id="updatePreco" step="0.01" required /><br />
 
-        <label for="updateAvaliacao">Avaliação:</label>
-        <input type="text" id="updateAvaliacao" required><br>
+          <label for="updateAvaliacao">Avaliação:</label>
+          <input type="text" id="updateAvaliacao" required /><br />
 
-        <label for="updateReviews">Reviews:</label>
-        <input type="number" id="updateReviews" required><br>
+          <label for="updateReviews">Reviews:</label>
+          <input type="number" id="updateReviews" required /><br />
 
-        <button type="submit" id="updateDestino">Atualizar</button>
-      </form>
+          <button type="submit" id="updateDestino">Atualizar</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2024 Admin Portal</p>
-  </footer>
+    <footer>
+      <p>© 2024 Admin Portal</p>
+    </footer>
 
-  <script src="js/admin_front.js"></script>
-</body>
-
+    <script src="js/admin_front.js"></script>
+  </body>
 </html>

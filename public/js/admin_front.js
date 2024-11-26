@@ -39,18 +39,32 @@ destinoForm.onsubmit = async function (event) {
   const reviews = parseInt(document.getElementById("reviews").value);
 
   // Verificação se os dados estão preenchidos corretamente
-  if (!nome || !descricao || !imagem || isNaN(preco) || !avaliacao || isNaN(reviews)) {
+  if (
+    !nome ||
+    !descricao ||
+    !imagem ||
+    isNaN(preco) ||
+    !avaliacao ||
+    isNaN(reviews)
+  ) {
     alert("Por favor, preencha todos os campos corretamente.");
     return; // Não envia os dados se houver campos vazios ou inválidos
   }
 
   try {
-    const response = await fetch('http://localhost:4000/admin/destinos', {
-      method: 'POST',
+    const response = await fetch("http://localhost:4000/admin/destinos", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome, descricao, imagem, preco, avaliacao, reviews }),
+      body: JSON.stringify({
+        nome,
+        descricao,
+        imagem,
+        preco,
+        avaliacao,
+        reviews,
+      }),
     });
 
     const data = await response.json();
@@ -62,7 +76,9 @@ destinoForm.onsubmit = async function (event) {
       destinoForm.reset(); // Reseta o formulário
       loadDestinos(); // Atualiza a lista de destinos
     } else {
-      alert("Erro ao adicionar o destino: " + (data.message || "Erro desconhecido."));
+      alert(
+        "Erro ao adicionar o destino: " + (data.message || "Erro desconhecido.")
+      );
     }
   } catch (error) {
     console.error(error);
@@ -73,39 +89,47 @@ destinoForm.onsubmit = async function (event) {
 // Função para carregar os destinos do banco
 async function loadDestinos() {
   try {
-    const response = await fetch('http://localhost:4000/admin/destinos');
+    const response = await fetch("http://localhost:4000/admin/destinos");
     const destinos = await response.json();
 
     // Limpar o container de cards antes de adicionar novos
-    cardContainer.innerHTML = '';
+    cardContainer.innerHTML = "";
 
     // Preencher o container com os destinos
-    destinos.forEach(destino => {
-      const card = document.createElement('div');
-      card.classList.add('card');
+    destinos.forEach((destino) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
       card.innerHTML = `
         <img src="${destino.imagem}" alt="${destino.nome}">
         <div class="card-content">
           <h3>${destino.nome}</h3>
           <p class="reviews">${destino.avaliacao} <span>${destino.reviews} customer reviews</span></p>
           <p>${destino.descricao}</p>
+          <div class="price-tag">$${destino.preco}</div>
           <div>
             <button onclick="openUpdateModal(${destino.id}, '${destino.nome}', '${destino.descricao}', '${destino.imagem}', ${destino.preco}, '${destino.avaliacao}', ${destino.reviews})">Atualizar Destino</button>
             <button onclick="deleteDestino(${destino.id})">Excluir Destino</button>
-            <div class="price-tag">$${destino.preco}</div>
           </div>
         </div>
       `;
       cardContainer.appendChild(card);
     });
   } catch (error) {
-    console.error('Erro ao carregar destinos:', error);
+    console.error("Erro ao carregar destinos:", error);
     alert("Erro ao carregar os destinos.");
   }
 }
 
 // Função para abrir o modal de atualização de destino
-function openUpdateModal(id, nome, descricao, imagem, preco, avaliacao, reviews) {
+function openUpdateModal(
+  id,
+  nome,
+  descricao,
+  imagem,
+  preco,
+  avaliacao,
+  reviews
+) {
   document.getElementById("updateId").value = id;
   document.getElementById("updateNome").value = nome;
   document.getElementById("updateDescricao").value = descricao;
@@ -135,18 +159,32 @@ updateDestinoForm.onsubmit = async function (event) {
   const reviews = parseInt(document.getElementById("updateReviews").value);
 
   // Verificação de dados
-  if (!nome || !descricao || !imagem || isNaN(preco) || !avaliacao || isNaN(reviews)) {
+  if (
+    !nome ||
+    !descricao ||
+    !imagem ||
+    isNaN(preco) ||
+    !avaliacao ||
+    isNaN(reviews)
+  ) {
     alert("Por favor, preencha todos os campos corretamente.");
     return;
   }
 
   try {
     const response = await fetch(`http://localhost:4000/admin/destinos/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome, descricao, imagem, preco, avaliacao, reviews }),
+      body: JSON.stringify({
+        nome,
+        descricao,
+        imagem,
+        preco,
+        avaliacao,
+        reviews,
+      }),
     });
 
     const data = await response.json();
@@ -156,7 +194,9 @@ updateDestinoForm.onsubmit = async function (event) {
       updateModal.style.display = "none";
       loadDestinos(); // Atualiza a lista de destinos
     } else {
-      alert("Erro ao atualizar o destino: " + (data.message || "Erro desconhecido."));
+      alert(
+        "Erro ao atualizar o destino: " + (data.message || "Erro desconhecido.")
+      );
     }
   } catch (error) {
     console.error(error);
@@ -168,9 +208,12 @@ updateDestinoForm.onsubmit = async function (event) {
 async function deleteDestino(id) {
   if (confirm("Tem certeza que deseja excluir este destino?")) {
     try {
-      const response = await fetch(`http://localhost:4000/admin/destinos/${id}`, {
-        method: 'DELETE',
-      });
+      const response = await fetch(
+        `http://localhost:4000/admin/destinos/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (response.ok) {
         alert("Destino excluído com sucesso!");
