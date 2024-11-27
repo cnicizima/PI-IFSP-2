@@ -194,6 +194,7 @@ body {
   font-size: 20px;
   margin-bottom: 15px;
   color: var(--white);
+  font-weight: 500;
 }
 
 .missao-visao-valores-card p {
