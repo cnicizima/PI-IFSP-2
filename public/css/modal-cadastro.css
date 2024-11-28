@@ -136,7 +136,8 @@ textarea {
   padding: 15px;
   border: 1px solid var(--blue);
   border-radius: 8px;
-  background-color: var(--soft_blue);
+  background-color: var(--blue);
   font-size: 1rem;
-  color: #333;
+  color: #ffffff;
+  outline: transparent;
 }

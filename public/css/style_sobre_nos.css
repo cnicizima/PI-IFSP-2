@@ -41,7 +41,7 @@ body {
 }
 
 .logo {
-  color: var(--blue);
+  color: var(--blue);   
   font-size: 35px;
   font-family: "higuen";
   letter-spacing: 5px;
@@ -223,6 +223,7 @@ body {
   justify-self: center;
   color: var(--blue);
   font-weight: 500;
+  margin-bottom: 15px;
 }
 
 /* h2 do card */
@@ -254,7 +255,7 @@ body {
   padding: 5%;
   border-radius: 5%;
   text-align: center;
-  box-shadow: 3px 3px 25px #0b0f16b0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .porque_condamine_cards_2 {
