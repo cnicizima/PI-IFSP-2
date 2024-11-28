@@ -252,38 +252,119 @@ textarea {
 .card button:active {
   background-color: var(--soft_blue);
 }
-
-/* Grade de Cards - 3 colunas */
+/* Grade de Cards - 2 colunas */
 #card-container {
   width: 65%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
   gap: 30px;
-  justify-items: center;
   padding: 30px 0;
   margin-right: auto;
   margin-left: auto;
+  grid-template-rows: auto; /* Ajuste automático das linhas */
 }
 
-/* Centralizando o botão "Adicionar Novo Destino" */
-#openModalBtn {
-  padding: 12px 25px;
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Divisão do card em 3 seções: imagem, conteúdo e botões */
+  width: 100%; /* Certificando que o card ocupa 100% da coluna */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  grid-row: 1 / 2; /* Coloca a imagem na primeira linha do card */
+}
+
+.card-content {
+  padding: 15px;
+  grid-row: 2 / 3; /* Coloca o conteúdo (texto) na segunda linha do card */
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.card .reviews {
+  font-size: 1rem;
+  color: #777;
+}
+
+.card .reviews span {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.card .price-tag {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--blue);
+  margin-top: 10px;
+}
+
+.card .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 botões lado a lado */
+  gap: 10px;
+  padding: 10px;
+  grid-row: 3 / 4; /* Coloca os botões na terceira linha */
+}
+
+.card button {
+  padding: 10px 15px;
   background-color: var(--blue);
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 4px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  margin: 0 auto;
-  display: block;
-  margin-top: 30px;
 }
 
-#openModalBtn:hover {
+.card button:hover {
   background-color: var(--hover_link);
 }
 
-#openModalBtn:active {
+.card button:active {
   background-color: var(--soft_blue);
+}
+
+/* Botões dentro do card */
+.card .buttons button {
+  padding: 12px 0;
+  background-color: var(--blue);
+  font-size: 15px;
+}
+
+/* Última linha de cards, os botões devem estar lado a lado */
+.card .buttons button {
+  width: 100%; /* Certificando que os botões ocupem todo o espaço */
+}
+
+/* Ajustando a grid para subgrid em cards para alinha-los */
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  gap: 30px;
+}
+
+.card-content,
+.card img,
+.card .buttons {
+  display: subgrid;
+  grid-column: 1 / -1; /* Faz com que esses elementos usem todas as colunas disponíveis */
 }

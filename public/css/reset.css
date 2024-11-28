@@ -25,3 +25,8 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  * {
+    outline: none;
+    /* color: black !important; */
+  }
