@@ -135,6 +135,10 @@
 
 input[type="text"],
 input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select > .input 
 textarea {
   width: 40%;
   padding: 15px;
@@ -142,6 +146,6 @@ textarea {
   border-radius: 8px;
   background-color: var(--blue);
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--white);
   outline: transparent;
 }
