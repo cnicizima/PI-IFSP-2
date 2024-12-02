@@ -137,7 +137,7 @@ input[type="tel"],
 input[type="email"],
 input[type="date"],
 input[type="password"],
-select > .input textarea {
+select {
   width: 40%;
   padding: 15px;
   /* border: 1px solid var(--light_blue); */
