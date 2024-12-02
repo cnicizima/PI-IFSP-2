@@ -68,7 +68,7 @@
 
        <!-- modal de login e cadastro -->
 
-       <dialog id="modal_cadastro">
+      <dialog id="modal_cadastro">
         <div
           class="container_modal_cadastro"
           onclick="event.stopPropagation();"
@@ -87,21 +87,100 @@
           </div>
           <h4>Comece aqui!</h4>
           <h1>Crie <b>sua conta</b></h1>
-           <input type="text" class="input" name="cadastro_nome" id="cadastro_nome" placeholder="Digite seu nome completo..." required/>
-          
-          <input type="text" class="input" id="cpf" name="cpf" placeholder="Digite seu CPF..." required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"/>
 
-          <input type="date" class="input" id="nascimento" name="nascimento" required>
-          
-          <input type="text" class="input" id="sexo" name="sexo" placeholder="Digite seu sexo...">
+          <input
+            type="text"
+            class="input"
+            name="cadastro_nome"
+            id="cadastro_nome"
+            placeholder="Digite seu nome completo..."
+            required
+          />
 
-          <input type="text" class="input" id="cep" name="cep" placeholder="Digite seu CEP..." required pattern="\d{5}-\d{3}">
+          <input
+            type="text"
+            class="input"
+            id="cpf"
+            name="cpf"
+            placeholder="Digite seu CPF..."
+            required
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+          />
 
-          <input type="text" class="input" id="celular" name="celular" placeholder="Digite seu celular..." required pattern="\(\d{2}\) \d{5}-\d{4}">
+          <input
+            type="date"
+            class="input"
+            id="nascimento"
+            name="nascimento"
+            required
+          />
 
-          <input type="email" class="input" name="cadastro_email" id="cadastro_email" placeholder="Digite seu email..." required/>
+          <select name="sexo" id="sexo">
+            <option value="">Selecione seu sexo...</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="">Prefiro não informar</option>
+          </select>
 
-          <input type="password" class="input" name="cadastro_senha" id="cadastro_senha" placeholder="Digite sua senha..." required/>
+          <select id="estado" name="Selecione seu estado...">
+            <option value="">Selecione seu estado...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </select>
+
+          <input
+            type="text"
+            class="input"
+            id="celular"
+            name="celular"
+            placeholder="Digite seu celular..."
+            required
+            pattern="\(\d{2}\) \d{5}-\d{4}"
+          />
+
+          <input
+            type="email"
+            class="input"
+            name="cadastro_email"
+            id="cadastro_email"
+            placeholder="Digite seu email..."
+            required
+          />
+
+          <input
+            type="password"
+            class="input"
+            name="cadastro_senha"
+            id="cadastro_senha"
+            placeholder="Digite sua senha..."
+            required
+          />
 
           <button class="cadastro" id="btnCadastro" onclick="registerUser();">
             Cadastre-se
