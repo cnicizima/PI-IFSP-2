@@ -96,7 +96,6 @@
   outline: none;
 }
 
-
 ::placeholder {
   padding: 10px;
   color: var(--white);
@@ -110,7 +109,7 @@
   margin-top: 2%;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
   color: var(--white);
 }
 
@@ -138,13 +137,12 @@ input[type="tel"],
 input[type="email"],
 input[type="date"],
 input[type="password"],
-select > .input 
-textarea {
+select > .input textarea {
   width: 40%;
   padding: 15px;
-  border: 1px solid var(--blue);
+  /* border: 1px solid var(--light_blue); */
   border-radius: 8px;
-  background-color: var(--blue);
+  background-color: var(--soft_blue);
   font-size: 1rem;
   color: var(--white);
   outline: transparent;

@@ -216,6 +216,8 @@ form {
 
 #contato_textos {
   width: 100%;
+  background-color: var(--blue);
+  border-radius: 8px;
 }
 
 .contatos_textox {
