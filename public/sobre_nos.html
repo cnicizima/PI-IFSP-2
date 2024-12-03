@@ -45,134 +45,137 @@
 
         <!-- modal de login e cadastro -->
 
-      <dialog id="modal_cadastro">
-        <div
-          class="container_modal_cadastro"
-          onclick="event.stopPropagation();"
-        >
-          <div class="xizzinho">
-            <img
-              src="img/img_index/logo_branca.png"
-              class="cadastro_logo_img"
-            />
-            <button
-              class="btn_fechar_modal"
-              onclick="closeModal('modal_cadastro')"
-            >
-              <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
-            </button>
-          </div>
-          <h4>Comece aqui!</h4>
-          <h1>Crie <b>sua conta</b></h1>
+     <!-- modal de login e cadastro -->
 
-          <input
-            type="text"
-            class="input"
-            name="cadastro_nome"
-            id="cadastro_nome"
-            placeholder="Digite seu nome completo..."
-            required
+     <dialog id="modal_cadastro">
+      <div
+        class="container_modal_cadastro"
+        onclick="event.stopPropagation();"
+      >
+        <div class="xizzinho">
+          <img
+            src="img/img_index/logo_branca.png"
+            class="cadastro_logo_img"
           />
-
-          <input
-            type="text"
-            class="input"
-            id="cpf"
-            name="cpf"
-            placeholder="Digite seu CPF..."
-            required
-            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-          />
-
-          <input
-            type="date"
-            class="input"
-            id="nascimento"
-            name="nascimento"
-            required
-          />
-
-          <select name="sexo" id="sexo">
-            <option value="">Selecione seu sexo...</option>
-            <option value="F">Feminino</option>
-            <option value="M">Masculino</option>
-            <option value="">Prefiro não informar</option>
-          </select>
-
-          <select id="estado" name="Selecione seu estado...">
-            <option value="">Selecione seu estado...</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-            <option value="EX">Estrangeiro</option>
-          </select>
-
-          <input
-            type="text"
-            class="input"
-            id="celular"
-            name="celular"
-            placeholder="Digite seu celular..."
-            required
-            pattern="\(\d{2}\) \d{5}-\d{4}"
-          />
-
-          <input
-            type="email"
-            class="input"
-            name="cadastro_email"
-            id="cadastro_email"
-            placeholder="Digite seu email..."
-            required
-          />
-
-          <input
-            type="password"
-            class="input"
-            name="cadastro_senha"
-            id="cadastro_senha"
-            placeholder="Digite sua senha..."
-            required
-          />
-
-          <button class="cadastro" id="btnCadastro" onclick="registerUser();">
-            Cadastre-se
+          <button
+            class="btn_fechar_modal"
+            onclick="closeModal('modal_cadastro')"
+          >
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #eef2f6"></i>
           </button>
-              <h4>
-                Já é cadastrado?
-                <a
-                  href="#"
-                  class="entre"
-                  onclick="closeModal('modal_cadastro'); openModal('modal_login');"
-                  >Entre aqui</a
-                >
-              </h4>
-            </div>
-          </dialog>
+        </div>
+        <h4>Comece aqui!</h4>
+        <h1>Crie <b>sua conta</b></h1>
+
+        <input
+          type="text"
+          class="input"
+          name="cadastro_nome"
+          id="cadastro_nome"
+          placeholder="Digite seu nome completo..."
+          required
+        />
+
+        <input
+          type="text"
+          class="input"
+          id="cpf"
+          name="cpf"
+          placeholder="Digite seu CPF..."
+          required
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+        />
+
+        <input
+          type="date"
+          class="input"
+          id="nascimento"
+          name="nascimento"
+          required
+        />
+
+        <select name="sexo" id="sexo">
+          <option value="">Selecione seu sexo...</option>
+          <option value="F">Feminino</option>
+          <option value="M">Masculino</option>
+          <option value="">Prefiro não informar</option>
+        </select>
+
+        <select id="estado" name="Selecione seu estado...">
+          <option value="">Selecione seu estado...</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+
+        <input
+          type="text"
+          class="input"
+          id="celular"
+          name="celular"
+          placeholder="Digite seu celular..."
+          required
+          pattern="\(\d{2}\) \d{5}-\d{4}"
+        />
+
+        <input
+          type="email"
+          class="input"
+          name="cadastro_email"
+          id="cadastro_email"
+          placeholder="Digite seu email..."
+          required
+        />
+
+        <input
+          type="password"
+          class="input"
+          name="cadastro_senha"
+          id="cadastro_senha"
+          placeholder="Digite sua senha..."
+          required
+        />
+
+        <button class="cadastro" id="btnCadastro" onclick="registerUser();">
+          Cadastre-se
+        </button>
+
+        <h4>
+          Já é cadastrado?
+          <a
+            href="#"
+            class="entre"
+            onclick="closeModal('modal_cadastro'); openModal('modal_login');"
+            >Entre aqui</a
+          >
+        </h4>
+      </div>
+    </dialog>
     
           <dialog id="modal_login">
             <div class="container_modal_login" onclick="event.stopPropagation();">
@@ -224,46 +227,54 @@
     
           <!-- Script para funcionar o modal -->
           <script>
-            // Função para registrar o usuário
-            async function registerUser() {
-              const nome = document.getElementById("cadastro_nome").value;
-              const email = document.getElementById("cadastro_email").value;
-              const senha = document.getElementById("cadastro_senha").value;
-    
-              if (!nome || !email || !senha) {
-                alert("Preencha todos os campos!");
-                return;
-              }
-    
-              try {
-                const response = await fetch(
-                  "http://localhost:4000/users/register",
-                  {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                      nome,
-                      email,
-                      senha,
-                    }),
-                  }
-                );
-    
-                const data = await response.json();
-                if (response.ok) {
-                  alert("Cadastro bem-sucedido!");
-                  closeModal("modal_cadastro");
-                  openModal("modal_login");
-                } else {
-                  alert(data.message);
-                }
-              } catch (error) {
-                console.error("Erro ao cadastrar o usuário:", error);
-                alert("Erro ao cadastrar o usuário.");
-              }
-            }
+             // Função para registrar o usuário
+async function registerUser() {
+  const nome = document.getElementById("cadastro_nome").value;
+  const email = document.getElementById("cadastro_email").value;
+  const senha = document.getElementById("cadastro_senha").value;
+  const cpf = document.getElementById("cpf").value;
+  const nascimento = document.getElementById("nascimento").value;
+  const sexo = document.getElementById("sexo").value;
+  const estado = document.getElementById("estado").value;
+  const celular = document.getElementById("celular").value;
+
+  // Verificar se todos os campos foram preenchidos
+  if (!nome || !email || !senha || !cpf || !nascimento || !sexo || !estado || !celular) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:4000/users/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        senha,
+        cpf,
+        nascimento,
+        sexo,
+        estado,
+        celular,
+      }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert("Cadastro bem-sucedido!");
+      closeModal("modal_cadastro");
+      openModal("modal_login");
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Erro ao cadastrar o usuário:", error);
+    alert("Erro ao cadastrar o usuário.");
+  }
+}
     
             // Função para fazer o login do usuário
             async function loginUser() {

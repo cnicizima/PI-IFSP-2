@@ -8,35 +8,43 @@ router.use(express.json()); // Middleware para analisar JSON
 
 // Rota de cadastro de usuário
 router.post('/register', async (req, res) => {
-    const { nome, email, senha } = req.body;
+    const { nome, email, senha, cpf, nascimento, sexo, estado, celular } = req.body;
 
-    if (!nome || !email || !senha) {
-        return res.status(400).json({ message: "Preencha todos os campos!" });
+    // Verificar se todos os campos obrigatórios foram preenchidos
+    if (!nome || !email || !senha || !cpf || !nascimento || !estado || !celular) {
+        return res.status(400).json({ message: "Preencha todos os campos obrigatórios!" });
     }
 
     try {
-        // Verificar se o usuário já existe
-        const existingUser = await prisma.users.findUnique({
-            where: { email },
+        // Verificar se o usuário já existe (baseado no email ou CPF, ambos devem ser únicos)
+        const existingUser = await prisma.users.findFirst({
+            where: {
+                OR: [{ email }, { cpf }],
+            },
         });
         if (existingUser) {
-            return res.status(400).json({ message: "Usuário já existe." });
+            return res.status(400).json({ message: "Usuário já cadastrado com este email ou CPF." });
         }
 
         // Criptografar a senha
         const hashedPassword = await bcrypt.hash(senha, 10);
 
-        // Criar um novo usuário no banco de dados, com is_admin como false por padrão
+        // Criar um novo usuário no banco de dados
         const newUser = await prisma.users.create({
             data: {
                 nome,
                 email,
                 senha: hashedPassword,
+                cpf,
+                nascimento: new Date(nascimento), // Converter para formato de data
+                sexo: sexo || null, // Campo opcional (pode ser nulo)
+                estado,
+                celular,
                 is_admin: false, // Garantir que o valor padrão de is_admin seja false
             },
         });
 
-        return res.status(201).json({ message: "Cadastro bem-sucedido!" });
+        return res.status(201).json({ message: "Cadastro bem-sucedido!", usuario: newUser });
     } catch (error) {
         console.error('Erro ao cadastrar o usuário:', error);
         res.status(500).json({ message: "Erro ao cadastrar o usuário." });
@@ -58,24 +66,19 @@ router.post('/login', async (req, res) => {
         });
 
         if (!user) {
-            return res.status(400).json({ message: "Usuário não encontrado." });
+            return res.status(401).json({ message: "Usuário não encontrado." }); // Usando 401 para falha de autenticação
         }
 
         // Verificar a senha
         let validPassword = false;
-
-        // Se o usuário for o admin, compara a senha diretamente com "senha123"
-        if (user.is_admin) {
-            validPassword = senha === "senha123";  // Comparação direta para o admin
-        } else {
-            validPassword = await bcrypt.compare(senha, user.senha);  // Para outros usuários, verifica com bcrypt
-        }
-
+ 
+        validPassword = await bcrypt.compare(senha, user.senha);  // Para outros usuários, verifica com bcrypt
+        
         if (!validPassword) {
-            return res.status(400).json({ message: "Senha incorreta." });
+            return res.status(401).json({ message: "Senha incorreta." }); // 401 também para falha de senha
         }
 
-        // Verificar o campo is_admin
+        // Se a senha estiver correta, direcionar o usuário para a página correspondente
         if (user.is_admin) {
             return res.status(200).json({
                 message: "Login bem-sucedido, redirecionando para admin.",
@@ -93,6 +96,7 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: "Erro ao realizar login." });
     }
 });
+
 
 // Exportar o router
 module.exports = router;
