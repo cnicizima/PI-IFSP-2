@@ -22,3 +22,6 @@ O Prisma deve ser instalado no BACKEND.
 o Faker pode ser usado para gerar dados ficticios, tem que instalar a biblioteca, depois criar um script com as informaçoes e depois rodar no console o script com o "node generate.js"
 
 para garantir que o prisma criou os models, dar npx generate. para usar um model novo, dar o migration antes.
+
+CHART.JS - biblioteca que faz gráficos. 
+Voce instala no front e consegue atraves de JS, criar graficos. precisa inserir um link igual do cdn do taiwind no header.
