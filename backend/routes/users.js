@@ -98,5 +98,17 @@ router.post('/login', async (req, res) => {
 });
 
 
+// Rota para obter todos os usuários
+router.get('/', async (req, res) => {
+    try {
+        const usuarios = await prisma.users.findMany(); // Supondo que você esteja usando o modelo Clientes
+        res.json(usuarios);
+    } catch (error) {
+        console.error('Erro ao buscar usuários:', error);
+        res.status(500).json({ message: 'Erro ao buscar usuários' });
+    }
+});
+
+
 // Exportar o router
 module.exports = router;
