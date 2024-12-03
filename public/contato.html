@@ -68,6 +68,8 @@
 
        <!-- modal de login e cadastro -->
 
+      <!-- modal de login e cadastro -->
+
       <dialog id="modal_cadastro">
         <div
           class="container_modal_cadastro"
@@ -185,6 +187,7 @@
           <button class="cadastro" id="btnCadastro" onclick="registerUser();">
             Cadastre-se
           </button>
+
           <h4>
             Já é cadastrado?
             <a
@@ -247,46 +250,54 @@
 
       <!-- Script para funcionar o modal -->
       <script>
-        // Função para registrar o usuário
-        async function registerUser() {
-          const nome = document.getElementById("cadastro_nome").value;
-          const email = document.getElementById("cadastro_email").value;
-          const senha = document.getElementById("cadastro_senha").value;
+         // Função para registrar o usuário
+async function registerUser() {
+  const nome = document.getElementById("cadastro_nome").value;
+  const email = document.getElementById("cadastro_email").value;
+  const senha = document.getElementById("cadastro_senha").value;
+  const cpf = document.getElementById("cpf").value;
+  const nascimento = document.getElementById("nascimento").value;
+  const sexo = document.getElementById("sexo").value;
+  const estado = document.getElementById("estado").value;
+  const celular = document.getElementById("celular").value;
 
-          if (!nome || !email || !senha) {
-            alert("Preencha todos os campos!");
-            return;
-          }
+  // Verificar se todos os campos foram preenchidos
+  if (!nome || !email || !senha || !cpf || !nascimento || !sexo || !estado || !celular) {
+    alert("Preencha todos os campos!");
+    return;
+  }
 
-          try {
-            const response = await fetch(
-              "http://localhost:4000/users/register",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  nome,
-                  email,
-                  senha,
-                }),
-              }
-            );
+  try {
+    const response = await fetch("http://localhost:4000/users/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        senha,
+        cpf,
+        nascimento,
+        sexo,
+        estado,
+        celular,
+      }),
+    });
 
-            const data = await response.json();
-            if (response.ok) {
-              alert("Cadastro bem-sucedido!");
-              closeModal("modal_cadastro");
-              openModal("modal_login");
-            } else {
-              alert(data.message);
-            }
-          } catch (error) {
-            console.error("Erro ao cadastrar o usuário:", error);
-            alert("Erro ao cadastrar o usuário.");
-          }
-        }
+    const data = await response.json();
+    if (response.ok) {
+      alert("Cadastro bem-sucedido!");
+      closeModal("modal_cadastro");
+      openModal("modal_login");
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Erro ao cadastrar o usuário:", error);
+    alert("Erro ao cadastrar o usuário.");
+  }
+}
 
         // Função para fazer o login do usuário
         async function loginUser() {
