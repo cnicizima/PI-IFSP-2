@@ -1,4 +1,4 @@
-1) Ao clonar, não vira a mode_nodule, porque ela esta na pasta .gitignore (ou seja, não sobe para o github).
+1) Ao clonar, não virá a mode_nodule, porque ela esta na pasta .gitignore (ou seja, não sobe para o github).
 Então precisa abrir o terminal, ir na raiz e dar npm install. Depois ir no backend e dar npm install também. 
 Isto vai instalar todos os programas que estão listados no package-json (dotenv, prisma client, etc)
 
@@ -17,3 +17,8 @@ Ex: criou no app.js um roteador para o / chamado indexRouter. No routes, ter um 
 Para o Back:
 
 é parecido, mas as rotas serão os caminhos que o front acessará para pegar dados, usando o JS para fazer a logica do front, para que busque a rota no back.
+
+O Prisma deve ser instalado no BACKEND. 
+o Faker pode ser usado para gerar dados ficticios, tem que instalar a biblioteca, depois criar um script com as informaçoes e depois rodar no console o script com o "node generate.js"
+
+para garantir que o prisma criou os models, dar npx generate. para usar um model novo, dar o migration antes.
