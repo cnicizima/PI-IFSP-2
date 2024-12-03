@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/dashboard.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1B1B2F;
+      color: #E5E5E5;
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #F9A826;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .card {
+      background-color: #162447;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+    }
+    .chart-container {
+      background-color: #162447;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    .chart-container canvas {
+      max-height: 400px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    ul li {
+      background-color: #1F4068;
+      color: #EAEAEA;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto p-5">
+    <h1>Dashboard - Relatórios e Gráficos</h1>
+
+    <!-- Cards -->
+    <div class="flex flex-wrap justify-between gap-4">
+      <div class="card p-5 w-full md:w-[30%]">
+        <h2 class="text-xl font-semibold mb-3">Total de Usuários</h2>
+        <p id="totalUsuarios" class="text-4xl font-bold text-[#F9A826]">0</p>
+      </div>
+      <div class="card p-5 w-full md:w-[30%]">
+        <h2 class="text-xl font-semibold mb-3">Média de Idade</h2>
+        <p id="mediaIdade" class="text-4xl font-bold text-[#F9A826]">0</p>
+      </div>
+    </div>
+
+    <!-- Relatórios -->
+    <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="card p-5">
+        <h2 class="text-xl font-semibold mb-3">Sexo</h2>
+        <ul id="sexoReport"></ul>
+      </div>
+      <div class="card p-5">
+        <h2 class="text-xl font-semibold mb-3">Estados</h2>
+        <ul id="estadoReport"></ul>
+      </div>
+      <div class="card p-5 md:col-span-2">
+        <h2 class="text-xl font-semibold mb-3">Faixas Etárias</h2>
+        <ul id="faixaEtariaReport"></ul>
+      </div>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="chart-container mt-5">
+      <h2 class="text-xl font-semibold mb-3">Gráfico de Sexo</h2>
+      <canvas id="sexoChart"></canvas>
+    </div>
+    <div class="chart-container mt-5">
+      <h2 class="text-xl font-semibold mb-3">Gráfico de Estados</h2>
+      <canvas id="estadoChart"></canvas>
+    </div>
+    <div class="chart-container mt-5" style="max-width: 600px; margin: 0 auto;">
+      <h2 class="text-xl font-semibold mb-3">Gráfico de Faixa Etária</h2>
+      <canvas id="faixaEtariaChart"></canvas>
+    </div>
+  </div>
+</body>
+</html>

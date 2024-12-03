@@ -29,5 +29,8 @@ router.get('/admin', async (req, res) => {
   res.sendFile(path.join(__dirname, '../public/admin.html'));
 });
 
+router.get('/dashboard', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+});
 
 module.exports = router;
