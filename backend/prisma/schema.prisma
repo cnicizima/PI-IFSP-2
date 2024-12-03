@@ -8,12 +8,18 @@ datasource db {
 }
 
 model Users {
-  id       Int       @id @default(autoincrement())
-  nome     String
-  email    String    @unique
-  senha    String
-  is_admin Boolean   @default(false) // Campo novo, padrão como false
-  compras  Compras[]
+  id         Int       @id @default(autoincrement())
+  nome       String
+  cpf        String    @unique
+  nascimento DateTime
+  sexo       String?
+  estado     String
+  celular    String
+  email      String    @unique
+  senha      String
+  createdAt  DateTime  @default(now())
+  is_admin   Boolean   @default(false)
+  compras    Compras[]
 }
 
 model Destinos {
