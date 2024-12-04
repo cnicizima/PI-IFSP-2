@@ -1,0 +1,100 @@
+:root {
+  --white: #ffffff;
+  --gelo: #eef2f6;
+  --blue: #496c7b;
+  --light_blue: #88a4b2;
+  --dark_blue: #0b0f16;
+  --gray: #57606d;
+  --hover_link: #88a4b2;
+  --soft_blue: #64818f;
+}
+
+body {
+  background-color: var(--gelo);
+  color: var(--white);
+  font-family: "Montserrat", system-ui;
+  margin: 20px;
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--blue);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--soft_blue);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 200px;
+  width: 15%;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.chart-container {
+  background-color: #162447;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.chart-container canvas {
+  max-height: 400px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ul li {
+  background-color: #1f4068;
+  color: #eaeaea;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: var(--soft_blue);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px; /* Reduzido de 16px para 15px */
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--hover_link);
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin-left: 10%;
+  margin-top: 5%;
+  gap: 30px;
+}
+
+#relatorios {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin-left: 10%;
+  margin-top: 30px;
+  gap: 30px;
+}
