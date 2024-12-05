@@ -24,3 +24,25 @@ function toggleBlur(apply) {
 //     }
 //   });
 // });
+
+const carousel = document.querySelector('.carousel');
+const images = document.querySelectorAll('.carousel img');
+let index = 0;
+
+function showSlide() {
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide();
+}
+
+function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide();
+}
+
+// Troca automática após 3 segundos
+setInterval(nextSlide, 3000);
