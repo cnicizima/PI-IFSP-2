@@ -1,5 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
-const { faker } = require('@faker-js/faker');
+const { fakerPT_BR: faker } = require('@faker-js/faker');
+
+
 
 const prisma = new PrismaClient();
 
@@ -9,56 +11,24 @@ function generateCPF() {
   return cpf;
 }
 
-function generateEstado() {
-    const estados = [
-      { code: "AC", name: "Acre" },
-      { code: "AL", name: "Alagoas" },
-      { code: "AP", name: "Amapá" },
-      { code: "AM", name: "Amazonas" },
-      { code: "BA", name: "Bahia" },
-      { code: "CE", name: "Ceará" },
-      { code: "DF", name: "Distrito Federal" },
-      { code: "ES", name: "Espírito Santo" },
-      { code: "GO", name: "Goiás" },
-      { code: "MA", name: "Maranhão" },
-      { code: "MT", name: "Mato Grosso" },
-      { code: "MS", name: "Mato Grosso do Sul" },
-      { code: "MG", name: "Minas Gerais" },
-      { code: "PA", name: "Pará" },
-      { code: "PB", name: "Paraíba" },
-      { code: "PR", name: "Paraná" },
-      { code: "PE", name: "Pernambuco" },
-      { code: "PI", name: "Piauí" },
-      { code: "RJ", name: "Rio de Janeiro" },
-      { code: "RN", name: "Rio Grande do Norte" },
-      { code: "RS", name: "Rio Grande do Sul" },
-      { code: "RO", name: "Rondônia" },
-      { code: "RR", name: "Roraima" },
-      { code: "SC", name: "Santa Catarina" },
-      { code: "SP", name: "São Paulo" },
-      { code: "SE", name: "Sergipe" },
-      { code: "TO", name: "Tocantins" },
-      { code: "EX", name: "Estrangeiro" }
-    ];
+function generateTelefone() {
+  // Gera um DDD aleatório da lista
+  const ddd = faker.helpers.arrayElement([ //Escolhe um elemento aleatorio do array
+      '11', '21', '31', '41', '51', 
+      '61', '71', '81', '91', '51', 
+      '85', '71', '62', '98', '84', 
+      '96', '48', '67', '34', '19'
+  ]);
   
-    // Escolhe um estado aleatoriamente
-    const estadoAleatorio = estados[Math.floor(Math.random() * estados.length)];
-  
-    // Retorna o código do estado
-    return estadoAleatorio.code;
-  }
-  
-  function generateTelefone() {
-    // Gera números aleatórios para preencher o formato
-    const ddd = Math.floor(Math.random() * 90) + 10; // Gera DDD entre 10 e 99
-    const numero = Math.floor(Math.random() * 1000000000); // Gera um número de telefone aleatório
-  
-    // Formata o número no padrão (xx) XXXXX-XXXX
-    const celular = `(${ddd}) ${String(numero).padStart(9, '0').slice(0, 5)}-${String(numero).padStart(9, '0').slice(5)}`;
-  
-    return celular;
-  }
-  
+  // Gera um número de telefone aleatório que sempre começa com 9
+  const numero = `9${Math.floor(Math.random() * 100000000).toString().padStart(8, '0')}`;
+
+  // Formata o número no padrão (xx) 9XXXX-XXXX
+  const celular = `(${ddd}) ${numero.slice(0, 5)}-${numero.slice(5)}`;
+
+  return celular;
+}
+
 
 async function createUser() {
   // Gerar dados fictícios usando o Faker
@@ -66,9 +36,13 @@ async function createUser() {
   const email = faker.internet.email(); // Email
   const senha = faker.internet.password(); // Senha
   const cpf = generateCPF(); // Gerar CPF fictício
-  const nascimento = faker.date.past(30, new Date(2000, 0, 1)); // Data de nascimento entre 1990 e 2000
+  const nascimento = faker.date.birthdate() //Gera um nascimento entre 18 e 80 anos
   const sexo = faker.helpers.arrayElement(['M', 'F']); // Sexo
-  const estado = generateEstado(); // Gera um estado aleatório
+  const estado = faker.helpers.arrayElement([
+    'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
+    'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN',
+    'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'EX'
+  ]); // Gera um estado aleatório
   const celular = generateTelefone(); // Gera um telefone no formato (xx) XXXXX-XXXX
 
 
@@ -95,7 +69,7 @@ async function generateData() {
     await createUser();
   }
 
-  console.log(`${userCount} usuários fictícios foram criados com sucesso!`);
+  console.log(`${userCount} usuários criados com sucesso!`);
   prisma.$disconnect();
 }
 
