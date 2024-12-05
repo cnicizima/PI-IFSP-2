@@ -64,7 +64,7 @@ async function gerarRelatorios() {
 
     // Média de Idade
     const totalIdade = usuarios.reduce((acc, usuario) => acc + calcularIdade(usuario.nascimento), 0);
-    document.getElementById('mediaIdade').innerText = (totalIdade / usuarios.length).toFixed(2);
+    document.getElementById('mediaIdade').innerText = Math.round((totalIdade / usuarios.length).toFixed(2));
 
     // Faixa Etária
     const faixaEtaria = usuarios.reduce((acc, usuario) => {
