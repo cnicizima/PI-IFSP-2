@@ -3,7 +3,7 @@
   --gelo: #eef2f6;
   --blue: #496c7b;
   --light_blue: #88a4b2;
-  --dark_blue: #0b0f16;
+  --dark_blue: #162447;
   --gray: #57606d;
   --hover_link: #88a4b2;
   --soft_blue: #64818f;
@@ -13,19 +13,53 @@ body {
   background-color: var(--gelo);
   color: var(--white);
   font-family: "Montserrat", system-ui;
-  margin: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Imagem principal */
+
+.div_imagem_principal {
+  width: 100%;
+  /* position: relative; */
+  margin-bottom: 0%;
+}
+
+.imagem_principal_destino {
+  height: 350px;
+  width: 100%;
+  filter: brightness(0.5);
+  background-image: url(../img/img_index/background_dashboard.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* div posicao texto sobre a imagem */
+.div_texto_imagem_principal {
+  width: 40%;
+  position: absolute;
+  top: 10%;
+  left: 32%;
+  text-align: center;
+  color: var(--gelo);
+}
+
+/* textos na div */
+.div_texto_imagem_principal h1 {
+  font-size: 48px;
   font-weight: 500;
 }
 
-h1 {
-  color: var(--blue);
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
+.div_texto_imagem_principal h2 {
+  font-size: 20px;
+  padding: 0 20px;
+  font-weight: 400;
 }
 
 .card {
-  background-color: #162447;
+  background-color: var(--blue);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -41,11 +75,13 @@ h1 {
 }
 
 .chart-container {
-  background-color: #162447;
+  background-color: var(--blue);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .chart-container canvas {
@@ -62,20 +98,31 @@ ul {
 }
 
 ul li {
-  background-color: #1f4068;
-  color: #eaeaea;
+  background-color: var(--soft_blue);
+  color: var(--gelo);
   padding: 5px 10px;
   border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.grafico_estados > ul li {
+  background-color: var(--soft_blue);
+  color: var(--gelo);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 button {
   padding: 10px 15px;
-  background-color: var(--soft_blue);
-  color: #fff;
+  background-color: var(--blue);
+  color: var(--gelo);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 15px; /* Reduzido de 16px para 15px */
+  font-size: 16px; /* Reduzido de 16px para 15px */
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -89,6 +136,7 @@ button:hover {
   width: 75%;
   gap: 30px;
   margin: 30px auto;
+  font-size: 20px;
 }
 
 #relatorios {
@@ -97,4 +145,47 @@ button:hover {
   width: 75%;
   gap: 30px;
   margin: 30px auto;
+  font-size: 16px;
+}
+
+#mediaIdade {
+  background-color: var(--soft_blue);
+  color: var(--gelo);
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#totalUsuarios {
+  background-color: var(--soft_blue);
+  color: var(--gelo);
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 40px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra */
+}
+
+/* Estilo do "polegar" (parte que se arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue); /* Cor do polegar */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo da trilha (parte que fica atrás do polegar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor da trilha */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover_link); /* Cor do polegar ao passar o mouse */
 }

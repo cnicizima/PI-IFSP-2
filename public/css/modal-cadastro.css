@@ -140,7 +140,7 @@ input[type="password"],
 select {
   width: 40%;
   padding: 15px;
-  border: 1px solid var(--light_blue);
+  border: 1px solid transparent;
   border-radius: 8px;
   background-color: var(--soft_blue);
   font-size: 1rem;
