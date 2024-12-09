@@ -66,7 +66,7 @@
         </nav>
       </header>
 
-       <!-- modal de login e cadastro -->
+      <!-- modal de login e cadastro -->
 
       <!-- modal de login e cadastro -->
 
@@ -247,57 +247,68 @@
       <button onclick="openModal('modal_cadastro')">Abrir Cadastro</button>
       <button onclick="openModal('modal_login')">Abrir Login</button>
 
-
       <!-- Script para funcionar o modal -->
       <script>
-         // Função para registrar o usuário
-async function registerUser() {
-  const nome = document.getElementById("cadastro_nome").value;
-  const email = document.getElementById("cadastro_email").value;
-  const senha = document.getElementById("cadastro_senha").value;
-  const cpf = document.getElementById("cpf").value;
-  const nascimento = document.getElementById("nascimento").value;
-  const sexo = document.getElementById("sexo").value;
-  const estado = document.getElementById("estado").value;
-  const celular = document.getElementById("celular").value;
+        // Função para registrar o usuário
+        async function registerUser() {
+          const nome = document.getElementById("cadastro_nome").value;
+          const email = document.getElementById("cadastro_email").value;
+          const senha = document.getElementById("cadastro_senha").value;
+          const cpf = document.getElementById("cpf").value;
+          const nascimento = document.getElementById("nascimento").value;
+          const sexo = document.getElementById("sexo").value;
+          const estado = document.getElementById("estado").value;
+          const celular = document.getElementById("celular").value;
 
-  // Verificar se todos os campos foram preenchidos
-  if (!nome || !email || !senha || !cpf || !nascimento || !sexo || !estado || !celular) {
-    alert("Preencha todos os campos!");
-    return;
-  }
+          // Verificar se todos os campos foram preenchidos
+          if (
+            !nome ||
+            !email ||
+            !senha ||
+            !cpf ||
+            !nascimento ||
+            !sexo ||
+            !estado ||
+            !celular
+          ) {
+            alert("Preencha todos os campos!");
+            return;
+          }
 
-  try {
-    const response = await fetch("http://localhost:4000/users/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        nome,
-        email,
-        senha,
-        cpf,
-        nascimento,
-        sexo,
-        estado,
-        celular,
-      }),
-    });
+          try {
+            const response = await fetch(
+              "http://localhost:4000/users/register",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  nome,
+                  email,
+                  senha,
+                  cpf,
+                  nascimento,
+                  sexo,
+                  estado,
+                  celular,
+                }),
+              }
+            );
 
-    const data = await response.json();
-    if (response.ok) {
-      alert("Cadastro bem-sucedido!");
-      closeModal("modal_cadastro");
-      openModal("modal_login");
-    } else {
-      alert(data.message);
-    }
-  } catch (error) {
-    console.error("Erro ao cadastrar o usuário:", error);
-    alert("Erro ao cadastrar o usuário.");
-  }
-}
+            const data = await response.json();
+            if (response.ok) {
+              alert("Cadastro bem-sucedido!");
+              closeModal("modal_cadastro");
+              openModal("modal_login");
+            } else {
+              alert(data.message);
+            }
+          } catch (error) {
+            console.error("Erro ao cadastrar o usuário:", error);
+            alert("Erro ao cadastrar o usuário.");
+          }
+        }
 
         // Função para fazer o login do usuário
         async function loginUser() {
@@ -325,7 +336,7 @@ async function registerUser() {
             const data = await response.json();
 
             if (response.ok) {
-            //   alert(data.message); // Exibe a mensagem do servidor
+              //   alert(data.message); // Exibe a mensagem do servidor
 
               // Usa setTimeout para garantir que o alert seja fechado antes do redirecionamento
               setTimeout(() => {
@@ -366,7 +377,8 @@ async function registerUser() {
         <div class="div_texto_imagem_principal">
           <h1>Fale <b>conosco!</b></h1>
           <h2>
-            Tem dúvidas ou deseja planejar a sua próxima aventura no deslumbrante Principado de Mónaco? Entre em contato!
+            Tem dúvidas ou deseja planejar a sua próxima aventura no
+            deslumbrante Principado de Mónaco? Entre em contato!
           </h2>
         </div>
 
@@ -387,12 +399,12 @@ async function registerUser() {
           <div class="info-box">
             <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff"></i>
             <h3>Email</h3>
-            <p>azuremonaco@gmail.com</p>
+            <p>azure@gmail.com</p>
           </div>
           <div class="info-box">
             <i class="fa-solid fa-clock fa-2xl" style="color: #ffffff"></i>
             <h3>Horários</h3>
-            <p>Check-in: 14:00<br />Check-out: 12:00</p>
+            <p>Das 8h00 da manhã<br />até as 17h00 da tarde</p>
           </div>
         </section>
       </div>
@@ -566,7 +578,7 @@ async function registerUser() {
 
         <div class="campos_contato1">
           <i class="fa-solid fa-location-dot contato_font_awesome"></i>
-          <p>Av. Bahia, 1739 - Indaiá, Caraguatatuba - SP.</p>
+          <p>Avenue de la Costa, 25, 98000 Mônaco, Mônaco</p>
         </div>
 
         <div class="campos_contato2">
