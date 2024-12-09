@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${destino.imagem}" alt="${destino.nome}">
           <div class="card-content">
             <h3>${destino.nome}</h3>
-            <p class="reviews">${destino.avaliacao} <span>${destino.reviews} customer reviews</span></p>
+            <p class="reviews">${destino.avaliacao} <span>${destino.reviews} avaliações de clientes</span></p>
             <p>${destino.descricao}</p>
             <div>
               <button>Adicionar ao carrinho</button>
