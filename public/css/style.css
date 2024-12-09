@@ -246,7 +246,7 @@ body {
   background-color: var(--hover_link);
 }
 
-.carousel-container {
+.carousel-destinos-container {
   max-width: 50%;
   overflow: hidden;
 }
