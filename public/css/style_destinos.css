@@ -115,7 +115,9 @@ body {
   object-fit: cover; /* Ajusta a imagem para cobrir toda a área */
 }
 
-
+.email_botao{
+  cursor: pointer;
+}
  
 
 .carousel-nav button {
