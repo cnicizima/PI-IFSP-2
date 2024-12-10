@@ -46,3 +46,8 @@ function prevSlideDestinos() {
 
 // Troca automática após 3 segundos
 setInterval(nextSlideDestinos, 3000);
+
+document.querySelector('.email_botao').addEventListener('click', ()=>{
+  alert("Inscrição realizada com sucesso!");
+  location.reload();
+})

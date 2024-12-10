@@ -14,6 +14,10 @@ body {
   max-width: 100%;
 }
 
+
+.email_botao{
+  cursor: pointer;
+}
 /* introduzindo variaveis */
 :root {
   --white: #ffffff;
@@ -218,6 +222,8 @@ form {
   width: 100%;
   background-color: var(--soft_blue);
   border-radius: 8px;
+  color: white;
+  padding: 10px;
 }
 
 .contatos_textox {

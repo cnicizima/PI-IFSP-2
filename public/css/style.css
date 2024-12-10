@@ -284,6 +284,10 @@ button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+.btn_saiba_mais, .email_botao{
+  cursor: pointer;
+}
 /* Foto de monaco com caixa texto "melhor agencia" */
 
 /* div */
