@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardContainer = document.getElementById("card-container");
 
   fetch("http://localhost:4000/admin/destinos")
-    .then((response) => response.json())
-    .then((destinos) => {
+    .then((response) => response.json()) // Aqui, converte a resposta para JSON
+    .then((destinos) => { // Aqui, 'destinos' é o JSON convertido
       cardContainer.innerHTML = ""; // Limpa o container antes de adicionar os cards
 
       destinos.forEach((destino) => {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
 
-        cardContainer.appendChild(card);
+        cardContainer.appendChild(card); //adiciona o card no container
       });
     })
     .catch((error) => console.error("Erro ao carregar destinos:", error));
